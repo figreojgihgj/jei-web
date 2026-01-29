@@ -54,7 +54,7 @@ const gridStyle = computed(() => {
   const maxX = slots.value.reduce((m, s) => Math.max(m, s.x), 0);
   const maxY = slots.value.reduce((m, s) => Math.max(m, s.y), 0);
   return {
-    gridTemplateColumns: `repeat(${maxX + 1}, minmax(160px, 1fr))`,
+    gridTemplateColumns: `repeat(${maxX + 1}, minmax(120px, 1fr))`,
     gridTemplateRows: `repeat(${maxY + 1}, auto)`,
   };
 });
@@ -77,6 +77,8 @@ function cellStyle(x: number, y: number) {
 .slot-layout__grid {
   display: grid;
   gap: 10px;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .slot-layout__slot {

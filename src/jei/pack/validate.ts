@@ -80,6 +80,26 @@ export function assertItemDef(value: unknown, jsonPath: string): ItemDef {
   const tagsRaw = assertOptionalArray(obj.tags, `${jsonPath}.tags`);
   const tags = tagsRaw?.map((t, i) => assertString(t, `${jsonPath}.tags[${i}]`));
   const icon = assertOptionalString(obj.icon, `${jsonPath}.icon`);
+  const iconSpriteRaw = assertOptionalRecord(obj.iconSprite, `${jsonPath}.iconSprite`);
+  let iconSprite: ItemDef['iconSprite'];
+  if (iconSpriteRaw !== undefined) {
+    const url = assertString(iconSpriteRaw.url, `${jsonPath}.iconSprite.url`);
+    const position = assertString(iconSpriteRaw.position, `${jsonPath}.iconSprite.position`);
+    const size = iconSpriteRaw.size;
+    if (size !== undefined && typeof size !== 'number') {
+      throw new PackValidationError(`${jsonPath}.iconSprite.size`, 'expected number');
+    }
+    const color = iconSpriteRaw.color;
+    if (color !== undefined && typeof color !== 'string') {
+      throw new PackValidationError(`${jsonPath}.iconSprite.color`, 'expected string');
+    }
+    iconSprite = {
+      url,
+      position,
+      ...(size !== undefined ? { size } : {}),
+      ...(color !== undefined ? { color } : {}),
+    };
+  }
   const source = assertOptionalString(obj.source, `${jsonPath}.source`);
   const description = assertOptionalString(obj.description, `${jsonPath}.description`);
 
@@ -88,6 +108,7 @@ export function assertItemDef(value: unknown, jsonPath: string): ItemDef {
     name: assertString(obj.name, `${jsonPath}.name`),
   };
   if (icon !== undefined) def.icon = icon;
+  if (iconSprite !== undefined) def.iconSprite = iconSprite;
   if (tags !== undefined) def.tags = tags;
   if (source !== undefined) def.source = source;
   if (description !== undefined) def.description = description;

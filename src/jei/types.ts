@@ -14,6 +14,12 @@ export interface ItemDef {
   key: ItemKey;
   name: string;
   icon?: string;
+  iconSprite?: {
+    url: string;
+    position: string;
+    size?: number;
+    color?: string;
+  };
   tags?: string[];
   source?: string;
   description?: string;

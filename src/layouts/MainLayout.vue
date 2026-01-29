@@ -18,7 +18,7 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container :class="settingsStore.debugLayout ? 'debug-scroll' : 'no-scroll'">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -27,6 +27,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink.vue';
+import { useSettingsStore } from 'src/stores/settings';
+
+const settingsStore = useSettingsStore();
 
 const linksList: EssentialLinkProps[] = [
   {
@@ -79,3 +82,27 @@ function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
+
+<style>
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.debug-scroll {
+  overflow: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.no-scroll > .q-page,
+.debug-scroll > .q-page {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+</style>

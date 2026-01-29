@@ -1,0 +1,238 @@
+[
+  {
+    "key": "aef:category/material",
+    "displayName": "材料",
+    "renderer": "slot_layout",
+    "slots": [
+      {
+        "slotId": "in1",
+        "io": "input",
+        "accept": [
+          "item",
+          "tag"
+        ],
+        "x": 0,
+        "y": 0,
+        "label": "In"
+      },
+      {
+        "slotId": "in2",
+        "io": "input",
+        "accept": [
+          "item",
+          "tag"
+        ],
+        "x": 1,
+        "y": 0,
+        "label": "In"
+      },
+      {
+        "slotId": "out1",
+        "io": "output",
+        "accept": [
+          "item"
+        ],
+        "x": 3,
+        "y": 0,
+        "label": "Out"
+      },
+      {
+        "slotId": "out2",
+        "io": "output",
+        "accept": [
+          "item"
+        ],
+        "x": 4,
+        "y": 0,
+        "label": "Out"
+      },
+      {
+        "slotId": "cat1",
+        "io": "catalyst",
+        "accept": [
+          "item"
+        ],
+        "x": 0,
+        "y": 2,
+        "label": "Machine"
+      },
+      {
+        "slotId": "cat2",
+        "io": "catalyst",
+        "accept": [
+          "item"
+        ],
+        "x": 1,
+        "y": 2,
+        "label": "Machine"
+      }
+    ],
+    "paramSchema": {
+      "time": {
+        "displayName": "Time",
+        "unit": "s",
+        "format": "duration"
+      },
+      "usage": {
+        "displayName": "Usage"
+      },
+      "cost": {
+        "displayName": "Cost"
+      }
+    }
+  },
+  {
+    "key": "aef:category/gen-power",
+    "displayName": "发电",
+    "renderer": "slot_layout",
+    "slots": [
+      {
+        "slotId": "in1",
+        "io": "input",
+        "accept": [
+          "item",
+          "tag"
+        ],
+        "x": 0,
+        "y": 0,
+        "label": "In"
+      },
+      {
+        "slotId": "cat1",
+        "io": "catalyst",
+        "accept": [
+          "item"
+        ],
+        "x": 0,
+        "y": 2,
+        "label": "Machine"
+      }
+    ],
+    "paramSchema": {
+      "time": {
+        "displayName": "Time",
+        "unit": "s",
+        "format": "duration"
+      },
+      "usage": {
+        "displayName": "Usage"
+      },
+      "cost": {
+        "displayName": "Cost"
+      }
+    }
+  },
+  {
+    "key": "aef:category/product",
+    "displayName": "工业产物",
+    "renderer": "slot_layout",
+    "slots": [
+      {
+        "slotId": "in1",
+        "io": "input",
+        "accept": [
+          "item",
+          "tag"
+        ],
+        "x": 0,
+        "y": 0,
+        "label": "In"
+      },
+      {
+        "slotId": "in2",
+        "io": "input",
+        "accept": [
+          "item",
+          "tag"
+        ],
+        "x": 1,
+        "y": 0,
+        "label": "In"
+      },
+      {
+        "slotId": "out1",
+        "io": "output",
+        "accept": [
+          "item"
+        ],
+        "x": 3,
+        "y": 0,
+        "label": "Out"
+      },
+      {
+        "slotId": "cat1",
+        "io": "catalyst",
+        "accept": [
+          "item"
+        ],
+        "x": 0,
+        "y": 2,
+        "label": "Machine"
+      }
+    ],
+    "paramSchema": {
+      "time": {
+        "displayName": "Time",
+        "unit": "s",
+        "format": "duration"
+      },
+      "usage": {
+        "displayName": "Usage"
+      },
+      "cost": {
+        "displayName": "Cost"
+      }
+    }
+  },
+  {
+    "key": "aef:category/settlement",
+    "displayName": "据点",
+    "renderer": "slot_layout",
+    "slots": [
+      {
+        "slotId": "in1",
+        "io": "input",
+        "accept": [
+          "item",
+          "tag"
+        ],
+        "x": 0,
+        "y": 0,
+        "label": "In"
+      },
+      {
+        "slotId": "out1",
+        "io": "output",
+        "accept": [
+          "item"
+        ],
+        "x": 2,
+        "y": 0,
+        "label": "Out"
+      },
+      {
+        "slotId": "cat1",
+        "io": "catalyst",
+        "accept": [
+          "item"
+        ],
+        "x": 0,
+        "y": 2,
+        "label": "Machine"
+      }
+    ],
+    "paramSchema": {
+      "time": {
+        "displayName": "Time",
+        "unit": "s",
+        "format": "duration"
+      },
+      "usage": {
+        "displayName": "Usage"
+      },
+      "cost": {
+        "displayName": "Cost"
+      }
+    }
+  }
+]

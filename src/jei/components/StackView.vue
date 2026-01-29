@@ -2,6 +2,13 @@
   <div class="stack-view" :class="{ 'stack-view--clickable': clickable }" @click="onClick">
     <div class="stack-view__main">
       <q-img v-if="iconSrc" :src="iconSrc" :ratio="1" fit="contain" class="stack-view__icon" />
+      <div
+        v-else-if="iconSprite"
+        class="stack-view__icon stack-view__icon-sprite"
+        :style="spriteWrapperStyle"
+      >
+        <div class="stack-view__icon-sprite-image" :style="spriteImageStyle"></div>
+      </div>
       <q-icon v-else :name="fallbackIcon" size="22px" class="stack-view__icon-fallback" />
       <div class="stack-view__text">
         <div class="stack-view__name">{{ displayName }}</div>
@@ -45,6 +52,37 @@ const iconSrc = computed(() => {
   if (!s || s.kind !== 'item') return '';
   const def = props.itemDefsByKeyHash[stackItemKeyHash(s)];
   return def?.icon ?? '';
+});
+
+const iconSprite = computed(() => {
+  const s = stack.value;
+  if (!s || s.kind !== 'item') return undefined;
+  const def = props.itemDefsByKeyHash[stackItemKeyHash(s)];
+  return def?.iconSprite;
+});
+
+const spriteWrapperStyle = computed(() => {
+  const sprite = iconSprite.value;
+  if (!sprite) return {};
+  return {
+    backgroundColor: sprite.color ?? 'transparent',
+  };
+});
+
+const spriteImageStyle = computed(() => {
+  const sprite = iconSprite.value;
+  if (!sprite) return {};
+  const size = sprite.size ?? 64;
+  const scale = 28 / size;
+  return {
+    width: `${size}px`,
+    height: `${size}px`,
+    backgroundImage: `url(${sprite.url})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: sprite.position,
+    transform: `scale(${scale})`,
+    transformOrigin: 'top left',
+  };
 });
 
 const displayName = computed(() => {
@@ -121,6 +159,14 @@ function onClick() {
   width: 28px;
   height: 28px;
   border-radius: 4px;
+}
+
+.stack-view__icon-sprite {
+  overflow: hidden;
+}
+
+.stack-view__icon-sprite-image {
+  border-radius: 0;
 }
 
 .stack-view__icon-fallback {
