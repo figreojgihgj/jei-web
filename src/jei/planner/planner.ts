@@ -211,6 +211,174 @@ export function computePlannerDecisions(args: {
   return decisions;
 }
 
+export function autoPlanSelections(args: {
+  pack: PackData;
+  index: JeiIndex;
+  rootItemKey: ItemKey;
+  maxDepth?: number;
+}): {
+  selectedRecipeIdByItemKeyHash: Record<string, string>;
+  selectedItemIdByTagId: Record<string, ItemId>;
+} {
+  const { pack, index, rootItemKey } = args;
+  const maxDepth = args.maxDepth ?? 20;
+  const defaultNs = pack.manifest.gameId;
+
+  const selectedRecipeIdByItemKeyHash = new Map<string, string>();
+  const selectedItemIdByTagId = new Map<string, ItemId>();
+
+  const stackHashes: string[] = [];
+  const stackKeys: ItemKey[] = [];
+
+  const getChosenRecipe = (key: ItemKey) => {
+    const h = itemKeyHash(key);
+    const chosenRecipeId = selectedRecipeIdByItemKeyHash.get(h);
+    if (!chosenRecipeId) return null;
+    const recipe = index.recipesById.get(chosenRecipeId);
+    if (!recipe) return null;
+    const recipeType = index.recipeTypesByKey.get(recipe.type);
+    return { chosenRecipeId, recipe, recipeType };
+  };
+
+  const isLegalCycle = (cycleStartHash: string) => {
+    const cycleStart = stackHashes.indexOf(cycleStartHash);
+    const cycleKeys = cycleStart >= 0 ? stackKeys.slice(cycleStart) : [];
+    if (!cycleKeys.length) return false;
+    let factor = 1;
+    for (let i = 0; i < cycleKeys.length; i += 1) {
+      const fromKey = cycleKeys[i]!;
+      const toKey = (i + 1 < cycleKeys.length ? cycleKeys[i + 1] : cycleKeys[0])!;
+      const chosen = getChosenRecipe(fromKey);
+      if (!chosen) return false;
+      const out = perCraftOutputAmountFor(chosen.recipe, chosen.recipeType, fromKey);
+      const inp = perCraftInputAmountFor(chosen.recipe, chosen.recipeType, toKey);
+      if (out <= 0 || inp <= 0) return false;
+      factor *= out / inp;
+    }
+    return factor > 1.000001;
+  };
+
+  type Op =
+    | { kind: 'recipe'; keyHash: string; prev: string | undefined }
+    | { kind: 'tag'; tagId: string; prev: ItemId | undefined };
+
+  const ops: Op[] = [];
+  const setRecipe = (keyHash: string, recipeId: string) => {
+    ops.push({ kind: 'recipe', keyHash, prev: selectedRecipeIdByItemKeyHash.get(keyHash) });
+    selectedRecipeIdByItemKeyHash.set(keyHash, recipeId);
+  };
+  const setTag = (tagId: string, itemId: ItemId) => {
+    ops.push({ kind: 'tag', tagId, prev: selectedItemIdByTagId.get(tagId) });
+    selectedItemIdByTagId.set(tagId, itemId);
+  };
+  const rollbackTo = (checkpoint: number) => {
+    while (ops.length > checkpoint) {
+      const op = ops.pop()!;
+      if (op.kind === 'recipe') {
+        if (op.prev === undefined) selectedRecipeIdByItemKeyHash.delete(op.keyHash);
+        else selectedRecipeIdByItemKeyHash.set(op.keyHash, op.prev);
+      } else {
+        if (op.prev === undefined) selectedItemIdByTagId.delete(op.tagId);
+        else selectedItemIdByTagId.set(op.tagId, op.prev);
+      }
+    }
+  };
+
+  const planItem = (key: ItemKey, depth: number): boolean => {
+    if (depth > maxDepth) return true;
+    const h = itemKeyHash(key);
+    if (stackHashes.includes(h)) return isLegalCycle(h);
+
+    stackHashes.push(h);
+    stackKeys.push(key);
+
+    const options = recipesProducingItem(index, key);
+    if (!options.length) {
+      stackHashes.pop();
+      stackKeys.pop();
+      return true;
+    }
+
+    const useRecipe = (recipeId: string): boolean => {
+      const checkpoint = ops.length;
+      setRecipe(h, recipeId);
+
+      const recipe = index.recipesById.get(recipeId);
+      if (!recipe) {
+        rollbackTo(checkpoint);
+        return false;
+      }
+      const recipeType = index.recipeTypesByKey.get(recipe.type);
+      const { inputs } = extractRecipeStacks(recipe, recipeType);
+      for (const input of inputs) {
+        if (input.kind === 'item') {
+          if (!planItem(stackItemToKey(input), depth + 1)) {
+            rollbackTo(checkpoint);
+            return false;
+          }
+        } else if (input.kind === 'tag') {
+          const normalized = normalizeTagId(input.id, defaultNs);
+          const set = index.itemIdsByTagId.get(normalized);
+          const candidates = set ? Array.from(set.values()).sort() : [];
+          if (!candidates.length) continue;
+          const chosen = selectedItemIdByTagId.get(normalized) ?? candidates[0]!;
+          if (!selectedItemIdByTagId.has(normalized)) setTag(normalized, chosen);
+          if (!planItem({ id: chosen }, depth + 1)) {
+            rollbackTo(checkpoint);
+            return false;
+          }
+        }
+      }
+      return true;
+    };
+
+    const chosen = selectedRecipeIdByItemKeyHash.get(h);
+    if (chosen) {
+      const ok = useRecipe(chosen);
+      stackHashes.pop();
+      stackKeys.pop();
+      return ok;
+    }
+
+    const sorted = options
+      .map((rid) => {
+        const r = index.recipesById.get(rid);
+        const rt = r ? index.recipeTypesByKey.get(r.type) : undefined;
+        const inputsLen = r ? extractRecipeStacks(r, rt).inputs.length : 9999;
+        return { rid, inputsLen };
+      })
+      .sort((a, b) => a.inputsLen - b.inputsLen || a.rid.localeCompare(b.rid))
+      .map((v) => v.rid);
+
+    let ok = false;
+    for (const rid of sorted) {
+      const checkpoint = ops.length;
+      if (useRecipe(rid)) {
+        ok = true;
+        break;
+      }
+      rollbackTo(checkpoint);
+    }
+
+    if (!ok) {
+      const checkpoint = ops.length;
+      setRecipe(h, sorted[0] ?? options[0]!);
+      rollbackTo(checkpoint);
+      ok = true;
+    }
+
+    stackHashes.pop();
+    stackKeys.pop();
+    return ok;
+  };
+
+  planItem(rootItemKey, 0);
+  return {
+    selectedRecipeIdByItemKeyHash: Object.fromEntries(selectedRecipeIdByItemKeyHash.entries()),
+    selectedItemIdByTagId: Object.fromEntries(selectedItemIdByTagId.entries()),
+  };
+}
+
 export function buildRequirementTree(args: {
   pack: PackData;
   index: JeiIndex;

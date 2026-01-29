@@ -150,7 +150,8 @@
                     dense
                     class="jei-type-sidebar__btn"
                     :color="m.typeKey === activeTypeKey ? 'primary' : 'grey-7'"
-                    @click="activeTypeKey = m.typeKey"
+                    :class="{ 'jei-type-sidebar__btn--active': m.typeKey === activeTypeKey }"
+                    @click="openMachineItem(m.machineItemId)"
                   >
                     <stack-view
                       :content="{ kind: 'item', id: m.machineItemId, amount: 1 }"
@@ -187,16 +188,56 @@
                       :name="g.typeKey"
                       class="q-pa-md"
                     >
-                      <div class="column q-gutter-md">
-                        <q-card v-for="rid in g.recipeIds" :key="rid" flat bordered class="q-pa-md">
-                          <recipe-viewer
-                            :recipe="recipesById.get(rid)!"
-                            :recipe-type="recipeTypesByKey.get(recipesById.get(rid)!.type)!"
-                            :item-defs-by-key-hash="itemDefsByKeyHash"
-                            @item-click="openDialogByItemKey"
-                          />
-                        </q-card>
-                      </div>
+                      <!-- "全部"分组：按配方类型分组显示 -->
+                      <template v-if="g.isAll">
+                        <div class="column q-gutter-lg">
+                          <div v-for="subGroup in allRecipeGroups" :key="subGroup.typeKey" class="column q-gutter-md">
+                            <div class="row items-center q-gutter-sm text-subtitle2">
+                              <span>{{ subGroup.label }}</span>
+                              <div v-if="subGroup.machines.length" class="row items-center q-gutter-xs">
+                                <q-icon name="precision_manufacturing" size="16px" color="grey-7" />
+                                <stack-view
+                                  v-for="m in subGroup.machines"
+                                  :key="m.machineItemId"
+                                  :content="{ kind: 'item', id: m.machineItemId, amount: 1 }"
+                                  :item-defs-by-key-hash="itemDefsByKeyHash"
+                                  variant="slot"
+                                  :show-name="false"
+                                  :show-subtitle="false"
+                                  class="cursor-pointer"
+                                  @item-click="openMachineItem(m.machineItemId)"
+                                />
+                              </div>
+                            </div>
+                            <q-separator />
+                            <div class="column q-gutter-md">
+                              <q-card v-for="rid in subGroup.recipeIds" :key="rid" flat bordered class="q-pa-md">
+                                <recipe-viewer
+                                  v-if="recipesById.get(rid)"
+                                  :recipe="recipesById.get(rid)"
+                                  :recipe-type="recipeTypesByKey.get(recipesById.get(rid)?.type || '')"
+                                  :item-defs-by-key-hash="itemDefsByKeyHash"
+                                  @item-click="openDialogByItemKey"
+                                />
+                              </q-card>
+                            </div>
+                          </div>
+                        </div>
+                      </template>
+                      <!-- 普通分组：直接显示配方列表 -->
+                      <template v-else>
+                        <div class="column q-gutter-md">
+                          <q-card v-for="rid in g.recipeIds" :key="rid" flat bordered class="q-pa-md">
+                            <recipe-viewer
+                              v-if="recipesById.get(rid)"
+                              :recipe="recipesById.get(rid)"
+                              :recipe-type="recipeTypesByKey.get(recipesById.get(rid)?.type || '')"
+                              :item-defs-by-key-hash="itemDefsByKeyHash"
+                              @item-click="openDialogByItemKey"
+                            />
+                          </q-card>
+                        </div>
+                      </template>
                     </q-tab-panel>
                   </q-tab-panels>
                 </div>
@@ -469,7 +510,8 @@
                   dense
                   class="jei-type-sidebar__btn"
                   :color="m.typeKey === activeTypeKey ? 'primary' : 'grey-7'"
-                  @click="activeTypeKey = m.typeKey"
+                  :class="{ 'jei-type-sidebar__btn--active': m.typeKey === activeTypeKey }"
+                  @click="openMachineItem(m.machineItemId)"
                 >
                   <stack-view
                     :content="{ kind: 'item', id: m.machineItemId, amount: 1 }"
@@ -506,16 +548,56 @@
                     :name="g.typeKey"
                     class="q-pa-md"
                   >
-                    <div class="column q-gutter-md">
-                      <q-card v-for="rid in g.recipeIds" :key="rid" flat bordered class="q-pa-md">
-                        <recipe-viewer
-                          :recipe="recipesById.get(rid)!"
-                          :recipe-type="recipeTypesByKey.get(recipesById.get(rid)!.type)!"
-                          :item-defs-by-key-hash="itemDefsByKeyHash"
-                          @item-click="openDialogByItemKey"
-                        />
-                      </q-card>
-                    </div>
+                    <!-- "全部"分组：按配方类型分组显示 -->
+                    <template v-if="g.isAll">
+                      <div class="column q-gutter-lg">
+                        <div v-for="subGroup in allRecipeGroups" :key="subGroup.typeKey" class="column q-gutter-md">
+                          <div class="row items-center q-gutter-sm text-subtitle2">
+                            <span>{{ subGroup.label }}</span>
+                            <div v-if="subGroup.machines.length" class="row items-center q-gutter-xs">
+                              <q-icon name="precision_manufacturing" size="16px" color="grey-7" />
+                              <stack-view
+                                v-for="m in subGroup.machines"
+                                :key="m.machineItemId"
+                                :content="{ kind: 'item', id: m.machineItemId, amount: 1 }"
+                                :item-defs-by-key-hash="itemDefsByKeyHash"
+                                variant="slot"
+                                :show-name="false"
+                                :show-subtitle="false"
+                                class="cursor-pointer"
+                                @item-click="openMachineItem(m.machineItemId)"
+                              />
+                            </div>
+                          </div>
+                          <q-separator />
+                          <div class="column q-gutter-md">
+                            <q-card v-for="rid in subGroup.recipeIds" :key="rid" flat bordered class="q-pa-md">
+                              <recipe-viewer
+                                v-if="recipesById.get(rid)"
+                                :recipe="recipesById.get(rid)"
+                                :recipe-type="recipeTypesByKey.get(recipesById.get(rid)?.type || '')"
+                                :item-defs-by-key-hash="itemDefsByKeyHash"
+                                @item-click="openDialogByItemKey"
+                              />
+                            </q-card>
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                    <!-- 普通分组：直接显示配方列表 -->
+                    <template v-else>
+                      <div class="column q-gutter-md">
+                        <q-card v-for="rid in g.recipeIds" :key="rid" flat bordered class="q-pa-md">
+                          <recipe-viewer
+                            v-if="recipesById.get(rid)"
+                            :recipe="recipesById.get(rid)"
+                            :recipe-type="recipeTypesByKey.get(recipesById.get(rid)?.type || '')"
+                            :item-defs-by-key-hash="itemDefsByKeyHash"
+                            @item-click="openDialogByItemKey"
+                          />
+                        </q-card>
+                      </div>
+                    </template>
                   </q-tab-panel>
                 </q-tab-panels>
               </div>
@@ -547,6 +629,7 @@ import type {
   PlannerSavePayload,
 } from 'src/jei/planner/plannerUi';
 import { itemKeyHash } from 'src/jei/indexing/key';
+import { autoPlanSelections } from 'src/jei/planner/planner';
 import { useSettingsStore } from 'src/stores/settings';
 
 const settingsStore = useSettingsStore();
@@ -1013,6 +1096,34 @@ const consumingRecipeIds = computed(() => {
   return recipesConsumingItem(index.value, currentItemKey.value);
 });
 
+// 机器提供的配方类型（用于"提供合成"分组）
+const machineProvidingRecipeIds = computed(() => {
+  if (!index.value || !currentItemKey.value) return [];
+  // 获取当前物品的所有 itemId 可能的变体（考虑 meta/nbt）
+  const currentItemIds = index.value.itemKeyHashesByItemId.get(currentItemKey.value.id) ?? [];
+  if (!currentItemIds.length) return [];
+
+  // 查找所有使用当前物品作为机器的配方类型
+  const providedTypeKeys: string[] = [];
+  for (const [typeKey, recipeType] of recipeTypesByKey.value) {
+    if (recipeType.machine?.id === currentItemKey.value.id) {
+      providedTypeKeys.push(typeKey);
+    }
+  }
+
+  if (!providedTypeKeys.length) return [];
+
+  // 收集这些配方类型的所有配方 ID
+  const recipeIds = new Set<string>();
+  for (const rid of index.value.recipesById.keys()) {
+    const r = index.value.recipesById.get(rid);
+    if (r && providedTypeKeys.includes(r.type)) {
+      recipeIds.add(rid);
+    }
+  }
+  return Array.from(recipeIds);
+});
+
 watch(
   activeTab,
   (t) => {
@@ -1021,11 +1132,31 @@ watch(
   { immediate: true },
 );
 
+watch(
+  () => [activeTab.value, currentItemKey.value, pack.value, index.value] as const,
+  () => {
+    if (activeTab.value !== 'planner') return;
+    if (plannerInitialState.value) return;
+    const p = pack.value;
+    const idx = index.value;
+    const key = currentItemKey.value;
+    if (!p || !idx || !key) return;
+    const auto = autoPlanSelections({ pack: p, index: idx, rootItemKey: key });
+    plannerInitialState.value = {
+      loadKey: `auto:${itemKeyHash(key)}:${Date.now()}`,
+      targetAmount: 1,
+      selectedRecipeIdByItemKeyHash: auto.selectedRecipeIdByItemKeyHash,
+      selectedItemIdByTagId: auto.selectedItemIdByTagId,
+    };
+  },
+  { immediate: true },
+);
+
 const activeRecipeIds = computed(() => {
   return lastRecipeTab.value === 'recipes' ? producingRecipeIds.value : consumingRecipeIds.value;
 });
 
-type RecipeGroup = { typeKey: string; label: string; recipeIds: string[] };
+type RecipeGroup = { typeKey: string; label: string; recipeIds: string[]; isAll?: boolean };
 
 const activeRecipeGroups = computed<RecipeGroup[]>(() => {
   const map = new Map<string, string[]>();
@@ -1042,7 +1173,47 @@ const activeRecipeGroups = computed<RecipeGroup[]>(() => {
     return { typeKey, label, recipeIds };
   });
   groups.sort((a, b) => a.label.localeCompare(b.label));
-  return groups;
+
+  // 在 Uses 标签页下，添加"提供合成"分组
+  if (lastRecipeTab.value === 'uses' && machineProvidingRecipeIds.value.length) {
+    // 按配方类型分组
+    const providingMap = new Map<string, string[]>();
+    machineProvidingRecipeIds.value.forEach((rid) => {
+      const r = recipesById.value.get(rid);
+      if (!r) return;
+      const list = providingMap.get(r.type) ?? [];
+      list.push(rid);
+      providingMap.set(r.type, list);
+    });
+
+    // 使用原始配方类型作为 typeKey，这样配方显示时能正确获取类型
+    const providingGroups = Array.from(providingMap.entries()).map(([typeKey, recipeIds]) => {
+      const typeDef = recipeTypesByKey.value.get(typeKey);
+      const label = `提供：${typeDef?.displayName ?? typeKey}`;
+      return { typeKey, label, recipeIds };
+    });
+    providingGroups.sort((a, b) => a.label.localeCompare(b.label));
+
+    // 添加"全部"分组（包含消耗配方和机器提供的配方），然后"提供合成"分组，最后普通分组
+    const allRecipeIds = [...activeRecipeIds.value, ...machineProvidingRecipeIds.value];
+    const allGroup: RecipeGroup = {
+      typeKey: '__all__',
+      label: '全部',
+      recipeIds: allRecipeIds,
+      isAll: true,
+    };
+    return [allGroup, ...providingGroups, ...groups];
+  }
+
+  // 添加"全部"分组到最前面
+  const allGroup: RecipeGroup = {
+    typeKey: '__all__',
+    label: '全部',
+    recipeIds: activeRecipeIds.value,
+    isAll: true,
+  };
+
+  return [allGroup, ...groups];
 });
 
 const preferredRecipeTypeKey = computed(() => {
@@ -1055,22 +1226,65 @@ const preferredRecipeTypeKey = computed(() => {
 });
 
 const typeMachineIcons = computed(() => {
-  const groups = (() => {
-    const preferred = preferredRecipeTypeKey.value;
-    if (!preferred) return activeRecipeGroups.value;
-    if (!activeRecipeGroups.value.some((g) => g.typeKey === preferred))
-      return activeRecipeGroups.value;
-    return activeRecipeGroups.value.filter((g) => g.typeKey === preferred);
-  })();
+  const currentGroup = activeRecipeGroups.value.find((g) => g.typeKey === activeTypeKey.value);
+  if (!currentGroup) return [];
 
-  return groups
-    .map((g) => {
-      const rt = recipeTypesByKey.value.get(g.typeKey);
+  // "全部"分组：显示所有有机器的配方类型
+  if (currentGroup.isAll) {
+    const icons: { typeKey: string; machineItemId: string }[] = [];
+    const seen = new Set<string>();
+
+    for (const group of activeRecipeGroups.value) {
+      if (group.isAll) continue;
+      const rt = recipeTypesByKey.value.get(group.typeKey);
       const machineItemId = rt?.machine?.id;
-      if (!machineItemId) return null;
-      return { typeKey: g.typeKey, machineItemId };
-    })
-    .filter((v): v is { typeKey: string; machineItemId: string } => !!v);
+      if (!machineItemId || seen.has(machineItemId)) continue;
+      seen.add(machineItemId);
+      icons.push({ typeKey: group.typeKey, machineItemId });
+    }
+    return icons;
+  }
+
+  // 普通分组：只显示当前分组对应的机器
+  const rt = recipeTypesByKey.value.get(currentGroup.typeKey);
+  const machineItemId = rt?.machine?.id;
+  if (!machineItemId) return [];
+
+  return [{ typeKey: currentGroup.typeKey, machineItemId }];
+});
+
+type AllRecipeSubGroup = {
+  typeKey: string;
+  label: string;
+  recipeIds: string[];
+  machines: { typeKey: string; machineItemId: string }[];
+};
+
+// 用于"全部"分组的子分组（按配方类型分组，包含机器信息）
+const allRecipeGroups = computed<AllRecipeSubGroup[]>(() => {
+  const map = new Map<string, string[]>();
+
+  // 在 Uses 模式下，需要同时包含消耗配方和机器提供的配方
+  const recipeIdsToInclude =
+    lastRecipeTab.value === 'uses' && machineProvidingRecipeIds.value.length
+      ? [...activeRecipeIds.value, ...machineProvidingRecipeIds.value]
+      : activeRecipeIds.value;
+
+  recipeIdsToInclude.forEach((rid) => {
+    const r = recipesById.value.get(rid);
+    if (!r) return;
+    const list = map.get(r.type) ?? [];
+    list.push(rid);
+    map.set(r.type, list);
+  });
+
+  return Array.from(map.entries()).map(([typeKey, recipeIds]) => {
+    const label = recipeTypesByKey.value.get(typeKey)?.displayName ?? typeKey;
+    const rt = recipeTypesByKey.value.get(typeKey);
+    const machineItemId = rt?.machine?.id;
+    const machines = machineItemId ? [{ typeKey, machineItemId }] : [];
+    return { typeKey, label, recipeIds, machines };
+  });
 });
 
 watch(
@@ -1112,6 +1326,15 @@ function openDialogByItemKey(key: ItemKey) {
   activeTab.value = 'recipes';
   plannerInitialState.value = null;
   pushHistoryKeyHash(itemKeyHash(key));
+}
+
+function openMachineItem(machineItemId: string) {
+  // 根据 itemId 找到对应的 ItemKeyHash
+  const keyHashes = index.value?.itemKeyHashesByItemId.get(machineItemId);
+  if (!keyHashes || !keyHashes.length) return;
+  // 使用第一个 keyHash 打开机器物品的对话框
+  const firstKeyHash = keyHashes[0];
+  if (firstKeyHash) openDialogByKeyHash(firstKeyHash);
 }
 
 function goBackInDialog() {

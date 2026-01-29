@@ -196,7 +196,7 @@
                 />
                 <q-badge
                   v-if="row.node.kind === 'item' && row.node.cycle"
-                  color="negative"
+                  :color="row.node.cycleSeed ? 'positive' : 'negative'"
                   class="q-ml-sm"
                 >
                   {{ row.node.cycleSeed ? 'cycle seed' : 'cycle' }}
@@ -218,68 +218,78 @@
               @update:model-value="(v) => (targetAmount = Number(v))"
             />
           </div>
-          <div v-if="svg" class="q-mt-md planner__svg-wrap">
-            <svg :width="svg.width" :height="svg.height" viewBox="0 0 1 1" style="display: none" />
-            <svg :width="svg.width" :height="svg.height" class="planner__svg">
-              <defs>
-                <marker
-                  id="planner-arrow"
-                  viewBox="0 0 10 10"
-                  refX="10"
-                  refY="5"
-                  markerWidth="6"
-                  markerHeight="6"
-                  orient="auto-start-reverse"
-                >
-                  <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(0, 0, 0, 0.55)" />
-                </marker>
-              </defs>
-              <g>
-                <line
-                  v-for="e in svg.edges"
-                  :key="e.key"
-                  :x1="e.x1"
-                  :y1="e.y1"
-                  :x2="e.x2"
-                  :y2="e.y2"
-                  stroke="rgba(0, 0, 0, 0.35)"
-                  stroke-width="1.5"
-                  marker-end="url(#planner-arrow)"
-                />
-              </g>
-              <g>
-                <g v-for="n in svg.nodes" :key="n.nodeId" class="planner__svg-node">
-                  <rect
-                    :x="n.x"
-                    :y="n.y"
-                    :width="svg.nodeW"
-                    :height="svg.nodeH"
-                    rx="8"
-                    ry="8"
-                    fill="white"
-                    stroke="rgba(0, 0, 0, 0.25)"
-                  />
-                  <text :x="n.x + 10" :y="n.y + 18" font-size="12" fill="rgba(0, 0, 0, 0.85)">
-                    {{ n.title }}
-                  </text>
-                  <text :x="n.x + 10" :y="n.y + 36" font-size="11" fill="rgba(0, 0, 0, 0.65)">
-                    {{ n.subtitle }}
-                  </text>
-                  <rect
-                    v-if="n.clickable"
-                    :x="n.x"
-                    :y="n.y"
-                    :width="svg.nodeW"
-                    :height="svg.nodeH"
-                    rx="8"
-                    ry="8"
-                    fill="transparent"
-                    style="cursor: pointer"
-                    @click="emit('item-click', n.itemKey!)"
-                  />
-                </g>
-              </g>
-            </svg>
+          <div v-if="treeResult" class="q-mt-md planner__flow">
+            <VueFlow
+              id="planner-flow"
+              :nodes="flowNodes"
+              :edges="flowEdges"
+              :nodes-draggable="false"
+              :nodes-connectable="false"
+              :elements-selectable="false"
+              :zoom-on-double-click="false"
+              :min-zoom="0.2"
+              :max-zoom="2"
+              :pan-on-drag="true"
+              no-pan-class-name="nopan"
+              no-drag-class-name="nodrag"
+            >
+              <Background :gap="20" pattern-color="rgba(0,0,0,0.12)" />
+              <Controls />
+              <MiniMap />
+              <template #node-itemNode="p">
+                <div class="planner__flow-node nodrag nopan">
+                  <div
+                    class="planner__flow-node-icon cursor-pointer"
+                    @click="emit('item-click', p.data.itemKey)"
+                  >
+                    <stack-view
+                      :content="{
+                        kind: 'item',
+                        id: p.data.itemKey.id,
+                        amount: 1,
+                        ...(p.data.itemKey.meta !== undefined ? { meta: p.data.itemKey.meta } : {}),
+                        ...(p.data.itemKey.nbt !== undefined ? { nbt: p.data.itemKey.nbt } : {}),
+                      }"
+                      :item-defs-by-key-hash="itemDefsByKeyHash"
+                      variant="slot"
+                      :show-name="false"
+                      :show-subtitle="false"
+                    />
+                  </div>
+                  <div class="planner__flow-node-text" @click.stop @mousedown.stop @dblclick.stop>
+                    <div class="planner__flow-node-title">{{ p.data.title }}</div>
+                    <div class="planner__flow-node-sub">
+                      {{ p.data.subtitle }}
+                      <q-badge
+                        v-if="p.data.cycle"
+                        :color="p.data.cycleSeed ? 'positive' : 'negative'"
+                        class="q-ml-xs"
+                      >
+                        {{ p.data.cycleSeed ? 'cycle seed' : 'cycle' }}
+                      </q-badge>
+                    </div>
+                  </div>
+                  <div v-if="p.data.machineItemId" class="planner__flow-node-machine">
+                    <stack-view
+                      :content="{ kind: 'item', id: p.data.machineItemId, amount: 1 }"
+                      :item-defs-by-key-hash="itemDefsByKeyHash"
+                      variant="slot"
+                      :show-name="false"
+                      :show-subtitle="false"
+                    />
+                    <q-tooltip>{{ p.data.machineName ?? p.data.machineItemId }}</q-tooltip>
+                  </div>
+                </div>
+              </template>
+              <template #node-fluidNode="p">
+                <div class="planner__flow-node planner__flow-node--fluid nodrag nopan">
+                  <div class="planner__flow-node-text" @mousedown.stop @dblclick.stop>
+                    <div class="planner__flow-node-title">{{ p.data.title }}</div>
+                    <div class="planner__flow-node-sub">{{ p.data.subtitle }}</div>
+                  </div>
+                </div>
+              </template>
+            </VueFlow>
           </div>
         </div>
 
@@ -362,6 +372,14 @@ import { computed, ref, watch } from 'vue';
 import type { ItemDef, ItemId, ItemKey, PackData, Stack } from 'src/jei/types';
 import type { JeiIndex } from 'src/jei/indexing/buildIndex';
 import { itemKeyHash } from 'src/jei/indexing/key';
+import { Background } from '@vue-flow/background';
+import { Controls } from '@vue-flow/controls';
+import { VueFlow, type Edge, type Node } from '@vue-flow/core';
+import { MiniMap } from '@vue-flow/minimap';
+import '@vue-flow/core/dist/style.css';
+import '@vue-flow/core/dist/theme-default.css';
+import '@vue-flow/controls/dist/style.css';
+import '@vue-flow/minimap/dist/style.css';
 import RecipeViewer from './RecipeViewer.vue';
 import StackView from './StackView.vue';
 import type {
@@ -570,100 +588,112 @@ function formatAmount(n: number) {
   return rounded;
 }
 
-type SvgNode = {
-  nodeId: string;
-  x: number;
-  y: number;
+type FlowItemData = {
+  itemKey: ItemKey;
   title: string;
   subtitle: string;
-  clickable: boolean;
-  itemKey?: ItemKey;
+  cycle: boolean;
+  cycleSeed: boolean;
+  machineItemId?: string;
+  machineName?: string;
 };
-type SvgEdge = { key: string; x1: number; y1: number; x2: number; y2: number };
+type FlowFluidData = {
+  title: string;
+  subtitle: string;
+};
 
-const svg = computed<null | {
-  width: number;
-  height: number;
-  nodeW: number;
-  nodeH: number;
-  nodes: SvgNode[];
-  edges: SvgEdge[];
-}>(() => {
+const flow = computed(() => {
   const result = treeResult.value;
-  if (!result) return null;
+  if (!result) return { nodes: [] as Node[], edges: [] as Edge[] };
 
-  const levels: RequirementNode[][] = [];
-  const walk = (node: RequirementNode, depth: number) => {
-    const list = levels[depth] ?? [];
-    list.push(node);
-    levels[depth] = list;
-    if (node.kind === 'item') node.children.forEach((c) => walk(c, depth + 1));
+  const nodeW = 260;
+  const nodeH = 56;
+  const gapX = 28;
+  const gapY = 40;
+  const pad = 18;
+
+  const nodes: Node[] = [];
+  const layouts: Array<{ node: RequirementNode; depth: number; x: number }> = [];
+  const xById = new Map<string, number>();
+  let nextX = 0;
+
+  const layout = (node: RequirementNode, depth: number): number => {
+    if (xById.has(node.nodeId)) return xById.get(node.nodeId)!;
+
+    let x: number;
+    if (node.kind !== 'item' || node.children.length === 0) {
+      x = nextX;
+      nextX += 1;
+    } else if (node.children.length === 1) {
+      x = layout(node.children[0]!, depth + 1);
+    } else {
+      const childXs = node.children.map((c) => layout(c, depth + 1)).sort((a, b) => a - b);
+      x = (childXs[0]! + childXs[childXs.length - 1]!) / 2;
+    }
+
+    xById.set(node.nodeId, x);
+    layouts.push({ node, depth, x });
+    return x;
   };
-  walk(result.root, 0);
 
-  const nodeW = 170;
-  const nodeH = 52;
-  const gapX = 22;
-  const gapY = 36;
-  const pad = 16;
+  layout(result.root, 0);
+  layouts.sort((a, b) => a.depth - b.depth || a.x - b.x);
 
-  const nodes: SvgNode[] = [];
-  const nodePos = new Map<string, { x: number; y: number }>();
-  levels.forEach((level, depth) => {
-    level.forEach((node, i) => {
-      const x = pad + i * (nodeW + gapX);
-      const y = pad + depth * (nodeH + gapY);
-      nodePos.set(node.nodeId, { x, y });
-      if (node.kind === 'item') {
-        nodes.push({
-          nodeId: node.nodeId,
-          x,
-          y,
-          title: itemName(node.itemKey),
-          subtitle: `${formatAmount(node.amount)}${node.machineName ? ` · ${node.machineName}` : ''}`,
-          clickable: true,
+  layouts.forEach(({ node, depth, x }) => {
+    const px = pad + x * (nodeW + gapX);
+    const py = pad + depth * (nodeH + gapY);
+    if (node.kind === 'item') {
+      nodes.push({
+        id: node.nodeId,
+        type: 'itemNode',
+        position: { x: px, y: py },
+        draggable: false,
+        selectable: false,
+        data: {
           itemKey: node.itemKey,
-        });
-      } else {
-        nodes.push({
-          nodeId: node.nodeId,
-          x,
-          y,
+          title: itemName(node.itemKey),
+          subtitle: `${formatAmount(node.amount)}`,
+          cycle: node.cycle,
+          cycleSeed: !!node.cycleSeed,
+          ...(node.machineItemId ? { machineItemId: node.machineItemId } : {}),
+          ...(node.machineName ? { machineName: node.machineName } : {}),
+        } satisfies FlowItemData,
+      });
+    } else {
+      nodes.push({
+        id: node.nodeId,
+        type: 'fluidNode',
+        position: { x: px, y: py },
+        draggable: false,
+        selectable: false,
+        data: {
           title: node.id,
           subtitle: `${formatAmount(node.amount)}${node.unit ?? ''}`,
-          clickable: false,
-        });
-      }
-    });
+        } satisfies FlowFluidData,
+      });
+    }
   });
 
-  const edges: SvgEdge[] = [];
+  const edges: Edge[] = [];
   const walkEdges = (node: RequirementNode) => {
     if (node.kind !== 'item') return;
-    const from = nodePos.get(node.nodeId);
-    if (!from) return;
     node.children.forEach((c, idx) => {
-      const to = nodePos.get(c.nodeId);
-      if (!to) return;
       edges.push({
-        key: `${node.nodeId}->${c.nodeId}:${idx}`,
-        x1: from.x + nodeW / 2,
-        y1: from.y + nodeH,
-        x2: to.x + nodeW / 2,
-        y2: to.y,
+        id: `${node.nodeId}->${c.nodeId}:${idx}`,
+        source: node.nodeId,
+        target: c.nodeId,
+        type: 'smoothstep',
       });
       walkEdges(c);
     });
   };
   walkEdges(result.root);
 
-  const width =
-    pad * 2 +
-    Math.max(1, ...levels.map((l) => l.length)) * nodeW +
-    Math.max(0, Math.max(0, ...levels.map((l) => l.length - 1))) * gapX;
-  const height = pad * 2 + levels.length * nodeH + Math.max(0, levels.length - 1) * gapY;
-  return { width, height, nodeW, nodeH, nodes, edges };
+  return { nodes, edges };
 });
+
+const flowNodes = computed(() => flow.value.nodes);
+const flowEdges = computed(() => flow.value.edges);
 
 const leafColumns = [
   { name: 'name', label: '物品', field: 'name', align: 'left' as const },
@@ -745,15 +775,59 @@ const catalystRows = computed<LeafRow[]>(() => {
   flex: 1 1 auto;
 }
 
-.planner__svg-wrap {
+.planner__flow {
   width: 100%;
-  overflow: auto;
+  height: 640px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   background: #fff;
 }
 
-.planner__svg {
-  display: block;
+.planner__flow-node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: white;
+  min-width: 220px;
+  max-width: 320px;
+}
+
+.planner__flow-node--fluid {
+  min-width: 180px;
+}
+
+.planner__flow-node-text {
+  min-width: 0;
+  flex: 1 1 auto;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.planner__flow-node-title {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.planner__flow-node-sub {
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 4px;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.planner__flow-node-machine {
+  flex: 0 0 auto;
 }
 </style>
