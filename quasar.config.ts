@@ -3,6 +3,16 @@
 
 import { defineConfig } from '#q-app/wrappers';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
+
+// 获取 git commit hash（短格式）
+function getGitCommitHash(): string {
+  try {
+    return execSync('git rev-parse --short HEAD', { encoding: 'utf-8' }).trim();
+  } catch {
+    return 'unknown';
+  }
+}
 
 export default defineConfig((ctx) => {
   return {
@@ -54,7 +64,9 @@ export default defineConfig((ctx) => {
       // publicPath: '/',
       // analyze: true,
       // env: {},
-      // rawDefine: {}
+      rawDefine: {
+        __APP_VERSION__: JSON.stringify(getGitCommitHash()),
+      },
       // ignorePublicFolder: true,
       // minify: false,
       // polyfillModulePreload: true,

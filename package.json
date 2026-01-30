@@ -2,7 +2,7 @@
   "name": "jei-web",
   "version": "0.0.1",
   "description": "Just Enough Items but Running in web",
-  "productName": "JEI Wed",
+  "productName": "JEI Web",
   "author": "AndreaFrederica <andreafrederica@outlook.com>",
   "type": "module",
   "private": true,
