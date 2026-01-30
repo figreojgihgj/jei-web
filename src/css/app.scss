@@ -1,1 +1,204 @@
 // app global css in SCSS form
+
+// Light mode styles
+.body--light {
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+  --text-secondary: #666666;
+}
+
+// Dark mode styles
+.body--dark {
+  --card-bg: #1e1e1e;
+  --card-border: #333333;
+  --text-secondary: #aaaaaa;
+
+  // Customize dark page background
+  background: #121212;
+
+  // 历史栏深色模式
+  .jei-list__history {
+    background: #1a1a1a !important;
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  // 底部搜索栏深色模式
+  .jei-bottombar {
+    background: #1a1a1a !important;
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  // 分页栏深色模式
+  .jei-list__pager {
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  // 类型侧边栏深色模式
+  .jei-type-sidebar {
+    border-right-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  // 网格占位符深色模式
+  .jei-grid__cell.placeholder {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+  }
+
+  // Wiki 描述深色模式
+  .wiki-description :deep(code) {
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .wiki-description :deep(pre) {
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .wiki-description :deep(blockquote) {
+    border-left-color: rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+  }
+
+  .wiki-description :deep(th),
+  .wiki-description :deep(td) {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .wiki-description :deep(th) {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .wiki-description :deep(a) {
+    color: #64b5f6 !important;
+  }
+
+  // === 规划器深色模式 ===
+
+  // 决策区块
+  .planner__decision {
+    border-left-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  // 树表样式
+  .planner__tree-table {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .planner__tree-table-header {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .planner__tree-table-row {
+    border-top-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  // 树连接线
+  .planner__connect--last,
+  .planner__connect--trail {
+    border-left-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  // 合成树总计行
+  .planner__tree-table-footer {
+    border-top-color: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+  }
+
+  .planner__tree-footer-label,
+  .planner__tree-footer-values {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  // === Vue Flow 深色模式 ===
+
+  // Flow 容器
+  .planner__flow {
+    background: #1a1a1a !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  // Flow 节点
+  .planner__flow-node {
+    background: #252525 !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .planner__flow-node-title {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .planner__flow-node-sub {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  // 机器节点回退图标
+  .planner__flow-node-icon-fallback {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  // Handle (连接点)
+  .planner__handle {
+    background: rgba(255, 255, 255, 0.4) !important;
+    border-color: rgba(0, 0, 0, 0.3) !important;
+  }
+
+  // Vue Flow 背景网格
+  :deep(.vue-flow__background) {
+    background-color: #1a1a1a !important;
+  }
+
+  :deep(.vue-flow__edge-path) {
+    stroke: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  :deep(.vue-flow__edge .vue-flow__edge-label) {
+    background: rgba(0, 0, 0, 0.7) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    fill: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  // === Vue Flow Controls 深色模式 ===
+  :deep(.vue-flow__controls) {
+    button {
+      background: #252525 !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      fill: rgba(255, 255, 255, 0.7) !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+
+      &:hover {
+        background: #333333 !important;
+        border-color: rgba(255, 255, 255, 0.25) !important;
+      }
+
+      &:active {
+        background: #404040 !important;
+      }
+    }
+  }
+
+  // === Vue Flow MiniMap 深色模式 ===
+  :deep(.vue-flow__minimap) {
+    background: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+    .vue-flow__minimap-node {
+      fill: #4a4a4a !important;
+    }
+
+    .vue-flow__minimap-node.selected {
+      fill: #1976d2 !important;
+    }
+
+    // MiniMap 形状（圆形/矩形）
+    circle,
+    rect {
+      stroke: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    // MiniMap 遮罩
+    .vue-flow__minimap-mask {
+      fill: rgba(0, 0, 0, 0.3) !important;
+    }
+  }
+}
+

@@ -6,6 +6,51 @@
 
         <q-toolbar-title>JEI-web</q-toolbar-title>
 
+        <q-btn flat dense round aria-label="Theme">
+          <q-icon :name="themeIcon" />
+
+          <q-menu>
+            <q-list style="min-width: 120px">
+              <q-item
+                clickable
+                :active="settingsStore.darkMode === 'auto'"
+                @click="setTheme('auto')"
+              >
+                <q-item-section avatar>
+                  <q-icon name="brightness_4" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>自动</q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item
+                clickable
+                :active="settingsStore.darkMode === 'light'"
+                @click="setTheme('light')"
+              >
+                <q-item-section avatar>
+                  <q-icon name="light_mode" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>亮色</q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item
+                clickable
+                :active="settingsStore.darkMode === 'dark'"
+                @click="setTheme('dark')"
+              >
+                <q-item-section avatar>
+                  <q-icon name="dark_mode" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>暗色</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
+
         <div>v{{ appVersion }}</div>
       </q-toolbar>
     </q-header>
@@ -25,13 +70,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+import { Dark } from 'quasar';
 import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink.vue';
-import { useSettingsStore } from 'src/stores/settings';
+import { useSettingsStore, type DarkMode } from 'src/stores/settings';
 
 const settingsStore = useSettingsStore();
 // 开发环境使用 package.json 版本，生产环境使用 git commit hash
 const appVersion = import.meta.env.DEV ? '0.0.1-dev' : (__APP_VERSION__ ?? 'unknown');
+
+const themeIcon = computed(() => {
+  if (settingsStore.darkMode === 'auto') {
+    return Dark.isActive ? 'dark_mode' : 'light_mode';
+  }
+  return settingsStore.darkMode === 'dark' ? 'dark_mode' : 'light_mode';
+});
+
+function setTheme(mode: DarkMode) {
+  settingsStore.setDarkMode(mode);
+}
 
 const linksList: EssentialLinkProps[] = [
   {
@@ -62,13 +119,13 @@ const linksList: EssentialLinkProps[] = [
     title: 'License',
     caption: 'Mozilla Public License 2.0',
     icon: 'gavel',
-    link: 'https://github.com/AndreaFrederica/jei-web/blob/main/LICENSE',
+    link: 'https://github.com/AndreaFrederica/jei-web/blob/master/LICENSE',
   },
   {
     title: 'Third-Party Licenses',
     caption: 'factoriolab-zmd (MIT)',
     icon: 'description',
-    link: 'https://github.com/AndreaFrederica/jei-web/blob/main/THIRD-PARTY_LICENSES.md',
+    link: 'https://github.com/AndreaFrederica/jei-web/blob/master/THIRD-PARTY_LICENSES.md',
   },
 ];
 

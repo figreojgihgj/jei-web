@@ -1,4 +1,12 @@
 import { defineStore } from 'pinia';
+import { Dark } from 'quasar';
+
+export type DarkMode = 'auto' | 'light' | 'dark';
+
+function darkModeToQuasar(mode: DarkMode): boolean | 'auto' {
+  if (mode === 'auto') return 'auto';
+  return mode === 'dark';
+}
 
 export const useSettingsStore = defineStore('settings', {
   state: () => {
@@ -8,11 +16,20 @@ export const useSettingsStore = defineStore('settings', {
       recipeViewMode: 'panel' as 'dialog' | 'panel',
       recipeSlotShowName: true,
       selectedPack: 'aef',
+      darkMode: 'auto' as DarkMode,
     };
     try {
       const raw = localStorage.getItem('jei.settings');
-      if (!raw) return defaults;
+      if (!raw) {
+        Dark.set('auto');
+        return defaults;
+      }
       const parsed = JSON.parse(raw) as Partial<typeof defaults>;
+      const darkMode =
+        parsed.darkMode === 'auto' || parsed.darkMode === 'light' || parsed.darkMode === 'dark'
+          ? parsed.darkMode
+          : defaults.darkMode;
+      Dark.set(darkModeToQuasar(darkMode));
       return {
         historyLimit: typeof parsed.historyLimit === 'number' ? parsed.historyLimit : defaults.historyLimit,
         debugLayout: typeof parsed.debugLayout === 'boolean' ? parsed.debugLayout : defaults.debugLayout,
@@ -22,8 +39,10 @@ export const useSettingsStore = defineStore('settings', {
             ? parsed.recipeSlotShowName
             : defaults.recipeSlotShowName,
         selectedPack: typeof parsed.selectedPack === 'string' ? parsed.selectedPack : defaults.selectedPack,
+        darkMode,
       };
     } catch {
+      Dark.set('auto');
       return defaults;
     }
   },
@@ -48,6 +67,11 @@ export const useSettingsStore = defineStore('settings', {
       this.selectedPack = packId;
       this.save();
     },
+    setDarkMode(mode: DarkMode) {
+      this.darkMode = mode;
+      Dark.set(darkModeToQuasar(mode));
+      this.save();
+    },
     save() {
       localStorage.setItem(
         'jei.settings',
@@ -57,6 +81,7 @@ export const useSettingsStore = defineStore('settings', {
           recipeViewMode: this.recipeViewMode,
           recipeSlotShowName: this.recipeSlotShowName,
           selectedPack: this.selectedPack,
+          darkMode: this.darkMode,
         }),
       );
     },

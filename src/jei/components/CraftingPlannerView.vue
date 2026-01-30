@@ -423,7 +423,7 @@
               no-pan-class-name="nopan"
               no-drag-class-name="nodrag"
             >
-              <Background :gap="20" pattern-color="rgba(0,0,0,0.12)" />
+              <Background :gap="20" :pattern-color="flowBackgroundPatternColor" />
               <Controls />
               <MiniMap />
               <template #node-itemNode="p">
@@ -528,7 +528,7 @@
               no-pan-class-name="nopan"
               no-drag-class-name="nodrag"
             >
-              <Background :gap="20" pattern-color="rgba(0,0,0,0.12)" />
+              <Background :gap="20" :pattern-color="flowBackgroundPatternColor" />
               <Controls />
               <MiniMap />
               <template #node-lineItemNode="p">
@@ -847,6 +847,7 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
+import { Dark } from 'quasar';
 import type { ItemDef, ItemId, ItemKey, PackData, Stack } from 'src/jei/types';
 import type { JeiIndex } from 'src/jei/indexing/buildIndex';
 import { itemKeyHash } from 'src/jei/indexing/key';
@@ -1944,6 +1945,11 @@ const totalPollution = computed(() => {
   if (!enhanced?.totals?.pollution) return '0';
   return formatAmount(enhanced.totals.pollution);
 });
+
+// Flow background pattern color based on dark mode
+const flowBackgroundPatternColor = computed(() =>
+  Dark.isActive ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.12)',
+);
 </script>
 
 <style scoped>
@@ -2149,16 +2155,17 @@ const totalPollution = computed(() => {
   background: #fff;
 }
 
-:deep(#planner-line-flow .vue-flow__edges) {
+/* 确保连线在节点上层 */
+:deep(.vue-flow__edges) {
   z-index: 50;
   pointer-events: none;
 }
 
-:deep(#planner-line-flow .vue-flow__nodes) {
+:deep(.vue-flow__nodes) {
   z-index: 10;
 }
 
-:deep(#planner-line-flow .vue-flow__edge-path) {
+:deep(.vue-flow__edge-path) {
   stroke-linecap: round;
 }
 
