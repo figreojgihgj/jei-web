@@ -77,7 +77,7 @@ export interface RecipeTypeDef {
   key: string;
   displayName: string;
   renderer: string;
-  machine?: RecipeTypeMachine;
+  machine?: RecipeTypeMachine | RecipeTypeMachine[];
   slots?: SlotDef[];
   paramSchema?: Record<string, ParamSchemaEntry>;
   defaults?: Record<string, unknown>;

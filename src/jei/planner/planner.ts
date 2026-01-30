@@ -482,6 +482,11 @@ export function buildRequirementTree(args: {
         growth && seedFromPredecessor > 0 ? seedFromPredecessor : amountNeeded;
 
       addLeafItem(key.id, seedAmount);
+      const machine = chosenForNode?.recipeType?.machine
+        ? Array.isArray(chosenForNode.recipeType.machine)
+          ? chosenForNode.recipeType.machine[0]
+          : chosenForNode.recipeType.machine
+        : undefined;
       return {
         kind: 'item',
         nodeId,
@@ -489,8 +494,8 @@ export function buildRequirementTree(args: {
         amount: seedAmount,
         ...(chosenForNode ? { recipeIdUsed: chosenForNode.chosenRecipeId } : {}),
         ...(chosenForNode?.recipe.type ? { recipeTypeKeyUsed: chosenForNode.recipe.type } : {}),
-        ...(chosenForNode?.recipeType?.machine?.id ? { machineItemId: chosenForNode.recipeType.machine.id } : {}),
-        ...(chosenForNode?.recipeType?.machine?.name ? { machineName: chosenForNode.recipeType.machine.name } : {}),
+        ...(machine?.id ? { machineItemId: machine.id } : {}),
+        ...(machine?.name ? { machineName: machine.name } : {}),
         children: [],
         catalysts: [],
         cycle: true,
@@ -567,8 +572,17 @@ export function buildRequirementTree(args: {
       amount: amountNeeded,
       recipeIdUsed: chosenRecipeId,
       recipeTypeKeyUsed: recipe.type,
-      ...(recipeType?.machine?.id ? { machineItemId: recipeType.machine.id } : {}),
-      ...(recipeType?.machine?.name ? { machineName: recipeType.machine.name } : {}),
+      ...(() => {
+        const machine = recipeType?.machine
+          ? Array.isArray(recipeType.machine)
+            ? recipeType.machine[0]
+            : recipeType.machine
+          : undefined;
+        return {
+          ...(machine?.id ? { machineItemId: machine.id } : {}),
+          ...(machine?.name ? { machineName: machine.name } : {}),
+        };
+      })(),
       children,
       catalysts: recipeCatalysts,
       cycle: false,
