@@ -81,6 +81,7 @@ import { useEditorStore } from 'src/stores/editor';
 import { useQuasar } from 'quasar';
 import { loadPack } from 'src/jei/pack/loader';
 import JSZip from 'jszip';
+import { collectPackAssetUrls } from 'src/jei/pack/collectAssetUrls';
 
 interface PackEntry {
   packId: string;
@@ -133,7 +134,7 @@ function newPack() {
 
 function clearPack() {
   store.resetPack();
-  store.clearPersistedPack();
+  store.clearPersistedAll();
   $q.notify({ type: 'warning', message: 'Editor data cleared' });
 }
 
@@ -166,6 +167,39 @@ async function exportZip() {
   if (files.tags) folder.file(files.tags, JSON.stringify(pack.tags ?? {}, null, 2));
   if (files.recipeTypes) folder.file(files.recipeTypes, JSON.stringify(pack.recipeTypes, null, 2));
   if (files.recipes) folder.file(files.recipes, JSON.stringify(pack.recipes, null, 2));
+
+  if (store.assets.length) {
+    for (const asset of store.assets) {
+      const blob = await store.getAssetBlob(asset.path);
+      if (!blob) continue;
+      folder.file(asset.path, blob);
+    }
+  }
+
+  const referenced = collectPackAssetUrls({
+    packId,
+    items: store.items,
+    recipeTypes: store.recipeTypes,
+    recipes: store.recipes,
+  });
+  if (referenced.length) {
+    const base = `/packs/${encodeURIComponent(packId)}/`;
+    const existing = new Set(store.assets.map((a) => `${base}${a.path}`));
+    for (const url of referenced) {
+      if (existing.has(url)) continue;
+      const rel = url.startsWith(base) ? url.slice(base.length) : null;
+      if (!rel) continue;
+      try {
+        const res = await fetch(url);
+        if (!res.ok) continue;
+        const blob = await res.blob();
+        if (!blob.type.startsWith('image/')) continue;
+        folder.file(rel, blob);
+      } catch {
+        continue;
+      }
+    }
+  }
 
   const blob = await zip.generateAsync({ type: 'blob' });
   downloadBlob(blob, `${packId}.zip`);

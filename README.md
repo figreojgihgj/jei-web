@@ -76,6 +76,7 @@ npm run format
    - `recipes.json` - 配方数据
    - `recipeTypes.json` - 配方类型
    - `tags.json` - 标签数据（可选）
+   - `assets/` - 静态资源（可选，例如图片、图标）
 3. 更新 `public/packs/index.json`，添加新数据包的条目：
 
 ```json
@@ -88,6 +89,25 @@ npm run format
   ]
 }
 ```
+
+## 编辑器：静态资源与导出
+
+### 添加图片资源
+
+1. 打开编辑器：`/editor`
+2. 进入 **Assets** 页面：`/editor/assets`
+3. 点击 **Add Images** 选择图片文件（png/webp/jpg/svg 等）
+4. 在列表里复制资源路径，然后在物品/配方类型里引用：
+   - 推荐路径形式：`/packs/<packId>/assets/<filename>`
+   - 导出 ZIP 时会把 `assets/<filename>` 一并打包
+
+### 导出格式
+
+- **Export JSON**：导出一个大 JSON（便于分享/备份）
+- **Export ZIP**：导出与 `public/packs/<packId>/` 一致的目录结构：
+  - `manifest.json`
+  - `items.json` / `tags.json` / `recipeTypes.json` / `recipes.json`
+  - `assets/*`（如有）
 
 ## 数据格式
 
@@ -107,6 +127,18 @@ npm run format
   }
 }
 ```
+
+## 提交 PR（贡献指南）
+
+1. Fork 本仓库到你的账号
+2. 新建分支：`git checkout -b feat/<something>`
+3. 用编辑器完成修改，并用 **Export ZIP** 导出
+4. 解压 ZIP，把内容放到 `public/packs/<packId>/`（新 pack 就新建目录；已有 pack 就覆盖对应文件）
+5. 如新增 pack，更新 `public/packs/index.json` 增加条目
+6. 本地验证：
+   - `pnpm lint`
+   - `pnpm dev`（可选）
+7. Push 分支并在 GitHub 创建 Pull Request，说明改动内容与截图/示例
 
 ## 键盘快捷键
 

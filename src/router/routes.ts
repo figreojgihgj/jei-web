@@ -19,6 +19,8 @@ const routes: RouteRecordRaw[] = [
       { path: 'types', component: () => import('pages/editor/RecipeTypeEditorPage.vue') },
       { path: 'recipes', component: () => import('pages/editor/RecipeEditorPage.vue') },
       { path: 'tags', component: () => import('pages/editor/TagEditorPage.vue') },
+      { path: 'assets', component: () => import('pages/editor/AssetManagerPage.vue') },
+      { path: 'packs', component: () => import('pages/editor/PackManagerPage.vue') },
     ],
   },
 

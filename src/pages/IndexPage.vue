@@ -1000,7 +1000,7 @@ import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useQuasar } from 'quasar';
 import { useRoute, useRouter } from 'vue-router';
 import type { ItemDef, ItemKey, PackData } from 'src/jei/types';
-import { loadPack } from 'src/jei/pack/loader';
+import { loadRuntimePack } from 'src/jei/pack/loader';
 import {
   buildJeiIndex,
   recipesConsumingItem,
@@ -1011,6 +1011,7 @@ import StackView from 'src/jei/components/StackView.vue';
 import RecipeViewer from 'src/jei/components/RecipeViewer.vue';
 import CraftingPlannerView from 'src/jei/components/CraftingPlannerView.vue';
 import MarkdownIt from 'markdown-it';
+import { pinyin } from 'pinyin-pro';
 import type {
   PlannerInitialState,
   PlannerLiveState,
@@ -1037,6 +1038,7 @@ const error = ref('');
 
 const pack = ref<PackData | null>(null);
 const index = ref<JeiIndex | null>(null);
+const runtimePackDispose = ref<null | (() => void)>(null);
 
 type PackOption = { label: string; value: string };
 
@@ -1044,6 +1046,30 @@ const packOptions = ref<PackOption[]>([
   { label: 'Arknights:Endfield', value: 'aef' },
   { label: 'demo', value: 'demo' },
 ]);
+
+type StoredLocalPackIndex = {
+  version: 1;
+  currentId?: string;
+  entries?: Array<{ id: string; name: string; packId: string; updatedAt: number }>;
+};
+
+function loadLocalPackOptions(): PackOption[] {
+  const INDEX_KEY = 'jei.editor.localPacks.v1';
+  const raw = localStorage.getItem(INDEX_KEY);
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw) as StoredLocalPackIndex;
+    if (!parsed || parsed.version !== 1 || !Array.isArray(parsed.entries)) return [];
+    return parsed.entries
+      .filter((e) => e && typeof e.id === 'string' && typeof e.name === 'string')
+      .map((e) => ({
+        value: `local:${e.id}`,
+        label: `本地: ${e.name}${e.packId ? ` (${e.packId})` : ''}`,
+      }));
+  } catch {
+    return [];
+  }
+}
 
 // 使用 settings store 的 selectedPack 作为当前选中的 pack
 const activePackId = computed({
@@ -1226,6 +1252,41 @@ type ParsedSearch = {
 
 const parsedSearch = computed<ParsedSearch>(() => parseSearch(filterText.value));
 
+type NameSearchKeys = {
+  nameLower: string;
+  pinyinFull: string;
+  pinyinFirst: string;
+};
+
+function normalizePinyinQuery(input: string): string {
+  return input.toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function buildNameSearchKeys(name: string): NameSearchKeys {
+  const nameLower = (name ?? '').toLowerCase();
+  try {
+    const pinyinFull = normalizePinyinQuery(
+      pinyin(name ?? '', { toneType: 'none', nonZh: 'consecutive' }),
+    );
+    const pinyinFirst = normalizePinyinQuery(
+      pinyin(name ?? '', { toneType: 'none', pattern: 'first', nonZh: 'consecutive' }),
+    );
+    return { nameLower, pinyinFull, pinyinFirst };
+  } catch {
+    return { nameLower, pinyinFull: '', pinyinFirst: '' };
+  }
+}
+
+const nameSearchKeysByKeyHash = computed(() => {
+  const map = index.value?.itemsByKeyHash;
+  const out = new Map<string, NameSearchKeys>();
+  if (!map) return out;
+  for (const [keyHash, def] of map.entries()) {
+    out.set(keyHash, buildNameSearchKeys(def.name ?? ''));
+  }
+  return out;
+});
+
 // 所有可用的标签 ID
 const availableTags = computed(() => {
   const tags = new Set<string>();
@@ -1262,8 +1323,11 @@ const filteredItems = computed(() => {
   if (!map) return [];
   const entries = Array.from(map.entries()).map(([keyHash, def]) => ({ keyHash, def }));
   const search = parsedSearch.value;
+  const keysByKeyHash = nameSearchKeysByKeyHash.value;
 
-  const filtered = entries.filter((e) => matchesSearch(e.def, search));
+  const filtered = entries.filter((e) =>
+    matchesSearch(e.def, search, keysByKeyHash.get(e.keyHash)),
+  );
   filtered.sort((a, b) => {
     return a.def.name.localeCompare(b.def.name);
   });
@@ -1668,6 +1732,8 @@ onUnmounted(() => {
   window.removeEventListener('keydown', onKeyDown, true);
   window.removeEventListener('resize', onWindowResize);
   resizeObserver.value?.disconnect();
+  runtimePackDispose.value?.();
+  runtimePackDispose.value = null;
 });
 
 const wheelState = ref({ lastAt: 0, acc: 0 });
@@ -1718,11 +1784,14 @@ async function reloadPack(packId: string) {
     closeDialog();
     applyingRoute.value = false;
     historyKeyHashes.value = [];
-    const p = await loadPack(packId);
-    pack.value = p;
-    index.value = buildJeiIndex(p);
-    favorites.value = loadFavorites(p.manifest.packId);
-    savedPlans.value = loadPlans(p.manifest.packId);
+    runtimePackDispose.value?.();
+    runtimePackDispose.value = null;
+    const loaded = await loadRuntimePack(packId);
+    runtimePackDispose.value = loaded.dispose;
+    pack.value = loaded.pack;
+    index.value = buildJeiIndex(loaded.pack);
+    favorites.value = loadFavorites(loaded.pack.manifest.packId);
+    savedPlans.value = loadPlans(loaded.pack.manifest.packId);
     plannerInitialState.value = null;
     selectedKeyHash.value = filteredItems.value[0]?.keyHash ?? null;
 
@@ -1738,12 +1807,17 @@ async function reloadPack(packId: string) {
 }
 
 async function loadPacksIndex() {
+  const local = loadLocalPackOptions();
   try {
     const res = await fetch('/packs/index.json');
-    if (!res.ok) return;
+    if (!res.ok) {
+      packOptions.value = [...packOptions.value, ...local];
+      return;
+    }
     const data = (await res.json()) as { packs?: Array<{ packId: string; label: string }> };
     if (Array.isArray(data.packs)) {
-      packOptions.value = data.packs.map((p) => ({ label: p.label, value: p.packId }));
+      const remote = data.packs.map((p) => ({ label: p.label, value: p.packId }));
+      packOptions.value = [...remote, ...local];
 
       // 如果 store 中的 packId 不在新列表中，切换到第一个
       if (!packOptions.value.some((o) => o.value === settingsStore.selectedPack)) {
@@ -1751,7 +1825,7 @@ async function loadPacksIndex() {
       }
     }
   } catch {
-    // 静默失败，使用默认值
+    packOptions.value = [...packOptions.value, ...local];
   }
 }
 
@@ -2373,12 +2447,17 @@ function splitDirective(raw: string): [string, string] {
   return [raw.slice(0, idx), raw.slice(idx + 1)];
 }
 
-function matchesSearch(def: ItemDef, search: ParsedSearch): boolean {
-  const name = (def.name ?? '').toLowerCase();
+function matchesSearch(def: ItemDef, search: ParsedSearch, nameKeys?: NameSearchKeys): boolean {
+  const name = nameKeys?.nameLower ?? (def.name ?? '').toLowerCase();
+  const pinyinFull = nameKeys?.pinyinFull ?? '';
+  const pinyinFirst = nameKeys?.pinyinFirst ?? '';
   const id = def.key.id.toLowerCase();
 
   for (const t of search.text) {
-    if (!name.includes(t)) return false;
+    if (name.includes(t)) continue;
+    const q = normalizePinyinQuery(t);
+    if (q && (pinyinFull.includes(q) || pinyinFirst.includes(q))) continue;
+    return false;
   }
   for (const t of search.itemId) {
     if (!id.includes(t)) return false;
