@@ -121,6 +121,10 @@
     border-color: rgba(255, 255, 255, 0.1) !important;
   }
 
+  .planner__pagefull--active {
+    background: #121212 !important;
+  }
+
   // Flow 节点
   .planner__flow-node {
     background: #252525 !important;

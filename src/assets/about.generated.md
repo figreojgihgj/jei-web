@@ -1,16 +1,27 @@
 # About
 
 ## Build
-- Version: 05774c1-dirty
-- Commit: 05774c1 (05774c1a4a858f5f031a0511c3848bd638de17c6)
-- Commit count: 20
-- Subject: feat(editor): 添加本地包管理和资源管理器
+- Version: ab432e7-dirty
+- Commit: ab432e7 (ab432e787d96856d67ae7b8458db4c71ea728b57)
+- Commit count: 21
+- Subject: feat(app): 添加文档页面和构建信息生成脚本
 - Author: AndreaFrederica
-- Date: 2026-01-31T05:33:21+08:00
-- Generated at: 2026-01-30T21:55:06.070Z
+- Date: 2026-01-31T05:57:22+08:00
+- Generated at: 2026-01-31T18:16:40.063Z
 - Remote: https://github.com/AndreaFrederica/jei-web.git
 
 ## Version History
+
+### r21 (2026-01-31T05:57:22+08:00)
+- ab432e7
+  feat(app): 添加文档页面和构建信息生成脚本
+  
+  - 新增关于、README、许可证和第三方许可证页面，支持内嵌Markdown渲染
+  - 添加构建信息生成脚本，自动从Git仓库提取版本历史和提交信息
+  - 更新路由配置以支持新的文档页面路径
+  - 在主导航和编辑器布局中添加文档页面链接
+  - 修改package.json脚本，在开发/构建/安装前自动生成文档文件
+  - 将许可证链接从外部GitHub页面改为内部路由
 
 ### r20 (2026-01-31T05:33:21+08:00)
 - 05774c1

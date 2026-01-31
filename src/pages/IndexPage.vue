@@ -6,7 +6,15 @@
       <div>Loading…</div>
     </div>
 
-    <div v-else class="jei-root" :class="{ 'jei-root--mobile': isMobile }">
+    <div
+      v-else
+      class="jei-root"
+      :class="{
+        'jei-root--mobile': isMobile,
+        'jei-root--fav-collapsed': settingsStore.favoritesCollapsed,
+        'jei-root--panel-collapsed': settingsStore.panelCollapsed,
+      }"
+    >
       <!-- 上下文菜单 -->
       <q-menu
         ref="contextMenuRef"
@@ -59,108 +67,146 @@
         v-show="!isMobile || mobileTab === 'fav'"
         flat
         bordered
-        class="jei-fav column no-wrap"
+        :class="[
+          'jei-fav column no-wrap',
+          { 'jei-fav--collapsed': settingsStore.favoritesCollapsed },
+        ]"
       >
-        <div class="jei-list__head col-auto">
-          <div class="text-subtitle2">收藏夹</div>
-          <div class="text-caption">A：取消收藏</div>
+        <!-- 折叠状态下的展开按钮 -->
+        <div
+          v-if="settingsStore.favoritesCollapsed"
+          class="jei-collapsed-trigger jei-collapsed-trigger--left"
+          @click="settingsStore.setFavoritesCollapsed(false)"
+        >
+          <q-icon name="chevron_right" size="16px" />
         </div>
 
-        <div class="jei-list__scroll col">
-          <div v-if="savedPlans.length" class="jei-plans">
-            <div class="jei-plans__head text-caption text-grey-8">已保存线路</div>
-            <q-list dense class="jei-plans__list">
-              <q-item
-                v-for="p in savedPlans"
-                :key="p.id"
-                clickable
-                class="jei-plans__item"
-                @click="openSavedPlan(p)"
+        <!-- 展开状态下的内容 -->
+        <template v-if="!settingsStore.favoritesCollapsed">
+          <div class="jei-list__head col-auto row items-center q-gutter-sm">
+            <div class="text-subtitle2">收藏夹</div>
+            <q-space />
+            <q-btn
+              flat
+              dense
+              round
+              icon="chevron_left"
+              size="sm"
+              @click="settingsStore.setFavoritesCollapsed(true)"
+            >
+              <q-tooltip>收起</q-tooltip>
+            </q-btn>
+          </div>
+
+          <div class="jei-list__scroll col">
+            <div v-if="savedPlans.length" class="jei-plans">
+              <div class="jei-plans__head text-caption text-grey-8">已保存线路</div>
+              <q-list dense class="jei-plans__list">
+                <q-item
+                  v-for="p in savedPlans"
+                  :key="p.id"
+                  clickable
+                  class="jei-plans__item"
+                  @click="openSavedPlan(p)"
+                >
+                  <q-item-section avatar>
+                    <stack-view
+                      :content="{
+                        kind: 'item',
+                        id: p.rootItemKey.id,
+                        amount: 1,
+                        ...(p.rootItemKey.meta !== undefined ? { meta: p.rootItemKey.meta } : {}),
+                        ...(p.rootItemKey.nbt !== undefined ? { nbt: p.rootItemKey.nbt } : {}),
+                      }"
+                      :item-defs-by-key-hash="itemDefsByKeyHash"
+                      variant="slot"
+                      :show-name="false"
+                      :show-subtitle="false"
+                    />
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label lines="1">{{ p.name }}</q-item-label>
+                    <q-item-label caption lines="1">{{ p.rootItemKey.id }}</q-item-label>
+                  </q-item-section>
+                  <q-item-section side>
+                    <q-btn
+                      flat
+                      round
+                      dense
+                      icon="delete"
+                      color="grey-7"
+                      @click.stop="deleteSavedPlan(p.id)"
+                    />
+                  </q-item-section>
+                </q-item>
+              </q-list>
+              <q-separator class="q-my-sm" />
+            </div>
+            <div v-if="favoriteItems.length" class="jei-grid">
+              <q-card
+                v-for="it in favoriteItems"
+                :key="it.keyHash"
+                flat
+                bordered
+                class="jei-grid__cell cursor-pointer"
+                v-touch-hold:600="(evt: unknown) => onTouchHold(evt, it.keyHash)"
+                @contextmenu.prevent="onContextMenu($event, it.keyHash)"
+                @mouseenter="hoveredKeyHash = it.keyHash"
+                @mouseleave="hoveredKeyHash = null"
+                @click="openDialogByKeyHash(it.keyHash)"
               >
-                <q-item-section avatar>
+                <q-btn
+                  flat
+                  round
+                  :dense="!isMobile"
+                  :size="isMobile ? 'md' : 'sm'"
+                  icon="star"
+                  color="amber"
+                  class="jei-grid__fav"
+                  @click.stop="toggleFavorite(it.keyHash)"
+                  @mousedown.stop
+                  @touchstart.stop
+                  style="z-index: 1"
+                />
+                <div class="jei-grid__cell-body">
                   <stack-view
                     :content="{
                       kind: 'item',
-                      id: p.rootItemKey.id,
+                      id: it.def.key.id,
                       amount: 1,
-                      ...(p.rootItemKey.meta !== undefined ? { meta: p.rootItemKey.meta } : {}),
-                      ...(p.rootItemKey.nbt !== undefined ? { nbt: p.rootItemKey.nbt } : {}),
+                      ...(it.def.key.meta !== undefined ? { meta: it.def.key.meta } : {}),
+                      ...(it.def.key.nbt !== undefined ? { nbt: it.def.key.nbt } : {}),
                     }"
                     :item-defs-by-key-hash="itemDefsByKeyHash"
-                    variant="slot"
-                    :show-name="false"
-                    :show-subtitle="false"
                   />
-                </q-item-section>
-                <q-item-section>
-                  <q-item-label lines="1">{{ p.name }}</q-item-label>
-                  <q-item-label caption lines="1">{{ p.rootItemKey.id }}</q-item-label>
-                </q-item-section>
-                <q-item-section side>
-                  <q-btn
-                    flat
-                    round
-                    dense
-                    icon="delete"
-                    color="grey-7"
-                    @click.stop="deleteSavedPlan(p.id)"
-                  />
-                </q-item-section>
-              </q-item>
-            </q-list>
-            <q-separator class="q-my-sm" />
+                </div>
+              </q-card>
+            </div>
+            <div v-else class="text-caption text-grey-7">暂无收藏（悬停物品按 A 收藏）</div>
           </div>
-          <div v-if="favoriteItems.length" class="jei-grid">
-            <q-card
-              v-for="it in favoriteItems"
-              :key="it.keyHash"
-              flat
-              bordered
-              class="jei-grid__cell cursor-pointer"
-              v-touch-hold:600="(evt: unknown) => onTouchHold(evt, it.keyHash)"
-              @contextmenu.prevent="onContextMenu($event, it.keyHash)"
-              @mouseenter="hoveredKeyHash = it.keyHash"
-              @mouseleave="hoveredKeyHash = null"
-              @click="openDialogByKeyHash(it.keyHash)"
-            >
-              <q-btn
-                flat
-                round
-                :dense="!isMobile"
-                :size="isMobile ? 'md' : 'sm'"
-                icon="star"
-                color="amber"
-                class="jei-grid__fav"
-                @click.stop="toggleFavorite(it.keyHash)"
-                @mousedown.stop
-                @touchstart.stop
-                style="z-index: 1"
-              />
-              <div class="jei-grid__cell-body">
-                <stack-view
-                  :content="{
-                    kind: 'item',
-                    id: it.def.key.id,
-                    amount: 1,
-                    ...(it.def.key.meta !== undefined ? { meta: it.def.key.meta } : {}),
-                    ...(it.def.key.nbt !== undefined ? { nbt: it.def.key.nbt } : {}),
-                  }"
-                  :item-defs-by-key-hash="itemDefsByKeyHash"
-                />
-              </div>
-            </q-card>
-          </div>
-          <div v-else class="text-caption text-grey-7">暂无收藏（悬停物品按 A 收藏）</div>
-        </div>
+        </template>
       </q-card>
 
       <q-card
         v-show="!isMobile || mobileTab === 'panel'"
         flat
         bordered
-        class="jei-panel column no-wrap"
+        :class="[
+          'jei-panel column no-wrap',
+          { 'jei-panel--collapsed': settingsStore.panelCollapsed },
+        ]"
       >
-        <template v-if="settingsStore.recipeViewMode === 'panel'">
+        <!-- 折叠状态下的展开按钮 -->
+        <div
+          v-if="settingsStore.panelCollapsed"
+          class="jei-collapsed-trigger jei-collapsed-trigger--right"
+          @click="settingsStore.setPanelCollapsed(false)"
+        >
+          <q-icon name="chevron_left" size="16px" />
+        </div>
+
+        <!-- 展开状态下的内容 -->
+        <template v-if="!settingsStore.panelCollapsed && settingsStore.recipeViewMode === 'panel'">
           <div class="jei-panel__head row items-center q-gutter-sm col-auto">
             <div class="text-subtitle2">{{ navStack.length ? currentItemTitle : '中间区域' }}</div>
             <q-space />
@@ -173,6 +219,16 @@
               @click="goBackInDialog"
             />
             <q-btn v-if="navStack.length" flat round dense icon="close" @click="closeDialog" />
+            <q-btn
+              flat
+              dense
+              round
+              icon="chevron_right"
+              size="sm"
+              @click="settingsStore.setPanelCollapsed(true)"
+            >
+              <q-tooltip>收起</q-tooltip>
+            </q-btn>
           </div>
           <div v-if="navStack.length" class="jei-panel__tabs col-auto">
             <q-tabs
@@ -190,7 +246,10 @@
             </q-tabs>
           </div>
           <q-separator />
-          <div v-if="navStack.length" class="col jei-panel__body">
+          <div
+            v-show="!settingsStore.panelCollapsed && navStack.length"
+            class="col jei-panel__body"
+          >
             <crafting-planner-view
               v-if="pack && index && currentItemKey"
               v-show="activeTab === 'planner'"
@@ -200,6 +259,7 @@
               :root-item-key="currentItemKey"
               :item-defs-by-key-hash="itemDefsByKeyHash"
               :initial-state="plannerInitialState"
+              :initial-tab="plannerTab"
               @item-click="openDialogByItemKey"
               @save-plan="savePlannerPlan"
               @state-change="onPlannerStateChange"
@@ -396,11 +456,14 @@
               <div v-else class="q-pa-md text-caption">没有找到相关配方。</div>
             </div>
           </div>
-          <div v-else class="q-pa-md text-caption text-grey-7 col">
+          <div
+            v-show="!settingsStore.panelCollapsed && !navStack.length"
+            class="q-pa-md text-caption text-grey-7 col"
+          >
             选择物品以查看 Recipes/Uses。
           </div>
         </template>
-        <template v-else>
+        <template v-else-if="!settingsStore.panelCollapsed">
           <div class="text-subtitle2">中间区域</div>
           <div class="text-caption">右侧是物品列表，左侧是收藏夹；点击物品打开悬浮窗。</div>
         </template>
@@ -800,6 +863,7 @@
             :root-item-key="currentItemKey"
             :item-defs-by-key-hash="itemDefsByKeyHash"
             :initial-state="plannerInitialState"
+            :initial-tab="plannerTab"
             @item-click="openDialogByItemKey"
             @save-plan="savePlannerPlan"
             @state-change="onPlannerStateChange"
@@ -1099,6 +1163,7 @@ const plannerLiveState = ref<PlannerLiveState>({
   selectedRecipeIdByItemKeyHash: {},
   selectedItemIdByTagId: {},
 });
+const plannerTab = ref<'tree' | 'graph' | 'line' | 'calc'>('tree');
 const historyKeyHashes = ref<string[]>([]);
 
 const filterDisabled = computed(() => loading.value || !!error.value);
@@ -2056,6 +2121,26 @@ watch(
   { immediate: true },
 );
 
+function buildAutoPlannerInitialState(rootItemKey: ItemKey): PlannerInitialState | null {
+  const p = pack.value;
+  const idx = index.value;
+  if (!p || !idx) return null;
+  const auto = autoPlanSelections({ pack: p, index: idx, rootItemKey });
+  return {
+    loadKey: `auto:${itemKeyHash(rootItemKey)}:${Date.now()}`,
+    targetAmount: 1,
+    selectedRecipeIdByItemKeyHash: auto.selectedRecipeIdByItemKeyHash,
+    selectedItemIdByTagId: auto.selectedItemIdByTagId,
+  };
+}
+
+function ensurePlannerAutoForCurrentItem() {
+  if (plannerInitialState.value) return;
+  const key = currentItemKey.value;
+  if (!key) return;
+  plannerInitialState.value = buildAutoPlannerInitialState(key);
+}
+
 function openDialogByKeyHash(
   keyHash: string,
   tab: 'recipes' | 'uses' | 'wiki' | 'planner' = 'recipes',
@@ -2065,7 +2150,8 @@ function openDialogByKeyHash(
   selectedKeyHash.value = keyHash;
   navStack.value = [def.key];
   activeTab.value = tab;
-  plannerInitialState.value = null;
+  plannerInitialState.value = tab === 'planner' ? buildAutoPlannerInitialState(def.key) : null;
+  if (tab !== 'planner') plannerTab.value = 'tree';
   dialogOpen.value = settingsStore.recipeViewMode === 'dialog';
   pushHistoryKeyHash(keyHash);
   void syncUrl('push');
@@ -2137,6 +2223,36 @@ function onKeyDown(e: KeyboardEvent) {
     if (key === 'p' || key === 'P') {
       e.preventDefault();
       activeTab.value = 'planner';
+      plannerTab.value = 'tree';
+      ensurePlannerAutoForCurrentItem();
+      return;
+    }
+    if (key === 't' || key === 'T' || key === '1') {
+      e.preventDefault();
+      activeTab.value = 'planner';
+      plannerTab.value = 'tree';
+      ensurePlannerAutoForCurrentItem();
+      return;
+    }
+    if (key === 'g' || key === 'G' || key === '2') {
+      e.preventDefault();
+      activeTab.value = 'planner';
+      plannerTab.value = 'graph';
+      ensurePlannerAutoForCurrentItem();
+      return;
+    }
+    if (key === 'l' || key === 'L' || key === '3') {
+      e.preventDefault();
+      activeTab.value = 'planner';
+      plannerTab.value = 'line';
+      ensurePlannerAutoForCurrentItem();
+      return;
+    }
+    if (key === 'c' || key === 'C' || key === '4') {
+      e.preventDefault();
+      activeTab.value = 'planner';
+      plannerTab.value = 'calc';
+      ensurePlannerAutoForCurrentItem();
       return;
     }
     return;
@@ -2154,6 +2270,23 @@ function onKeyDown(e: KeyboardEvent) {
     openDialogByKeyHash(hoveredKeyHash.value, 'wiki');
   } else if (key === 'p' || key === 'P') {
     e.preventDefault();
+    plannerTab.value = 'tree';
+    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+  } else if (key === 't' || key === 'T' || key === '1') {
+    e.preventDefault();
+    plannerTab.value = 'tree';
+    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+  } else if (key === 'g' || key === 'G' || key === '2') {
+    e.preventDefault();
+    plannerTab.value = 'graph';
+    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+  } else if (key === 'l' || key === 'L' || key === '3') {
+    e.preventDefault();
+    plannerTab.value = 'line';
+    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+  } else if (key === 'c' || key === 'C' || key === '4') {
+    e.preventDefault();
+    plannerTab.value = 'calc';
     openDialogByKeyHash(hoveredKeyHash.value, 'planner');
   } else if (key === 'a' || key === 'A') {
     e.preventDefault();
@@ -2492,11 +2625,23 @@ function matchesSearch(def: ItemDef, search: ParsedSearch, nameKeys?: NameSearch
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: 320px 1fr 380px;
+  --jei-fav-col: fit-content(320px);
+  --jei-panel-col: 1fr;
+  --jei-list-col: fit-content(380px);
+  grid-template-columns: var(--jei-fav-col) var(--jei-panel-col) var(--jei-list-col);
   gap: 12px;
   align-items: stretch;
   padding: 12px;
   padding-bottom: 0;
+}
+
+.jei-root--fav-collapsed {
+  --jei-fav-col: 20px;
+}
+
+.jei-root--panel-collapsed {
+  --jei-panel-col: 20px;
+  --jei-list-col: 1fr;
 }
 
 .jei-root--mobile {
@@ -2532,6 +2677,57 @@ function matchesSearch(def: ItemDef, search: ParsedSearch, nameKeys?: NameSearch
 .jei-fav {
   height: 100%;
   min-height: 0;
+  transition: width 0.3s ease;
+}
+
+.jei-fav--collapsed {
+  width: 20px !important;
+  min-width: 20px !important;
+}
+
+.jei-panel {
+  padding: 12px;
+  height: 100%;
+  min-height: 0;
+  transition: width 0.3s ease;
+}
+
+.jei-panel--collapsed {
+  width: 20px !important;
+  min-width: 20px !important;
+  padding: 0;
+}
+
+.jei-collapsed-trigger {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: var(--q-primary);
+  color: white;
+  opacity: 0.6;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.jei-collapsed-trigger:hover {
+  opacity: 1;
+  width: 24px;
+}
+
+.jei-collapsed-trigger--left {
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.jei-collapsed-trigger--right {
+  right: 0;
+  border-radius: 4px 0 0 4px;
 }
 
 .jei-list {
@@ -2634,12 +2830,6 @@ function matchesSearch(def: ItemDef, search: ParsedSearch, nameKeys?: NameSearch
   line-height: 1.25;
   white-space: pre-wrap;
   pointer-events: none;
-}
-
-.jei-panel {
-  padding: 12px;
-  height: 100%;
-  min-height: 0;
 }
 
 .jei-panel__head {

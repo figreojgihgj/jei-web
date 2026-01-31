@@ -1,10 +1,21 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header>
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title>JEI-web</q-toolbar-title>
+
+        <q-btn
+          flat
+          dense
+          round
+          :icon="isPageFullscreen ? 'fullscreen_exit' : 'fullscreen'"
+          aria-label="Fullscreen"
+          @click="togglePageFullscreen"
+        >
+          <q-tooltip>{{ isPageFullscreen ? '退出网页全屏' : '网页全屏' }}</q-tooltip>
+        </q-btn>
 
         <q-btn flat dense round aria-label="Theme">
           <q-icon :name="themeIcon" />
@@ -70,12 +81,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import { Dark } from 'quasar';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { Dark, useQuasar } from 'quasar';
 import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink.vue';
 import { useSettingsStore, type DarkMode } from 'src/stores/settings';
 
 const settingsStore = useSettingsStore();
+const $q = useQuasar();
 // 开发环境使用 package.json 版本，生产环境使用 git commit hash
 const appVersion = import.meta.env.DEV ? '0.0.1-dev' : (__APP_VERSION__ ?? 'unknown');
 
@@ -88,6 +100,17 @@ const themeIcon = computed(() => {
 
 function setTheme(mode: DarkMode) {
   settingsStore.setDarkMode(mode);
+}
+
+const isPageFullscreen = ref($q.fullscreen.isActive);
+
+function handleFullscreenChange() {
+  isPageFullscreen.value = $q.fullscreen.isActive;
+}
+
+function togglePageFullscreen() {
+  if (!$q.fullscreen.isCapable) return;
+  $q.fullscreen.toggle().catch(() => undefined);
 }
 
 const linksList: EssentialLinkProps[] = [
@@ -154,6 +177,15 @@ const leftDrawerOpen = ref(false);
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
+
+onMounted(() => {
+  document.addEventListener('fullscreenchange', handleFullscreenChange);
+  handleFullscreenChange();
+});
+
+onUnmounted(() => {
+  document.removeEventListener('fullscreenchange', handleFullscreenChange);
+});
 </script>
 
 <style>
@@ -176,5 +208,16 @@ function toggleLeftDrawer() {
 .debug-scroll > .q-page {
   flex: 1 1 auto;
   min-height: 0;
+}
+
+/* 顶栏样式：颜色与页面背景一致，去除光晕效果 */
+.q-header {
+  background-color: var(--q-page-background);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+body.body--dark .q-header {
+  background-color: var(--q-page-background);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 </style>

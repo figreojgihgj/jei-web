@@ -16,6 +16,8 @@ export const useSettingsStore = defineStore('settings', {
       recipeViewMode: 'panel' as 'dialog' | 'panel',
       recipeSlotShowName: true,
       selectedPack: 'aef',
+      favoritesCollapsed: false,
+      panelCollapsed: false,
       darkMode: 'auto' as DarkMode,
     };
     try {
@@ -39,6 +41,12 @@ export const useSettingsStore = defineStore('settings', {
             ? parsed.recipeSlotShowName
             : defaults.recipeSlotShowName,
         selectedPack: typeof parsed.selectedPack === 'string' ? parsed.selectedPack : defaults.selectedPack,
+        favoritesCollapsed:
+          typeof parsed.favoritesCollapsed === 'boolean'
+            ? parsed.favoritesCollapsed
+            : defaults.favoritesCollapsed,
+        panelCollapsed:
+          typeof parsed.panelCollapsed === 'boolean' ? parsed.panelCollapsed : defaults.panelCollapsed,
         darkMode,
       };
     } catch {
@@ -67,6 +75,14 @@ export const useSettingsStore = defineStore('settings', {
       this.selectedPack = packId;
       this.save();
     },
+    setFavoritesCollapsed(value: boolean) {
+      this.favoritesCollapsed = value;
+      this.save();
+    },
+    setPanelCollapsed(value: boolean) {
+      this.panelCollapsed = value;
+      this.save();
+    },
     setDarkMode(mode: DarkMode) {
       this.darkMode = mode;
       Dark.set(darkModeToQuasar(mode));
@@ -81,6 +97,8 @@ export const useSettingsStore = defineStore('settings', {
           recipeViewMode: this.recipeViewMode,
           recipeSlotShowName: this.recipeSlotShowName,
           selectedPack: this.selectedPack,
+          favoritesCollapsed: this.favoritesCollapsed,
+          panelCollapsed: this.panelCollapsed,
           darkMode: this.darkMode,
         }),
       );
