@@ -804,6 +804,11 @@
             :model-value="settingsStore.debugLayout"
             @update:model-value="(v) => settingsStore.setDebugLayout(!!v)"
           />
+          <q-toggle
+            label="导航栈调试面板"
+            :model-value="settingsStore.debugNavPanel"
+            @update:model-value="(v) => settingsStore.setDebugNavPanel(!!v)"
+          />
           <q-select
             dense
             outlined
@@ -1058,6 +1063,30 @@
         </q-scroll-area>
       </q-card>
     </q-dialog>
+
+    <!-- 调试悬浮窗 -->
+    <div
+      v-if="settingsStore.debugNavPanel"
+      class="debug-panel"
+      :style="{ top: debugPanelPos.y + 'px', left: debugPanelPos.x + 'px' }"
+      @mousedown="startDragDebugPanel"
+    >
+      <div class="debug-panel__header">导航栈调试 (拖动我)</div>
+      <div class="debug-panel__content">
+        <div>navStack.length: {{ navStack.length }}</div>
+        <div>dialogOpen: {{ dialogOpen }}</div>
+        <div class="debug-panel__stack">
+          <div v-for="(item, index) in navStack" :key="index" class="debug-panel__item">
+            [{{ index }}] {{ item.id }}
+          </div>
+        </div>
+        <div class="debug-panel__log">
+          <div v-for="(log, index) in navChangeLog" :key="index" class="debug-panel__log-item">
+            {{ log }}
+          </div>
+        </div>
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -1231,6 +1260,68 @@ function onContextMenuAction(action: 'recipes' | 'uses' | 'wiki' | 'planner' | '
 }
 
 const navStack = ref<ItemKey[]>([]);
+
+// 调试面板状态
+const debugPanelPos = ref({ x: 10, y: 10 });
+const navChangeLog = ref<string[]>([]);
+const isDraggingDebugPanel = ref(false);
+const dragOffset = ref({ x: 0, y: 0 });
+
+function startDragDebugPanel(evt: MouseEvent) {
+  const target = evt.target as HTMLElement;
+  if (!target.closest('.debug-panel__header')) return;
+  isDraggingDebugPanel.value = true;
+  dragOffset.value = {
+    x: evt.clientX - debugPanelPos.value.x,
+    y: evt.clientY - debugPanelPos.value.y,
+  };
+  document.addEventListener('mousemove', onDragDebugPanel);
+  document.addEventListener('mouseup', stopDragDebugPanel);
+}
+
+function onDragDebugPanel(evt: MouseEvent) {
+  if (!isDraggingDebugPanel.value) return;
+  debugPanelPos.value = {
+    x: evt.clientX - dragOffset.value.x,
+    y: evt.clientY - dragOffset.value.y,
+  };
+}
+
+function stopDragDebugPanel() {
+  isDraggingDebugPanel.value = false;
+  document.removeEventListener('mousemove', onDragDebugPanel);
+  document.removeEventListener('mouseup', stopDragDebugPanel);
+}
+
+// 添加调试日志
+function addNavChangeLog(msg: string) {
+  if (!settingsStore.debugNavPanel) return;
+  const time = new Date().toLocaleTimeString();
+  navChangeLog.value.unshift(`[${time}] ${msg}`);
+  if (navChangeLog.value.length > 20) navChangeLog.value.pop();
+}
+
+// 追踪导航栈变化
+watch(
+  () => navStack.value,
+  (newStack, oldStack) => {
+    const prevLen = oldStack?.length ?? 0;
+    const newLen = newStack.length;
+    if (newLen === 0 && prevLen > 0) {
+      addNavChangeLog(`❌ navStack 被清空！之前长度: ${prevLen}`);
+      // 打印堆栈来追踪是谁清空的
+      console.trace('navStack 被清空！');
+    } else if (newLen < prevLen) {
+      addNavChangeLog(`⬅️ navStack 减少: ${prevLen} -> ${newLen}`);
+    } else if (newLen > prevLen) {
+      const newItem = newStack[newStack.length - 1];
+      if (newItem) {
+        addNavChangeLog(`➡️ navStack 增加: ${prevLen} -> ${newLen} (${newItem.id})`);
+      }
+    }
+  },
+  { deep: true },
+);
 
 watch(
   () => navStack.value.length,
@@ -1454,7 +1545,24 @@ function applyRouteState() {
     if (!def) return;
 
     selectedKeyHash.value = keyHash;
-    navStack.value = [def.key];
+
+    // 检查当前物品是否已经在导航栈顶部，如果是则不重置导航栈
+    const topKey = navStack.value[navStack.value.length - 1];
+    const isTopMatches = topKey && itemKeyHash(topKey) === keyHash;
+
+    if (!isTopMatches) {
+      // 只有当导航栈为空或顶部物品不匹配时才重置
+      // 检查导航栈中是否已有该物品，如果有则滚动到该位置
+      const existingIndex = navStack.value.findIndex(k => itemKeyHash(k) === keyHash);
+      if (existingIndex >= 0) {
+        // 物品已存在于导航栈中，滚动到该位置
+        navStack.value = navStack.value.slice(0, existingIndex + 1);
+      } else {
+        // 物品不存在于导航栈中，重置为新导航栈
+        navStack.value = [def.key];
+      }
+    }
+
     const finalTab = tab ?? 'recipes';
     activeTab.value = finalTab;
     if (finalTab === 'planner' && pack.value && index.value) {
@@ -2196,7 +2304,9 @@ function onKeyDown(e: KeyboardEvent) {
   if (isTyping) return;
 
   const key = e.key;
-  if (dialogOpen.value) {
+
+  // Backspace 和 Escape 在面板模式和对话框模式下都应该工作
+  if (navStack.value.length > 0) {
     if (key === 'Escape') {
       e.preventDefault();
       closeDialog();
@@ -2207,6 +2317,9 @@ function onKeyDown(e: KeyboardEvent) {
       goBackInDialog();
       return;
     }
+  }
+
+  if (dialogOpen.value) {
     if (key === 'r' || key === 'R') {
       e.preventDefault();
       activeTab.value = 'recipes';
@@ -3055,5 +3168,48 @@ function matchesSearch(def: ItemDef, search: ParsedSearch, nameKeys?: NameSearch
 .wiki-description :deep(img) {
   max-width: 100%;
   height: auto;
+}
+
+/* 调试面板样式 */
+.debug-panel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #0f0;
+  font-family: monospace;
+  font-size: 11px;
+  border-radius: 4px;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.debug-panel__header {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.debug-panel__content {
+  padding: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.debug-panel__stack {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.debug-panel__item {
+  padding: 2px 0;
+  word-break: break-all;
+}
+
+.debug-panel__item:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 </style>

@@ -13,6 +13,7 @@ export const useSettingsStore = defineStore('settings', {
     const defaults = {
       historyLimit: 6,
       debugLayout: false,
+      debugNavPanel: false,
       recipeViewMode: 'panel' as 'dialog' | 'panel',
       recipeSlotShowName: true,
       selectedPack: 'aef',
@@ -35,6 +36,7 @@ export const useSettingsStore = defineStore('settings', {
       return {
         historyLimit: typeof parsed.historyLimit === 'number' ? parsed.historyLimit : defaults.historyLimit,
         debugLayout: typeof parsed.debugLayout === 'boolean' ? parsed.debugLayout : defaults.debugLayout,
+        debugNavPanel: typeof parsed.debugNavPanel === 'boolean' ? parsed.debugNavPanel : defaults.debugNavPanel,
         recipeViewMode: parsed.recipeViewMode === 'panel' ? 'panel' : 'dialog',
         recipeSlotShowName:
           typeof parsed.recipeSlotShowName === 'boolean'
@@ -61,6 +63,10 @@ export const useSettingsStore = defineStore('settings', {
     },
     setDebugLayout(enabled: boolean) {
       this.debugLayout = enabled;
+      this.save();
+    },
+    setDebugNavPanel(enabled: boolean) {
+      this.debugNavPanel = enabled;
       this.save();
     },
     setRecipeViewMode(mode: 'dialog' | 'panel') {
@@ -94,6 +100,7 @@ export const useSettingsStore = defineStore('settings', {
         JSON.stringify({
           historyLimit: this.historyLimit,
           debugLayout: this.debugLayout,
+          debugNavPanel: this.debugNavPanel,
           recipeViewMode: this.recipeViewMode,
           recipeSlotShowName: this.recipeSlotShowName,
           selectedPack: this.selectedPack,
