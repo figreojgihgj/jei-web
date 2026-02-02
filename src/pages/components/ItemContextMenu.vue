@@ -13,25 +13,25 @@
         <q-item-section avatar>
           <q-icon name="handyman" size="xs" />
         </q-item-section>
-        <q-item-section>Recipes (R)</q-item-section>
+        <q-item-section>配方 (R)</q-item-section>
       </q-item>
       <q-item clickable v-close-popup @click="$emit('action', 'uses')">
         <q-item-section avatar>
           <q-icon name="input" size="xs" />
         </q-item-section>
-        <q-item-section>Uses (U)</q-item-section>
+        <q-item-section>用途 (U)</q-item-section>
       </q-item>
       <q-item clickable v-close-popup @click="$emit('action', 'wiki')">
         <q-item-section avatar>
           <q-icon name="menu_book" size="xs" />
         </q-item-section>
-        <q-item-section>Wiki (W)</q-item-section>
+        <q-item-section>维基 (W)</q-item-section>
       </q-item>
       <q-item clickable v-close-popup @click="$emit('action', 'planner')">
         <q-item-section avatar>
           <q-icon name="calculate" size="xs" />
         </q-item-section>
-        <q-item-section>Planner (P)</q-item-section>
+        <q-item-section>规划器 (P)</q-item-section>
       </q-item>
       <q-separator />
       <q-item clickable v-close-popup @click="$emit('action', 'advanced')">

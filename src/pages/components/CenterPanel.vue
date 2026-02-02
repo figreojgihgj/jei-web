@@ -76,10 +76,10 @@
                 inline-label
                 class="q-px-sm q-pt-sm"
               >
-                <q-tab name="recipes" label="Recipes (R)" />
-                <q-tab name="uses" label="Uses (U)" />
-                <q-tab name="wiki" label="Wiki (W)" />
-                <q-tab name="planner" label="Planner (P)" />
+                <q-tab name="recipes" label="配方 (R)" />
+                <q-tab name="uses" label="用途 (U)" />
+                <q-tab name="wiki" label="维基 (W)" />
+                <q-tab name="planner" label="规划器 (P)" />
               </q-tabs>
             </div>
             <q-separator v-if="navStackLength" />
@@ -114,7 +114,7 @@
               />
             </div>
             <div v-show="!navStackLength" class="q-pa-md text-caption text-grey-7">
-              选择物品以查看 Recipes/Uses。
+              选择物品以查看 配方 / 用途。
             </div>
           </q-tab-panel>
 

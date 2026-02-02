@@ -1,16 +1,107 @@
 # About
 
 ## Build
-- Version: ab432e7-dirty
-- Commit: ab432e7 (ab432e787d96856d67ae7b8458db4c71ea728b57)
-- Commit count: 21
-- Subject: feat(app): 添加文档页面和构建信息生成脚本
+- Version: c573aa3-dirty
+- Commit: c573aa3 (c573aa31207afe0e0f4ce6144d12bf4c8477adde)
+- Commit count: 34
+- Subject: feat: enhance CenterPanel with save-plan event and loadAdvancedPlan method
 - Author: AndreaFrederica
-- Date: 2026-01-31T05:57:22+08:00
-- Generated at: 2026-01-31T18:16:40.063Z
+- Date: 2026-02-03T07:42:03+08:00
+- Generated at: 2026-02-02T23:45:24.229Z
 - Remote: https://github.com/AndreaFrederica/jei-web.git
 
 ## Version History
+
+### r34 (2026-02-03T07:42:03+08:00)
+- c573aa3
+  feat: enhance CenterPanel with save-plan event and loadAdvancedPlan method
+  
+  - Added an event emission for 'save-plan' from the AdvancedPlanner component.
+  - Introduced a new method `loadAdvancedPlan` to load saved plans into the advanced planner.
+  - Updated CSS styles for better layout management, changing overflow properties for improved usability.
+
+### r33 (2026-02-03T04:08:21+08:00)
+- 16160f7
+  feat: 增强 AdvancedPlanner 组件，添加节点图视图和计算器视图功能
+
+### r32 (2026-02-03T03:44:56+08:00)
+- 6ccaacd
+  style: 优化 CenterPanel 组件中的 q-tab-panels 代码格式
+
+### r31 (2026-02-03T03:43:10+08:00)
+- 56733bb
+  feat: enhance CenterPanel with advanced planner and update context menu
+  
+  - Added a new tab for the advanced planner in CenterPanel.vue.
+  - Refactored the tab structure to include recipe and advanced planner views.
+  - Implemented a computed property to dynamically set the title based on the active tab.
+  - Integrated the advanced planner component with props for pack and item definitions.
+  - Updated ItemContextMenu.vue to include an option for adding items to the advanced planner.
+  - Modified event emissions to support the new advanced planner functionality.
+
+### r30 (2026-02-03T02:45:07+08:00)
+- decd3e9
+  style: 优化流程图中输入输出端口样式的代码格式
+
+### r29 (2026-02-03T02:40:50+08:00)
+- 5e01581
+  fix: 修复流程图中输入输出端口样式计算逻辑
+
+### r28 (2026-02-03T02:36:33+08:00)
+- ebe859d
+  feat: add ItemContextMenu, ItemDialog, ItemListPanel, RecipeContentView, and SettingsDialog components
+  
+  - Implemented ItemContextMenu.vue for context menu actions related to items.
+  - Created ItemDialog.vue to display detailed information about selected items with tabs for recipes, uses, wiki, and planner.
+  - Developed ItemListPanel.vue to show a list of items with pagination and history tracking.
+  - Added RecipeContentView.vue to handle the display of recipes and crafting planner functionalities.
+  - Introduced SettingsDialog.vue for user settings, including history limit and debug options.
+  - Updated settings store to manage new settings related to recipe view mode and debug panel position.
+
+### r27 (2026-02-02T07:24:22+08:00)
+- 3a3d93e
+  feat: 添加导航栈调试面板功能
+  
+  添加可拖动的调试面板，用于实时监控导航栈状态和变化。面板显示当前导航栈长度、对话框状态、栈内项目详情以及导航操作日志。同时改进导航栈逻辑，避免重复重置并支持栈内跳转。
+
+### r26 (2026-02-02T05:55:07+08:00)
+- 561abe5
+  style: 改进 Vue Flow 控件的深色主题样式
+  
+  修复 Vue Flow 控件在深色主题下图标不显示的问题。由于控件通过 Portal 渲染到 body 下，原样式选择器无法生效，现添加全局样式选择器并优化按钮图标和 MiniMap 的视觉细节。
+
+### r25 (2026-02-02T04:52:16+08:00)
+- edac3fc
+  fix(jei): 修复流程图拖拽功能，将pan-on-drag设为true
+  
+  之前设置为[1, 2]导致在某些情况下无法正常拖拽视图，改为true确保始终启用拖拽平移功能。
+
+### r24 (2026-02-01T03:52:38+08:00)
+- 90c57a7
+  fix(jei): 修复流程图拖拽和连线层级问题
+  
+  - 将 pan-on-drag 设置为 [1, 2] 以限制为鼠标中键拖拽，避免与节点交互冲突
+  - 为所有 stack-view 添加 nodrag nopan 类，防止在物品图标上误触发拖拽
+  - 调整连线 zIndex 为 2000 并改用默认类型，确保连线显示在节点上方
+  - 移除冗余的 z-index CSS 规则，统一由 Vue Flow 属性控制层级
+  - 增加节点宽度和间距，提升流程图可读性
+
+### r23 (2026-02-01T03:22:06+08:00)
+- 9860f25
+  fix: 修复上下文菜单关闭后目标未清除的问题
+  
+  修复在关闭上下文菜单后未清除 contextMenuTarget 导致的下次菜单可能显示异常的问题。通过添加 @hide 事件处理来重置目标变量，确保菜单状态正确。
+
+### r22 (2026-02-01T03:11:51+08:00)
+- 3e7b191
+  feat(app): 添加收藏夹和面板折叠功能及全屏支持
+  
+  - 在设置存储中添加收藏夹和面板的折叠状态字段
+  - 为主布局添加网页全屏切换按钮，支持顶栏样式适配
+  - 为收藏夹和面板区域添加折叠/展开功能，支持鼠标悬停触发按钮
+  - 在合成规划器的节点图和生产线视图中添加页面内全屏和元素全屏功能
+  - 扩展键盘快捷键，支持使用 T/G/L/C 或 1/2/3/4 快速切换到合成规划器的不同标签页
+  - 更新关于页面的构建信息以反映最新提交
 
 ### r21 (2026-01-31T05:57:22+08:00)
 - ab432e7
