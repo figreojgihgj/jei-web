@@ -33,6 +33,10 @@ export const useSettingsStore = defineStore('settings', {
       debugPanelPos: { x: 10, y: 10 },
       acceptedStartupDialogs: [] as string[],
       favoritesOpensNewStack: false,
+      // Wiki 渲染器设置
+      wikiImageUseProxy: false,
+      wikiImageProxyUrl: 'https://r.jina.ai/http://',
+      wikiCatalogFileName: '',
     };
     try {
       const raw = localStorage.getItem('jei.settings');
@@ -80,6 +84,18 @@ export const useSettingsStore = defineStore('settings', {
           typeof parsed.favoritesOpensNewStack === 'boolean'
             ? parsed.favoritesOpensNewStack
             : defaults.favoritesOpensNewStack,
+        wikiImageUseProxy:
+          typeof parsed.wikiImageUseProxy === 'boolean'
+            ? parsed.wikiImageUseProxy
+            : defaults.wikiImageUseProxy,
+        wikiImageProxyUrl:
+          typeof parsed.wikiImageProxyUrl === 'string'
+            ? parsed.wikiImageProxyUrl
+            : defaults.wikiImageProxyUrl,
+        wikiCatalogFileName:
+          typeof parsed.wikiCatalogFileName === 'string'
+            ? parsed.wikiCatalogFileName
+            : defaults.wikiCatalogFileName,
       };
     } catch {
       Dark.set('auto');
@@ -142,6 +158,18 @@ export const useSettingsStore = defineStore('settings', {
       this.favoritesOpensNewStack = value;
       this.save();
     },
+    setWikiImageUseProxy(value: boolean) {
+      this.wikiImageUseProxy = value;
+      this.save();
+    },
+    setWikiImageProxyUrl(value: string) {
+      this.wikiImageProxyUrl = value;
+      this.save();
+    },
+    setWikiCatalogFileName(value: string) {
+      this.wikiCatalogFileName = value;
+      this.save();
+    },
     save() {
       localStorage.setItem(
         'jei.settings',
@@ -159,6 +187,9 @@ export const useSettingsStore = defineStore('settings', {
           debugPanelPos: this.debugPanelPos,
           acceptedStartupDialogs: this.acceptedStartupDialogs,
           favoritesOpensNewStack: this.favoritesOpensNewStack,
+          wikiImageUseProxy: this.wikiImageUseProxy,
+          wikiImageProxyUrl: this.wikiImageProxyUrl,
+          wikiCatalogFileName: this.wikiCatalogFileName,
         }),
       );
     },

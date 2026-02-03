@@ -1,6 +1,6 @@
 <template>
   <q-page padding class="doc-page">
-    <q-card flat bordered>
+    <q-card flat bordered :class="$q.dark.isActive ? 'bg-dark text-white' : ''">
       <q-card-section>
         <div class="doc-md" v-html="html"></div>
       </q-card-section>
@@ -10,8 +10,11 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useQuasar } from 'quasar';
 import MarkdownIt from 'markdown-it';
 import licenseMd from 'src/assets/license.generated.md?raw';
+
+const $q = useQuasar();
 
 const md = new MarkdownIt({
   html: true,
@@ -27,10 +30,13 @@ const html = computed(() => md.render(licenseMd));
   overflow: auto;
 }
 
+:deep(.body--dark) .doc-page {
+  background: var(--q-dark-page);
+}
+
 .doc-md :deep(pre) {
   white-space: pre-wrap;
   word-break: break-word;
-}
 
 .doc-md :deep(h1) {
   font-size: 22px;

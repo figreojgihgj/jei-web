@@ -2,9 +2,19 @@
   <q-layout view="hHh Lpr lff">
     <q-header elevated>
       <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+        <q-btn
+          flat
+          dense
+          round
+          :class="$q.dark.isActive ? 'text-white' : 'text-grey-8'"
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
 
-        <q-toolbar-title>JEI Web Editor</q-toolbar-title>
+        <q-toolbar-title :class="$q.dark.isActive ? 'text-white' : 'text-grey-9'"
+          >JEI Web Editor</q-toolbar-title
+        >
 
         <q-chip
           v-if="packStore.currentEntry"
@@ -42,7 +52,13 @@
 
         <q-btn flat dense round icon="home" to="/" label="Back to App" />
 
-        <q-btn flat dense round aria-label="Theme">
+        <q-btn
+          flat
+          dense
+          round
+          :class="$q.dark.isActive ? 'text-white' : 'text-grey-8'"
+          aria-label="Theme"
+        >
           <q-icon :name="themeIcon" />
           <q-menu>
             <q-list style="min-width: 120px">

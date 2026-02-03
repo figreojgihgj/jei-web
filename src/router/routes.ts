@@ -11,6 +11,7 @@ const routes: RouteRecordRaw[] = [
       { path: 'readme', component: () => import('pages/ReadmePage.vue') },
       { path: 'license', component: () => import('pages/LicensePage.vue') },
       { path: 'third-party-licenses', component: () => import('pages/ThirdPartyLicensesPage.vue') },
+      { path: 'wiki-renderer', component: () => import('pages/WikiRendererPage.vue') },
     ],
   },
 

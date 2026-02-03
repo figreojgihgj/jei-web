@@ -34,3 +34,7 @@ yarn-error.log*
 
 .history
 src\assets\about.generated.md
+
+# Temporary files
+public\temp
+temp

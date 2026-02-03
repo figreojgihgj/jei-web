@@ -76,6 +76,82 @@
     color: #64b5f6 !important;
   }
 
+  // === Wiki 渲染器深色模式 ===
+  .wiki-renderer-page,
+  .wiki-content,
+  .wiki-body {
+    background: #121212 !important;
+  }
+
+  .wiki-card--dark,
+  .upload-card,
+  .file-tools-card,
+  .wiki-widget,
+  .wiki-widget.q-card,
+  .wiki-widget.q-card--dark {
+    background: var(--card-bg) !important;
+    border-color: var(--card-border) !important;
+    color: rgba(255, 255, 255, 0.87) !important;
+  }
+
+  .wiki-widget .q-card__section,
+  .wiki-widget .q-card__section--vert,
+  .wiki-widget .widget-body,
+  .wiki-widget .widget-header {
+    background: var(--card-bg) !important;
+  }
+
+  .wiki-widget .q-separator {
+    background: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .wiki-widget .tab-header {
+    border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .wiki-widget .q-tab-panels,
+  .wiki-widget .q-tab-panel,
+  .wiki-widget .wiki-tab-panel {
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.87) !important;
+  }
+
+  .wiki-widget .wiki-table,
+  .wiki-widget .wiki-table td,
+  .wiki-widget .wiki-table th {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    background: transparent !important;
+  }
+
+  .wiki-widget .wiki-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .wiki-widget,
+  .wiki-widget .widget-title,
+  .wiki-widget .stack-title,
+  .wiki-document,
+  .wiki-text-block,
+  .wiki-list,
+  .wiki-list-item,
+  .wiki-entry-card,
+  .wiki-entry-inline,
+  .wiki-table,
+  .wiki-table td,
+  .wiki-table th,
+  .table-label,
+  .table-value {
+    color: rgba(255, 255, 255, 0.87) !important;
+  }
+
+  .wiki-widget .text-secondary,
+  .wiki-widget .entry-count,
+  .wiki-widget .card-count,
+  .wiki-widget .image-description,
+  .wiki-widget .wiki-unknown-block .block-data {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
   // === 规划器深色模式 ===
 
   // 决策区块

@@ -1,16 +1,40 @@
 # About
 
 ## Build
-- Version: 13d61ef-dirty
-- Commit: 13d61ef (13d61ef1ebd1c56896dfc5e0ee8fcca9be41a633)
-- Commit count: 41
-- Subject: feat: 更新 CenterPanel 组件中的标签文本以提高可读性
+- Version: 14a59b7-dirty
+- Commit: 14a59b7 (14a59b70cb97ad6cc07bb29c67ef6e39e2a5ee07)
+- Commit count: 47
+- Subject: feat: 添加带速带的物品定义，更新相关组件以支持新功能
 - Author: AndreaFrederica
-- Date: 2026-02-03T10:11:30+08:00
-- Generated at: 2026-02-03T02:15:51.275Z
+- Date: 2026-02-03T12:04:31+08:00
+- Generated at: 2026-02-03T21:22:53.462Z
 - Remote: https://github.com/AndreaFrederica/jei-web.git
 
 ## Version History
+
+### r47 (2026-02-03T12:04:31+08:00)
+- 14a59b7
+  feat: 添加带速带的物品定义，更新相关组件以支持新功能
+
+### r46 (2026-02-03T11:22:28+08:00)
+- 43ee6da
+  fix: 格式化启动对话框选项类型定义以提高可读性
+
+### r45 (2026-02-03T11:22:12+08:00)
+- 1558538
+  feat: 添加收藏夹导航栈选项，更新相关组件以支持新功能
+
+### r44 (2026-02-03T10:55:15+08:00)
+- 7925b25
+  feat: 添加启动对话框支持，更新设置以管理已接受的对话框
+
+### r43 (2026-02-03T10:22:19+08:00)
+- 3fa836e
+  fix: 更新过滤器占位符文本以支持正确的格式化
+
+### r42 (2026-02-03T10:17:15+08:00)
+- fc02bef
+  fix: 修复 BottomBar 组件中的 placeholder 绑定方式
 
 ### r41 (2026-02-03T10:11:30+08:00)
 - 13d61ef

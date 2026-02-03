@@ -2,14 +2,25 @@
   <q-layout view="lHh Lpr lFf">
     <q-header>
       <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+        <q-btn
+          flat
+          dense
+          round
+          :class="$q.dark.isActive ? 'text-white' : 'text-grey-8'"
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
 
-        <q-toolbar-title>JEI-web</q-toolbar-title>
+        <q-toolbar-title :class="$q.dark.isActive ? 'text-white' : 'text-grey-9'"
+          >JEI-web</q-toolbar-title
+        >
 
         <q-btn
           flat
           dense
           round
+          :class="$q.dark.isActive ? 'text-white' : 'text-grey-8'"
           :icon="isPageFullscreen ? 'fullscreen_exit' : 'fullscreen'"
           aria-label="Fullscreen"
           @click="togglePageFullscreen"
@@ -17,7 +28,13 @@
           <q-tooltip>{{ isPageFullscreen ? '退出网页全屏' : '网页全屏' }}</q-tooltip>
         </q-btn>
 
-        <q-btn flat dense round aria-label="Language">
+        <q-btn
+          flat
+          dense
+          round
+          :class="$q.dark.isActive ? 'text-white' : 'text-grey-8'"
+          aria-label="Language"
+        >
           <q-icon name="translate" />
 
           <q-menu>
@@ -40,7 +57,13 @@
           </q-menu>
         </q-btn>
 
-        <q-btn flat dense round aria-label="Theme">
+        <q-btn
+          flat
+          dense
+          round
+          :class="$q.dark.isActive ? 'text-white' : 'text-grey-8'"
+          aria-label="Theme"
+        >
           <q-icon :name="themeIcon" />
 
           <q-menu>
@@ -85,7 +108,7 @@
           </q-menu>
         </q-btn>
 
-        <div>v{{ appVersion }}</div>
+        <div :class="$q.dark.isActive ? 'text-white' : 'text-grey-8'">v{{ appVersion }}</div>
       </q-toolbar>
     </q-header>
 
@@ -169,6 +192,12 @@ const linksList: EssentialLinkProps[] = [
     title: 'Home',
     icon: 'home',
     link: '/',
+  },
+  {
+    title: 'Wiki Renderer',
+    caption: 'Block-based Wiki',
+    icon: 'article',
+    link: '/wiki-renderer',
   },
   {
     title: 'Editor',
