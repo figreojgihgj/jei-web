@@ -36,7 +36,7 @@ export default {
   middleAreaDesc: 'Right side is item list, left side is favorites; click item to open popup.',
 
   // Bottom Bar
-  filterPlaceholder: 'Enter name to filter… (supports @itemid/@gameid/@tag)',
+  filterPlaceholder: "Enter name to filter… (supports {'@'}itemid/{'@'}gameid/{'@'}tag)",
   advancedFilter: 'Advanced Filter',
   itemName: 'Item Name',
   itemNamePlaceholder: 'Enter item name keywords',

@@ -36,7 +36,7 @@ export default {
   middleAreaDesc: '右侧是物品列表，左侧是收藏夹；点击物品打开悬浮窗。',
 
   // Bottom Bar
-  filterPlaceholder: '输入名字过滤…（支持 @itemid/@gameid/@tag）',
+  filterPlaceholder: "输入名字过滤…（支持 {'@'}itemid/{'@'}gameid/{'@'}tag）",
   advancedFilter: '高级过滤器',
   itemName: '物品名称',
   itemNamePlaceholder: '输入物品名称关键词',

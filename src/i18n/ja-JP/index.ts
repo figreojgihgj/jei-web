@@ -36,7 +36,7 @@ export default {
   middleAreaDesc: '右側がアイテムリスト、左側がお気に入り；アイテムをクリックしてポップアップを開く。',
 
   // Bottom Bar
-  filterPlaceholder: '名前を入力してフィルタ…（@itemid/@gameid/@tag に対応）',
+  filterPlaceholder: "名前を入力してフィルタ…（{'@'}itemid/{'@'}gameid/{'@'}tag に対応）",
   advancedFilter: '高度なフィルタ',
   itemName: 'アイテム名',
   itemNamePlaceholder: 'アイテム名のキーワードを入力',
