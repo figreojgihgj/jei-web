@@ -1025,6 +1025,17 @@ const props = defineProps<{
   initialTab?: 'tree' | 'graph' | 'line' | 'calc' | null;
 }>();
 
+const beltSpeed = computed(() => {
+  const items = props.pack?.items ?? [];
+  const beltItem = items.find((item) =>
+    Boolean(
+      item.tags?.includes('belt') && (item as ItemDef & { belt?: { speed?: number } }).belt?.speed,
+    ),
+  );
+  const speed = (beltItem as ItemDef & { belt?: { speed?: number } })?.belt?.speed;
+  return Number.isFinite(speed) && (speed ?? 0) > 0 ? Number(speed) : DEFAULT_BELT_SPEED;
+});
+
 const emit = defineEmits<{
   (e: 'item-click', itemKey: ItemKey): void;
   (e: 'save-plan', payload: PlannerSavePayload): void;
@@ -1364,7 +1375,7 @@ function nodeBeltsText(node: RequirementNode | EnhancedRequirementNode): string 
   if (targetUnit.value === 'items') return '';
   if (node.kind !== 'item') return '';
   const perSecond = nodeDisplayAmount(node) / 60;
-  const belts = perSecond / DEFAULT_BELT_SPEED;
+  const belts = perSecond / beltSpeed.value;
   if (!Number.isFinite(belts) || belts <= 0) return '';
   if (belts < 0.1) return '<0.1';
   return String(formatAmount(belts));

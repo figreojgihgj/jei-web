@@ -177,7 +177,7 @@ function main() {
     }
     if (it.belt) {
       extraData.belt = {
-        speed: isFiniteNumber(it.beltSpeed) ? it.beltSpeed : 15, // items per second
+        speed: isFiniteNumber(it.beltSpeed) ? it.beltSpeed : 0.5, // items per second
       };
     }
 

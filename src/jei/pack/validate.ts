@@ -80,6 +80,15 @@ export function assertItemDef(value: unknown, jsonPath: string): ItemDef {
   const tagsRaw = assertOptionalArray(obj.tags, `${jsonPath}.tags`);
   const tags = tagsRaw?.map((t, i) => assertString(t, `${jsonPath}.tags[${i}]`));
   const icon = assertOptionalString(obj.icon, `${jsonPath}.icon`);
+  const beltRaw = assertOptionalRecord(obj.belt, `${jsonPath}.belt`);
+  let belt: ItemDef['belt'];
+  if (beltRaw !== undefined) {
+    const speed = beltRaw.speed;
+    if (typeof speed !== 'number') {
+      throw new PackValidationError(`${jsonPath}.belt.speed`, 'expected number');
+    }
+    belt = { speed };
+  }
   const iconSpriteRaw = assertOptionalRecord(obj.iconSprite, `${jsonPath}.iconSprite`);
   let iconSprite: ItemDef['iconSprite'];
   if (iconSpriteRaw !== undefined) {
@@ -112,6 +121,7 @@ export function assertItemDef(value: unknown, jsonPath: string): ItemDef {
   if (tags !== undefined) def.tags = tags;
   if (source !== undefined) def.source = source;
   if (description !== undefined) def.description = description;
+  if (belt !== undefined) def.belt = belt;
   return def;
 }
 

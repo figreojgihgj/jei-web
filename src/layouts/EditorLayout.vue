@@ -220,6 +220,19 @@
           </q-item-section>
           <q-item-section>Third-Party Licenses</q-item-section>
         </q-item>
+
+        <q-separator class="q-my-sm" />
+
+        <q-item-label header>友情链接</q-item-label>
+
+        <q-item clickable tag="a" target="_blank" href="https://www.gamekee.com/zmd" v-ripple>
+          <q-item-section avatar>
+            <q-icon name="link" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>明日方舟:终末地非官方Wiki</q-item-label>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 

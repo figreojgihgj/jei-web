@@ -23,6 +23,9 @@ export interface ItemDef {
   tags?: string[];
   source?: string;
   description?: string;
+  belt?: {
+    speed: number;
+  };
 }
 
 export interface StackItem {
