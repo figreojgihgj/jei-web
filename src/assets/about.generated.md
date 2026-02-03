@@ -1,16 +1,34 @@
 # About
 
 ## Build
-- Version: a2ec007-dirty
-- Commit: a2ec007 (a2ec00776ce7b4288b30ee37bb8f4ed8a1139196)
-- Commit count: 35
-- Subject: feat: 更新文档和界面，增强 CenterPanel 组件，添加保存/加载规划方案功能
+- Version: 255f0a3
+- Commit: 255f0a3 (255f0a3075b152b223cc0876899df1f8886792de)
+- Commit count: 38
+- Subject: feat: 添加原生暗色模式支持，优化页面结构和元数据，避免vue启动前的闪烁
 - Author: AndreaFrederica
-- Date: 2026-02-03T07:53:10+08:00
-- Generated at: 2026-02-03T00:51:15.230Z
+- Date: 2026-02-03T09:04:37+08:00
+- Generated at: 2026-02-03T01:56:31.811Z
 - Remote: https://github.com/AndreaFrederica/jei-web.git
 
 ## Version History
+
+### r38 (2026-02-03T09:04:37+08:00)
+- 255f0a3
+  feat: 添加原生暗色模式支持，优化页面结构和元数据，避免vue启动前的闪烁
+
+### r37 (2026-02-03T09:02:06+08:00)
+- d258798
+  feat: 优化国际化文件，调整文本格式以提高可读性
+
+### r36 (2026-02-03T09:01:54+08:00)
+- 3c7547a
+  feat: add language selection and localization support
+  
+  - Implemented a language selection button in MainLayout.vue with options for Chinese, English, and Japanese.
+  - Integrated vue-i18n for localization across various components, including IndexPage.vue, AdvancedPlanner.vue, BottomBar.vue, and others.
+  - Updated UI elements to use localized strings for labels, placeholders, and tooltips.
+  - Enhanced settings store to detect browser language and allow language preference saving.
+  - Refactored components to utilize the new localization setup, ensuring a consistent user experience across different languages.
 
 ### r35 (2026-02-03T07:53:10+08:00)
 - a2ec007
