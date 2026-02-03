@@ -84,8 +84,14 @@
             class="jei-grid__cell cursor-pointer"
             v-touch-hold:600="(evt: unknown) => $emit('touch-hold', evt, it.keyHash)"
             @contextmenu.prevent="$emit('context-menu', $event, it.keyHash)"
-            @mouseenter="$emit('update:hovered-key-hash', it.keyHash)"
-            @mouseleave="$emit('update:hovered-key-hash', null)"
+            @mouseenter="
+              $emit('update:hovered-key-hash', it.keyHash);
+              $emit('update:hovered-source', 'favorites');
+            "
+            @mouseleave="
+              $emit('update:hovered-key-hash', null);
+              $emit('update:hovered-source', 'none');
+            "
             @click="$emit('item-click', it.keyHash)"
           >
             <q-btn
@@ -151,6 +157,7 @@ defineProps<{
 defineEmits<{
   'update:collapsed': [value: boolean];
   'update:hovered-key-hash': [value: string | null];
+  'update:hovered-source': [source: 'list' | 'favorites' | 'none'];
   'open-plan': [plan: SavedPlan];
   'delete-plan': [id: string];
   'item-click': [keyHash: string];

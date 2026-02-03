@@ -60,6 +60,7 @@ export default {
   recipeViewDialog: 'Dialog',
   recipeViewPanel: 'Center Panel',
   recipeSlotShowName: 'Show Item Names in Recipe Slots',
+    favoritesOpenStack: 'Favorites open new navigation stack',
   close: 'Close',
 
   // Context Menu

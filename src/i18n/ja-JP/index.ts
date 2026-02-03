@@ -60,6 +60,7 @@ export default {
   recipeViewDialog: 'ダイアログ',
   recipeViewPanel: '中央パネル',
   recipeSlotShowName: 'レシピスロットにアイテム名を表示',
+  favoritesOpenStack: 'お気に入りでナビ履歴を作成',
   close: '閉じる',
 
   // Context Menu

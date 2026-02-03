@@ -286,12 +286,17 @@ export function assertPackManifest(value: unknown, jsonPath: string): PackManife
 
   if (isRecord(obj.startupDialog)) {
     const d = obj.startupDialog;
-    out.startupDialog = {
+    const confirmText = assertOptionalString(d.confirmText, `${jsonPath}.startupDialog.confirmText`);
+    const title = assertOptionalString(d.title, `${jsonPath}.startupDialog.title`);
+
+    const startupDialog: PackManifest['startupDialog'] = {
       id: assertString(d.id, `${jsonPath}.startupDialog.id`),
       message: assertString(d.message, `${jsonPath}.startupDialog.message`),
-      confirmText: assertOptionalString(d.confirmText, `${jsonPath}.startupDialog.confirmText`),
-      title: assertOptionalString(d.title, `${jsonPath}.startupDialog.title`),
+      ...(confirmText !== undefined ? { confirmText } : {}),
+      ...(title !== undefined ? { title } : {}),
     };
+
+    out.startupDialog = startupDialog;
   }
 
   return out;

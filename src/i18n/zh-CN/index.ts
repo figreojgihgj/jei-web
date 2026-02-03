@@ -60,6 +60,7 @@ export default {
   recipeViewDialog: '弹窗',
   recipeViewPanel: '中间区域',
   recipeSlotShowName: '合成表物品显示名字',
+  favoritesOpenStack: '收藏夹点击/快捷键创建导航栈',
   close: '关闭',
 
   // Context Menu

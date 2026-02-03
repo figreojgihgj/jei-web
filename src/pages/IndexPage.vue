@@ -36,9 +36,10 @@
         :item-defs-by-key-hash="itemDefsByKeyHash"
         @update:collapsed="settingsStore.setFavoritesCollapsed($event)"
         @update:hovered-key-hash="hoveredKeyHash = $event"
+        @update:hovered-source="hoveredSource = $event"
         @open-plan="openSavedPlan"
         @delete-plan="deleteSavedPlan"
-        @item-click="openDialogByKeyHash"
+        @item-click="openDialogFromFavorites"
         @toggle-favorite="toggleFavorite"
         @context-menu="onContextMenu"
         @touch-hold="onTouchHold"
@@ -79,8 +80,14 @@
         @machine-item-click="openMachineItem"
         @save-plan="savePlannerPlan"
         @state-change="onPlannerStateChange"
-        @item-mouseenter="hoveredKeyHash = $event"
-        @item-mouseleave="hoveredKeyHash = null"
+        @item-mouseenter="
+          hoveredKeyHash = $event;
+          hoveredSource = 'recipe';
+        "
+        @item-mouseleave="
+          hoveredKeyHash = null;
+          hoveredSource = 'none';
+        "
         @item-context-menu="(evt, keyHash) => onContextMenu(evt, keyHash)"
         @item-touch-hold="(evt, keyHash) => onTouchHold(evt, keyHash)"
       />
@@ -103,6 +110,7 @@
         :item-defs-by-key-hash="itemDefsByKeyHash"
         :favorites="favorites"
         @update:hovered-key-hash="hoveredKeyHash = $event"
+        @update:hovered-source="hoveredSource = $event"
         @item-click="openDialogByKeyHash"
         @toggle-favorite="toggleFavorite"
         @context-menu="onContextMenu"
@@ -158,6 +166,8 @@
       @update:recipe-view-mode="settingsStore.setRecipeViewMode($event)"
       :recipe-slot-show-name="settingsStore.recipeSlotShowName"
       @update:recipe-slot-show-name="settingsStore.setRecipeSlotShowName($event)"
+      :favorites-opens-new-stack="settingsStore.favoritesOpensNewStack"
+      @update:favorites-open-stack="settingsStore.setFavoritesOpensNewStack($event)"
     />
 
     <pre v-if="settingsStore.debugLayout" class="jei-debug-overlay">{{ debugText }}</pre>
@@ -190,8 +200,14 @@
       @machine-item-click="openMachineItem"
       @save-plan="savePlannerPlan"
       @state-change="onPlannerStateChange"
-      @item-mouseenter="hoveredKeyHash = $event"
-      @item-mouseleave="hoveredKeyHash = null"
+      @item-mouseenter="
+        hoveredKeyHash = $event;
+        hoveredSource = 'recipe';
+      "
+      @item-mouseleave="
+        hoveredKeyHash = null;
+        hoveredSource = 'none';
+      "
       @item-context-menu="(evt, keyHash) => onContextMenu(evt, keyHash)"
       @item-touch-hold="(evt, keyHash) => onTouchHold(evt, keyHash)"
     />
@@ -296,6 +312,7 @@ const activePackId = computed({
 
 const selectedKeyHash = ref<string | null>(null);
 const hoveredKeyHash = ref<string | null>(null);
+const hoveredSource = ref<'list' | 'favorites' | 'recipe' | 'none'>('none');
 const filterText = ref('');
 const favorites = ref<Set<string>>(new Set());
 type SavedPlan = {
@@ -1040,15 +1057,16 @@ async function reloadPack(packId: string) {
 
     const startupDialog = loaded.pack.manifest.startupDialog;
     if (startupDialog && !settingsStore.acceptedStartupDialogs.includes(startupDialog.id)) {
-      $q.dialog({
-        title: startupDialog.title,
+      const dialogOptions = {
         message: startupDialog.message,
         persistent: true,
         ok: {
           label: startupDialog.confirmText || 'OK',
           color: 'primary',
         },
-      }).onOk(() => {
+      } as { message: string; persistent: true; ok: { label: string; color: string }; title?: string };
+      if (startupDialog.title) dialogOptions.title = startupDialog.title;
+      $q.dialog(dialogOptions).onOk(() => {
         settingsStore.addAcceptedStartupDialog(startupDialog.id);
       });
     }
@@ -1362,17 +1380,52 @@ function openDialogByKeyHash(
   void syncUrl('push');
 }
 
-function openDialogByItemKey(key: ItemKey) {
+function openDialogByItemKey(
+  key: ItemKey,
+  tab: 'recipes' | 'uses' | 'wiki' | 'planner' = 'recipes',
+) {
   // 如果当前在高级计划器，切换到合成查看器
   if (centerTab.value === 'advanced') {
     centerTab.value = 'recipe';
   }
 
+  // 防止重复压栈
+  const last = navStack.value[navStack.value.length - 1];
+  if (last && itemKeyHash(last) === itemKeyHash(key)) {
+    activeTab.value = tab;
+    if (tab === 'planner' && !plannerInitialState.value) {
+      plannerInitialState.value = buildAutoPlannerInitialState(key);
+    }
+    return;
+  }
+
   navStack.value = [...navStack.value, key];
-  activeTab.value = 'recipes';
-  plannerInitialState.value = null;
+  activeTab.value = tab;
+  plannerInitialState.value = tab === 'planner' ? buildAutoPlannerInitialState(key) : null;
+  if (tab !== 'planner') plannerTab.value = 'tree';
   pushHistoryKeyHash(itemKeyHash(key));
   void syncUrl('push');
+}
+
+function openStackDialog(
+  keyHash: string,
+  tab: 'recipes' | 'uses' | 'wiki' | 'planner' = 'recipes',
+) {
+  const def = index.value?.itemsByKeyHash.get(keyHash);
+  if (!def) return;
+  if (dialogOpen.value || settingsStore.recipeViewMode === 'panel') {
+    openDialogByItemKey(def.key, tab);
+  } else {
+    openDialogByKeyHash(keyHash, tab);
+  }
+}
+
+function openDialogFromFavorites(keyHash: string) {
+  if (settingsStore.favoritesOpensNewStack) {
+    openStackDialog(keyHash, 'recipes');
+  } else {
+    openDialogByKeyHash(keyHash, 'recipes');
+  }
 }
 
 function openMachineItem(machineItemId: string) {
@@ -1420,23 +1473,43 @@ function onKeyDown(e: KeyboardEvent) {
   }
 
   if (dialogOpen.value) {
+    const canStackFromHover =
+      hoveredKeyHash.value &&
+      hoveredSource.value !== 'list' &&
+      (hoveredSource.value !== 'favorites' || settingsStore.favoritesOpensNewStack) &&
+      hoveredKeyHash.value !== (currentItemKey.value ? itemKeyHash(currentItemKey.value) : '');
+    const openHoverInDialog = (tab: 'recipes' | 'uses' | 'wiki' | 'planner') => {
+      if (!canStackFromHover || !hoveredKeyHash.value) return false;
+      const def = index.value?.itemsByKeyHash.get(hoveredKeyHash.value);
+      if (!def) return false;
+      openDialogByItemKey(def.key, tab);
+      return true;
+    };
+
     if (key === 'r' || key === 'R') {
       e.preventDefault();
+      if (openHoverInDialog('recipes')) return;
       activeTab.value = 'recipes';
       return;
     }
     if (key === 'u' || key === 'U') {
       e.preventDefault();
+      if (openHoverInDialog('uses')) return;
       activeTab.value = 'uses';
       return;
     }
     if (key === 'w' || key === 'W') {
       e.preventDefault();
+      if (openHoverInDialog('wiki')) return;
       activeTab.value = 'wiki';
       return;
     }
     if (key === 'p' || key === 'P') {
       e.preventDefault();
+      if (openHoverInDialog('planner')) {
+        plannerTab.value = 'tree';
+        return;
+      }
       activeTab.value = 'planner';
       plannerTab.value = 'tree';
       ensurePlannerAutoForCurrentItem();
@@ -1444,6 +1517,10 @@ function onKeyDown(e: KeyboardEvent) {
     }
     if (key === 't' || key === 'T' || key === '1') {
       e.preventDefault();
+      if (openHoverInDialog('planner')) {
+        plannerTab.value = 'tree';
+        return;
+      }
       activeTab.value = 'planner';
       plannerTab.value = 'tree';
       ensurePlannerAutoForCurrentItem();
@@ -1451,6 +1528,10 @@ function onKeyDown(e: KeyboardEvent) {
     }
     if (key === 'g' || key === 'G' || key === '2') {
       e.preventDefault();
+      if (openHoverInDialog('planner')) {
+        plannerTab.value = 'graph';
+        return;
+      }
       activeTab.value = 'planner';
       plannerTab.value = 'graph';
       ensurePlannerAutoForCurrentItem();
@@ -1458,6 +1539,10 @@ function onKeyDown(e: KeyboardEvent) {
     }
     if (key === 'l' || key === 'L' || key === '3') {
       e.preventDefault();
+      if (openHoverInDialog('planner')) {
+        plannerTab.value = 'line';
+        return;
+      }
       activeTab.value = 'planner';
       plannerTab.value = 'line';
       ensurePlannerAutoForCurrentItem();
@@ -1474,35 +1559,43 @@ function onKeyDown(e: KeyboardEvent) {
   }
 
   if (!hoveredKeyHash.value) return;
+  const useStack =
+    hoveredSource.value === 'recipe' ||
+    (hoveredSource.value === 'favorites' && settingsStore.favoritesOpensNewStack);
+  const openTarget = (tab: 'recipes' | 'uses' | 'wiki' | 'planner') => {
+    if (useStack) openStackDialog(hoveredKeyHash.value!, tab);
+    else openDialogByKeyHash(hoveredKeyHash.value!, tab);
+  };
+
   if (key === 'r' || key === 'R') {
     e.preventDefault();
-    openDialogByKeyHash(hoveredKeyHash.value, 'recipes');
+    openTarget('recipes');
   } else if (key === 'u' || key === 'U') {
     e.preventDefault();
-    openDialogByKeyHash(hoveredKeyHash.value, 'uses');
+    openTarget('uses');
   } else if (key === 'w' || key === 'W') {
     e.preventDefault();
-    openDialogByKeyHash(hoveredKeyHash.value, 'wiki');
+    openTarget('wiki');
   } else if (key === 'p' || key === 'P') {
     e.preventDefault();
     plannerTab.value = 'tree';
-    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+    openTarget('planner');
   } else if (key === 't' || key === 'T' || key === '1') {
     e.preventDefault();
     plannerTab.value = 'tree';
-    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+    openTarget('planner');
   } else if (key === 'g' || key === 'G' || key === '2') {
     e.preventDefault();
     plannerTab.value = 'graph';
-    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+    openTarget('planner');
   } else if (key === 'l' || key === 'L' || key === '3') {
     e.preventDefault();
     plannerTab.value = 'line';
-    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+    openTarget('planner');
   } else if (key === 'c' || key === 'C' || key === '4') {
     e.preventDefault();
     plannerTab.value = 'calc';
-    openDialogByKeyHash(hoveredKeyHash.value, 'planner');
+    openTarget('planner');
   } else if (key === 'a' || key === 'A') {
     e.preventDefault();
     toggleFavorite(hoveredKeyHash.value);

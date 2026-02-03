@@ -23,8 +23,14 @@
               (evt: unknown) => $emit('touch-hold', evt, firstPagedItem?.keyHash ?? '')
             "
             @contextmenu.prevent="$emit('context-menu', $event, firstPagedItem?.keyHash ?? '')"
-            @mouseenter="$emit('update:hovered-key-hash', firstPagedItem.keyHash)"
-            @mouseleave="$emit('update:hovered-key-hash', null)"
+            @mouseenter="
+              $emit('update:hovered-key-hash', firstPagedItem.keyHash);
+              $emit('update:hovered-source', 'list');
+            "
+            @mouseleave="
+              $emit('update:hovered-key-hash', null);
+              $emit('update:hovered-source', 'none');
+            "
             @click="$emit('item-click', firstPagedItem.keyHash)"
           >
             <q-btn
@@ -67,8 +73,14 @@
           class="jei-grid__cell cursor-pointer"
           v-touch-hold:600="(evt: unknown) => $emit('touch-hold', evt, it.keyHash)"
           @contextmenu.prevent="$emit('context-menu', $event, it.keyHash)"
-          @mouseenter="$emit('update:hovered-key-hash', it.keyHash)"
-          @mouseleave="$emit('update:hovered-key-hash', null)"
+          @mouseenter="
+            $emit('update:hovered-key-hash', it.keyHash);
+            $emit('update:hovered-source', 'list');
+          "
+          @mouseleave="
+            $emit('update:hovered-key-hash', null);
+            $emit('update:hovered-source', 'none');
+          "
           @click="$emit('item-click', it.keyHash)"
         >
           <q-btn
@@ -181,6 +193,7 @@ const props = defineProps<{
 
 defineEmits<{
   'update:hovered-key-hash': [value: string | null];
+  'update:hovered-source': [source: 'list' | 'favorites' | 'none'];
   'update:page': [value: number];
   'item-click': [keyHash: string];
   'toggle-favorite': [keyHash: string];

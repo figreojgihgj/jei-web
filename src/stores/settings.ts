@@ -32,6 +32,7 @@ export const useSettingsStore = defineStore('settings', {
       language: detectBrowserLanguage(),
       debugPanelPos: { x: 10, y: 10 },
       acceptedStartupDialogs: [] as string[],
+      favoritesOpensNewStack: false,
     };
     try {
       const raw = localStorage.getItem('jei.settings');
@@ -75,6 +76,10 @@ export const useSettingsStore = defineStore('settings', {
         acceptedStartupDialogs: Array.isArray(parsed.acceptedStartupDialogs)
           ? parsed.acceptedStartupDialogs.filter((x): x is string => typeof x === 'string')
           : defaults.acceptedStartupDialogs,
+        favoritesOpensNewStack:
+          typeof parsed.favoritesOpensNewStack === 'boolean'
+            ? parsed.favoritesOpensNewStack
+            : defaults.favoritesOpensNewStack,
       };
     } catch {
       Dark.set('auto');
@@ -133,6 +138,10 @@ export const useSettingsStore = defineStore('settings', {
         this.save();
       }
     },
+    setFavoritesOpensNewStack(value: boolean) {
+      this.favoritesOpensNewStack = value;
+      this.save();
+    },
     save() {
       localStorage.setItem(
         'jei.settings',
@@ -149,6 +158,7 @@ export const useSettingsStore = defineStore('settings', {
           language: this.language,
           debugPanelPos: this.debugPanelPos,
           acceptedStartupDialogs: this.acceptedStartupDialogs,
+          favoritesOpensNewStack: this.favoritesOpensNewStack,
         }),
       );
     },

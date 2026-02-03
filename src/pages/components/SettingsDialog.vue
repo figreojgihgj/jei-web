@@ -41,6 +41,11 @@
           :model-value="recipeSlotShowName"
           @update:model-value="$emit('update:recipe-slot-show-name', !!$event)"
         />
+        <q-toggle
+          :label="t('favoritesOpenStack')"
+          :model-value="favoritesOpensNewStack"
+          @update:model-value="$emit('update:favorites-open-stack', !!$event)"
+        />
       </q-card-section>
       <q-card-actions align="right">
         <q-btn flat :label="t('close')" color="primary" v-close-popup />
@@ -61,6 +66,7 @@ defineProps<{
   debugNavPanel: boolean;
   recipeViewMode: 'dialog' | 'panel';
   recipeSlotShowName: boolean;
+  favoritesOpensNewStack: boolean;
 }>();
 
 defineEmits<{
@@ -70,5 +76,6 @@ defineEmits<{
   'update:debug-nav-panel': [value: boolean];
   'update:recipe-view-mode': [value: 'dialog' | 'panel'];
   'update:recipe-slot-show-name': [value: boolean];
+  'update:favorites-open-stack': [value: boolean];
 }>();
 </script>
