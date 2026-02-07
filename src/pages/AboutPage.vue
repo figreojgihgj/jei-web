@@ -37,6 +37,7 @@ const html = computed(() => md.render(aboutMd));
 .doc-md :deep(pre) {
   white-space: pre-wrap;
   word-break: break-word;
+}
 
 .doc-md :deep(h1) {
   font-size: 22px;

@@ -37,7 +37,7 @@ const html = computed(() => md.render(licenseMd));
 .doc-md :deep(pre) {
   white-space: pre-wrap;
   word-break: break-word;
-
+}
 .doc-md :deep(h1) {
   font-size: 22px;
   line-height: 30px;

@@ -1,16 +1,20 @@
 # About
 
 ## Build
-- Version: aa6d8c0-dirty
-- Commit: aa6d8c0 (aa6d8c0d9cbef64d4cf0db7fd1ee186a3fbe0014)
-- Commit count: 50
-- Subject: feat: add tutorial manager and integrate with dialog system
+- Version: c2956e6-dirty
+- Commit: c2956e6 (c2956e668607e1521ee015843c9595f5bc2bb232)
+- Commit count: 51
+- Subject: feat: 添加存储编辑器页面及相关路由
 - Author: AndreaFrederica
-- Date: 2026-02-07T09:36:44+08:00
-- Generated at: 2026-02-07T01:38:47.003Z
+- Date: 2026-02-07T09:49:54+08:00
+- Generated at: 2026-02-07T01:57:13.892Z
 - Remote: https://github.com/AndreaFrederica/jei-web.git
 
 ## Version History
+
+### r51 (2026-02-07T09:49:54+08:00)
+- c2956e6
+  feat: 添加存储编辑器页面及相关路由
 
 ### r50 (2026-02-07T09:36:44+08:00)
 - aa6d8c0

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/icons/icon.svg" alt="JEI-web Icon" width="20%">
+</p>
+
 # JEI-web
 
 Just Enough Items but Running in web - 一个基于 Web 的物品查看和合成规划工具。
