@@ -196,7 +196,7 @@
       @skip="handleTutorialSkip"
     />
 
-    <q-page-container :class="settingsStore.debugLayout ? 'debug-scroll' : 'no-scroll'">
+    <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
@@ -307,6 +307,18 @@ const linksList: EssentialLinkProps[] = [
     caption: 'LocalStorage Manager',
     icon: 'storage',
     link: '/storage-editor',
+  },
+  {
+    title: 'Circuit Puzzle',
+    caption: 'Block fitting minigame',
+    icon: 'extension',
+    link: '/circuit-puzzle',
+  },
+  {
+    title: 'Puzzle Collection',
+    caption: 'Curated puzzle levels',
+    icon: 'library_books',
+    link: '/circuit-puzzle-collection',
   },
   {
     title: 'README',
@@ -485,27 +497,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-.no-scroll {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.debug-scroll {
-  overflow: auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.no-scroll > .q-page,
-.debug-scroll > .q-page {
-  flex: 1 1 auto;
-  min-height: 0;
-}
-
 /* 顶栏样式：颜色与页面背景一致，去除光晕效果 */
 .q-header {
   background-color: var(--q-page-background);

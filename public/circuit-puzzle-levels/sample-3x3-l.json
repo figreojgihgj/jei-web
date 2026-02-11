@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "id": "sample-3x3-l",
+  "name": "Sample 3x3 L",
+  "board": {
+    "rows": 3,
+    "cols": 3,
+    "blocked": [],
+    "hintCells": [
+      [0, 0],
+      [1, 0],
+      [0, 1]
+    ],
+    "hintColors": [
+      { "cell": [0, 0], "color": "#9ddb22" },
+      { "cell": [1, 0], "color": "#9ddb22" },
+      { "cell": [0, 1], "color": "#9ddb22" }
+    ]
+  },
+  "clues": {
+    "rows": [2, 1, 0],
+    "cols": [2, 1, 0]
+  },
+  "pieces": [
+    {
+      "id": "p-l",
+      "name": "L Piece",
+      "color": "#9ddb22",
+      "cells": [
+        [0, 0],
+        [1, 0],
+        [0, 1]
+      ],
+      "count": 1
+    }
+  ],
+  "scoring": {
+    "colorWeights": {
+      "#9ddb22": 1
+    }
+  }
+}

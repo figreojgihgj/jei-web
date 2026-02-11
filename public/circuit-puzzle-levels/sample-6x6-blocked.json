@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "sample-6x6-blocked",
+  "name": "Sample 6x6 Blocked",
+  "board": {
+    "rows": 6,
+    "cols": 6,
+    "blocked": [[0, 0], [5, 0], [0, 5], [5, 5]],
+    "hintCells": [
+      [1, 1],
+      [2, 1],
+      [4, 1],
+      [4, 2],
+      [5, 2],
+      [3, 4],
+      [4, 4]
+    ],
+    "hintColors": [
+      { "cell": [1, 1], "color": "#00ccff" },
+      { "cell": [2, 1], "color": "#00ccff" },
+      { "cell": [4, 1], "color": "#ff6f6f" },
+      { "cell": [4, 2], "color": "#ff6f6f" },
+      { "cell": [5, 2], "color": "#ff6f6f" },
+      { "cell": [3, 4], "color": "#00ccff" },
+      { "cell": [4, 4], "color": "#00ccff" }
+    ]
+  },
+  "clues": {
+    "rows": [0, 3, 2, 0, 2, 0],
+    "cols": [0, 1, 1, 1, 3, 1]
+  },
+  "pieces": [
+    {
+      "id": "p-domino-blue",
+      "name": "Domino Blue",
+      "color": "#00ccff",
+      "cells": [[0, 0], [1, 0]],
+      "count": 2
+    },
+    {
+      "id": "p-mini-l-red",
+      "name": "Mini L Red",
+      "color": "#ff6f6f",
+      "cells": [[0, 0], [0, 1], [1, 1]],
+      "count": 1
+    }
+  ],
+  "scoring": {
+    "colorWeights": {
+      "#00ccff": 1,
+      "#ff6f6f": 1
+    }
+  }
+}

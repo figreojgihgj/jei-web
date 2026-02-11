@@ -1,16 +1,45 @@
 # About
 
 ## Build
-- Version: 8dac017-dirty
-- Commit: 8dac017 (8dac017f1311dcdaf00061059f4231c296ed4d9e)
-- Commit count: 54
-- Subject: fix: 修正 README 中图标路径并更新生成的文档
+- Version: b2fe075-dirty
+- Commit: b2fe075 (b2fe0759645d3165280f5663bf7331cd84acc270)
+- Commit count: 57
+- Subject: feat: 添加 WikiDocRecipeView 组件以支持文档视图，更新 RecipeViewer 以集成新组件
 - Author: AndreaFrederica
-- Date: 2026-02-07T10:10:59+08:00
-- Generated at: 2026-02-09T16:33:34.334Z
+- Date: 2026-02-11T14:25:12+08:00
+- Generated at: 2026-02-11T14:36:19.409Z
 - Remote: https://github.com/AndreaFrederica/jei-web.git
 
 ## Version History
+
+### r57 (2026-02-11T14:25:12+08:00)
+- b2fe075
+  feat: 添加 WikiDocRecipeView 组件以支持文档视图，更新 RecipeViewer 以集成新组件
+
+### r56 (2026-02-10T03:03:49+08:00)
+- 3ead8b0
+  refactor(wiki): update EntryInline rendering to StackView
+  
+  Replaces the previous `ImageLoader` and manual DOM structure with the
+  shared `StackView` component to standardize how wiki entries are
+  displayed.
+  
+  - Integrates `StackView` for both inline and card display modes.
+  - Adapts entry data into `SlotContent` and `ItemDef` formats required by
+    `StackView`.
+  - Removes anchor tag wrapper from inline view, handling navigation via
+    click event.
+  - Adds `resolveIconUrl` helper to maintain image proxy configuration.
+
+### r55 (2026-02-10T00:36:13+08:00)
+- 5e3a970
+  feat: enhance wiki component with structured documentation support and color contrast improvements
+  
+  - Updated `TextInline.vue` to include dynamic color resolution based on theme and ensure readability against backgrounds.
+  - Enhanced `RecipeContentView.vue` to support structured wiki documents, allowing for better organization and display of content.
+  - Added new `DARK_COLOR_MAP` to `wiki.ts` for improved color management in dark mode.
+  - Modified `validate.ts` to include wiki and recipes fields in item definitions.
+  - Updated generated documentation to reflect the latest changes and commit history.
 
 ### r54 (2026-02-07T10:10:59+08:00)
 - 8dac017

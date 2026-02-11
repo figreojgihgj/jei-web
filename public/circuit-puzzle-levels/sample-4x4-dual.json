@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "id": "sample-4x4-dual",
+  "name": "Sample 4x4 Dual",
+  "board": {
+    "rows": 4,
+    "cols": 4,
+    "blocked": [],
+    "hintCells": [
+      [0, 0],
+      [1, 0],
+      [3, 0],
+      [0, 1],
+      [1, 1],
+      [3, 1],
+      [3, 2],
+      [3, 3]
+    ],
+    "hintColors": [
+      { "cell": [0, 0], "color": "#9ddb22" },
+      { "cell": [1, 0], "color": "#9ddb22" },
+      { "cell": [3, 0], "color": "#9ddb22" },
+      { "cell": [0, 1], "color": "#9ddb22" },
+      { "cell": [1, 1], "color": "#9ddb22" },
+      { "cell": [3, 1], "color": "#9ddb22" },
+      { "cell": [3, 2], "color": "#9ddb22" },
+      { "cell": [3, 3], "color": "#9ddb22" }
+    ]
+  },
+  "clues": {
+    "rows": [3, 3, 1, 1],
+    "cols": [2, 2, 0, 4]
+  },
+  "pieces": [
+    {
+      "id": "p-o2",
+      "name": "Square 2x2",
+      "color": "#9ddb22",
+      "cells": [[0, 0], [1, 0], [0, 1], [1, 1]],
+      "count": 1
+    },
+    {
+      "id": "p-i4",
+      "name": "Line 4",
+      "color": "#9ddb22",
+      "cells": [[0, 0], [0, 1], [0, 2], [0, 3]],
+      "count": 1
+    }
+  ],
+  "scoring": {
+    "colorWeights": {
+      "#9ddb22": 1
+    }
+  }
+}

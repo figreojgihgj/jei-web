@@ -13,6 +13,8 @@ const routes: RouteRecordRaw[] = [
       { path: 'third-party-licenses', component: () => import('pages/ThirdPartyLicensesPage.vue') },
       { path: 'wiki-renderer', component: () => import('pages/WikiRendererPage.vue') },
       { path: 'storage-editor', component: () => import('pages/StorageEditorPage.vue') },
+      { path: 'circuit-puzzle', component: () => import('pages/CircuitPuzzlePage.vue') },
+      { path: 'circuit-puzzle-collection', component: () => import('pages/CircuitPuzzleCollectionPage.vue') },
     ],
   },
 

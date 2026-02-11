@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "sample-5x5-two-color",
+  "name": "Sample 5x5 Two Color",
+  "board": {
+    "rows": 5,
+    "cols": 5,
+    "blocked": [],
+    "hintCells": [
+      [0, 0],
+      [1, 0],
+      [0, 1],
+      [2, 3],
+      [3, 3],
+      [4, 3]
+    ],
+    "hintColors": [
+      { "cell": [0, 0], "color": "#9ddb22" },
+      { "cell": [1, 0], "color": "#9ddb22" },
+      { "cell": [0, 1], "color": "#9ddb22" },
+      { "cell": [2, 3], "color": "#ff6f6f" },
+      { "cell": [3, 3], "color": "#ff6f6f" },
+      { "cell": [4, 3], "color": "#ff6f6f" }
+    ]
+  },
+  "clues": {
+    "rows": [2, 1, 0, 3, 0],
+    "cols": [2, 1, 1, 1, 1]
+  },
+  "pieces": [
+    {
+      "id": "p-gamma",
+      "name": "Gamma 3",
+      "color": "#9ddb22",
+      "cells": [[0, 0], [1, 0], [0, 1]],
+      "count": 1
+    },
+    {
+      "id": "p-line3",
+      "name": "Line 3",
+      "color": "#ff6f6f",
+      "cells": [[0, 0], [1, 0], [2, 0]],
+      "count": 1
+    }
+  ],
+  "scoring": {
+    "colorWeights": {
+      "#9ddb22": 1,
+      "#ff6f6f": 1
+    }
+  }
+}

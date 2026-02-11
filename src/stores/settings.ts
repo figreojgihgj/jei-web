@@ -38,6 +38,7 @@ export const useSettingsStore = defineStore('settings', {
       wikiImageUseProxy: false,
       wikiImageProxyUrl: 'https://r.jina.ai/http://',
       wikiCatalogFileName: '',
+      circuitCollectionPreviewShowPieces: false,
     };
     try {
       const raw = localStorage.getItem('jei.settings');
@@ -101,6 +102,10 @@ export const useSettingsStore = defineStore('settings', {
           typeof parsed.wikiCatalogFileName === 'string'
             ? parsed.wikiCatalogFileName
             : defaults.wikiCatalogFileName,
+        circuitCollectionPreviewShowPieces:
+          typeof parsed.circuitCollectionPreviewShowPieces === 'boolean'
+            ? parsed.circuitCollectionPreviewShowPieces
+            : defaults.circuitCollectionPreviewShowPieces,
       };
     } catch {
       Dark.set('auto');
@@ -179,6 +184,10 @@ export const useSettingsStore = defineStore('settings', {
       this.completedTutorial = value;
       this.save();
     },
+    setCircuitCollectionPreviewShowPieces(value: boolean) {
+      this.circuitCollectionPreviewShowPieces = value;
+      this.save();
+    },
     save() {
       localStorage.setItem(
         'jei.settings',
@@ -200,6 +209,7 @@ export const useSettingsStore = defineStore('settings', {
           wikiImageUseProxy: this.wikiImageUseProxy,
           wikiImageProxyUrl: this.wikiImageProxyUrl,
           wikiCatalogFileName: this.wikiCatalogFileName,
+          circuitCollectionPreviewShowPieces: this.circuitCollectionPreviewShowPieces,
         }),
       );
     },

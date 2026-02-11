@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "title": "Circuit Puzzle 题目收录",
+  "basePath": "/circuit-puzzle-levels",
+  "entries": [
+    {
+      "id": "sample-3x3-l",
+      "title": "示例：3x3-L 形入门题",
+      "json": "sample-3x3-l.json",
+      "markdown": "sample-3x3-l.md",
+      "difficulty": "easy",
+      "author": "local",
+      "tags": ["sample", "tutorial", "single-piece"]
+    },
+    {
+      "id": "sample-4x4-dual",
+      "title": "示例：4x4 双方块拼接",
+      "json": "sample-4x4-dual.json",
+      "markdown": "sample-4x4-dual.md",
+      "difficulty": "easy",
+      "author": "local",
+      "tags": ["sample", "two-pieces", "basic"]
+    },
+    {
+      "id": "sample-5x5-two-color",
+      "title": "示例：5x5 双颜色提示",
+      "json": "sample-5x5-two-color.json",
+      "markdown": "sample-5x5-two-color.md",
+      "difficulty": "normal",
+      "author": "local",
+      "tags": ["sample", "color", "hint-color"]
+    },
+    {
+      "id": "sample-6x6-blocked",
+      "title": "示例：6x6 带禁用格",
+      "json": "sample-6x6-blocked.json",
+      "markdown": "sample-6x6-blocked.md",
+      "difficulty": "normal",
+      "author": "local",
+      "tags": ["sample", "blocked", "count"]
+    }
+  ]
+}
