@@ -1,0 +1,175 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_1044"
+  },
+  "name": "塔卫二畅游指南 - 四号谷地",
+  "icon": "https://bbs.hycdn.cn/image/2026/01/20/3002335/5670dcd5e96e9b63e7e3d326121edd7c.png",
+  "tags": [
+    "main:情报档案库",
+    "sub:情报资讯"
+  ],
+  "source": "情报档案库/情报资讯/id1044.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648736",
+    "data": {
+      "item": {
+        "itemId": "1044",
+        "document": {
+          "documentMap": {
+            "y0TRQ7M4": {
+              "id": "document-id",
+              "blockIds": [
+                "UX3Cv9cdsqFT",
+                "s0PI5cQzLRot",
+                "Nvw0ubIDH5Tm",
+                "lVDJo80KxBjq"
+              ],
+              "blockMap": {
+                "Nvw0ubIDH5Tm": {
+                  "id": "Nvw0ubIDH5Tm",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696f0038fd450daf2ba95e0d",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/c5784e398334b6785e0bc8fee69c4416.webp",
+                    "width": "1000",
+                    "height": "2612",
+                    "size": "267690",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "UX3Cv9cdsqFT": {
+                  "id": "UX3Cv9cdsqFT",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696eff90aa015319cfdbf9f7",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/3513dfa20f116c12b25733065ea9b2c0.webp",
+                    "width": "1000",
+                    "height": "3975",
+                    "size": "347204",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "lVDJo80KxBjq": {
+                  "id": "lVDJo80KxBjq",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "s0PI5cQzLRot": {
+                  "id": "s0PI5cQzLRot",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696eff9f65951d615cb932cf",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/62c0a51718a18560393ac2dc310ef2c1.webp",
+                    "width": "1000",
+                    "height": "2788",
+                    "size": "286956",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "畅游指南",
+              "widgets": [
+                {
+                  "id": "7mW8JuoP",
+                  "title": "",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "7mW8JuoP": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "y0TRQ7M4",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "塔卫二畅游指南 - 四号谷地",
+        "mainType": {
+          "id": "3",
+          "name": "情报档案库",
+          "status": 2,
+          "position": 3,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "12",
+          "name": "情报资讯",
+          "fatherTypeId": "3",
+          "style": 5,
+          "status": 2,
+          "position": 17,
+          "icon": "",
+          "items": [],
+          "filterTagTree": []
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "createdUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2026/01/20/3002335/5670dcd5e96e9b63e7e3d326121edd7c.png",
+          "name": "塔卫二畅游指南 - 四号谷地",
+          "description": null,
+          "associate": null,
+          "subTypeList": [],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1768909249",
+        "lastAuditPassedAt": "1768910275",
+        "tagIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1926 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_1005"
+  },
+  "name": "【玩家攻略】陈千语",
+  "icon": "https://bbs.hycdn.cn/image/2026/01/10/132207/29056206486b61da2a0a00b31d06a468.png",
+  "rarity": {
+    "stars": 5,
+    "label": "5星",
+    "color": "#fb8c00",
+    "token": "rarity_5",
+    "tagId": "10005"
+  },
+  "tags": [
+    "main:游戏攻略辑",
+    "sub:干员攻略",
+    "rarity:5"
+  ],
+  "source": "游戏攻略辑/干员攻略/id1005.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648735",
+    "data": {
+      "item": {
+        "itemId": "1005",
+        "document": {
+          "documentMap": {
+            "KbTnoH8N": {
+              "id": "document-id",
+              "blockIds": [
+                "uhcOvzWKCDth",
+                "Q6WMPwLSpUaQ",
+                "DErhfpZmz25F",
+                "gZgfXOyP2b9T",
+                "dhKg52aREwx2",
+                "2jW9rgkr8fFd",
+                "9KugH3Z8zNu7",
+                "P3DFqcddX5Zy",
+                "ZfK5Av0ARG8E",
+                "g7uLBolferzf",
+                "j7bXxCTfA7B0",
+                "XdgSIGjGnH2k",
+                "bg9xky7Aaxi6",
+                "rDnVeQvIvwVV",
+                "ierfwPbUiGYT",
+                "2vUmygyXEIr7",
+                "5JK1ywTmIxqh",
+                "rmT2va8ZA1hR",
+                "z85Pk5ALzGds",
+                "scGgbihc1DwT",
+                "FzLOFd9OKY3d",
+                "bRJlYO3R02fA",
+                "7ktv1yXxIZ5O",
+                "DXg2LjavjbbS",
+                "r4pbglB5RXfq",
+                "yCd58VZ19NUc",
+                "4NksZUnEEHGU",
+                "7sM01mYYISMZ",
+                "DuTZCyOUu09q",
+                "WETbsInNMxo9",
+                "hBskrfQlGpI2",
+                "xnNuPjMJqzD7",
+                "WOYjbF5wuTaW",
+                "uKW7idQRv1gW",
+                "uhkYPWCM3EpF",
+                "QGLbjgVylxZe",
+                "TUNVb1vHETBU",
+                "szChEmLokVgD",
+                "CGKkPv346n5c",
+                "iTYdtdyGdFR5",
+                "ywB2pUSwZUcz",
+                "NplpNtWOx70B",
+                "6LGYf4BB2vVY",
+                "3EBmWYVOvJWw",
+                "hus15KmozSId",
+                "aW8IxjpunZv4",
+                "Qrzuyjmk79Uu",
+                "HN5P44aezZTu",
+                "kcZ4pHpzzjga",
+                "5YocfprUi3sG",
+                "USXnxIpWORtR",
+                "qSgA9XFx8jyu",
+                "qes5g0UIHKW2",
+                "UNOBjWMyd7uL",
+                "N5pMBSq57lSU",
+                "uglwqJTUqLCG",
+                "Ed4C9qjXoHhI",
+                "XWharB9pSiqT",
+                "s0yhXIMtsyoL",
+                "DnRmKom7Op85",
+                "GxkT5RvBY5Ss",
+                "lJ0bs5ZUI9m5",
+                "oT5v5Vvbq0jR",
+                "v6USw0C6btuE",
+                "r3DVgbtA8qlV",
+                "ylXBGPFBsXxA",
+                "aPkMixaIQRuL",
+                "gNVfDuuDcn2l",
+                "6vexFqm3nxul",
+                "PuUCgGLCtEdv",
+                "G2kugs1ycJnh"
+              ],
+              "blockMap": {
+                "2jW9rgkr8fFd": {
+                  "id": "2jW9rgkr8fFd",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "物理系五星角色，近卫干员。专精于击飞效果，能够快速叠加破防，还能对单体敌人造成大量伤害和失衡值。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "2vUmygyXEIr7": {
+                  "id": "2vUmygyXEIr7",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：输出一般，但比较团队。除非陈是完全的后台工具人，升级提高一点点伤害，不然不推荐优先专精。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "3EBmWYVOvJWw": {
+                  "id": "3EBmWYVOvJWw",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696513a418767e28b2c69d56",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/e6667a003459c50f693b1b53eb7dbfa5.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "164726",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "4NksZUnEEHGU": {
+                  "id": "4NksZUnEEHGU",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "其余的为信赖区和基建区，如图。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "5JK1ywTmIxqh": {
+                  "id": "5JK1ywTmIxqh",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "终结技——7段斩击，最后一段倍率很高。（技力70）"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "5YocfprUi3sG": {
+                  "id": "5YocfprUi3sG",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696513caa59001b9ad14fcf2",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/2cb6668af45f39cc50229ca8cb7a94c2.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "163300",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "6LGYf4BB2vVY": {
+                  "id": "6LGYf4BB2vVY",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "毕业金装1（超域*3+1）："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "6vexFqm3nxul": {
+                  "id": "6vexFqm3nxul",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6965144b18767e28b2c69d58",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/419eb86634b5ba99acbd3308cb711203.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "216024",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "7ktv1yXxIZ5O": {
+                  "id": "7ktv1yXxIZ5O",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "斩锋"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "——技能每次命中敌人时，攻击力+8%，持续10秒，该效果最多叠加5层。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "7sM01mYYISMZ": {
+                  "id": "7sM01mYYISMZ",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "陈千语的基建技能是制造武器经验和培养矿物质料的，前期不急点，之后需要了在点即可。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "9KugH3Z8zNu7": {
+                  "id": "9KugH3Z8zNu7",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "标签：击飞和失衡"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "CGKkPv346n5c": {
+                  "id": "CGKkPv346n5c",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6965138718767e28b2c69d55",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/098b3a96f662d0b2b8a83bd5fe9537d9.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "131836",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "DErhfpZmz25F": {
+                  "id": "DErhfpZmz25F",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6965134751ac3ba99b149dcb",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/1b34c545a1559addcff54f53ac50b167.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "206618",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "DXg2LjavjbbS": {
+                  "id": "DXg2LjavjbbS",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：叠满就是+40%的攻击力，连携技也算技能，每次伤害都能触发，也就是"
+                        }
+                      },
+                      {
+                        "underline": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "大招最后两段必定吃满"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "DnRmKom7Op85": {
+                  "id": "DnRmKom7Op85",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "管理员（主控）+陈千语+佩丽卡+艾尔黛拉"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "DuTZCyOUu09q": {
+                  "id": "DuTZCyOUu09q",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "武器部分："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Ed4C9qjXoHhI": {
+                  "id": "Ed4C9qjXoHhI",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "配队部分："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "FzLOFd9OKY3d": {
+                  "id": "FzLOFd9OKY3d",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "天赋部分："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "G2kugs1ycJnh": {
+                  "id": "G2kugs1ycJnh",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "实战连招：余烬站场按住左键无脑输出，战技以大潘为主，连携技有就放，极致肉度，几乎挂机。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "GxkT5RvBY5Ss": {
+                  "id": "GxkT5RvBY5Ss",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：全面测试期间小羊是赠送的，所以本队是完全的免费队，开荒极其好用。陈千语在此队主要用于与管理员打配合，能有左脚踩右脚起飞的效果，小羊提供奶量且有物理脆弱效果，佩丽卡负责吃。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "HN5P44aezZTu": {
+                  "id": "HN5P44aezZTu",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "是陈千语的常规毕业套。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "N5pMBSq57lSU": {
+                  "id": "N5pMBSq57lSU",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "阿伯莉重甲+巡行信使手套一型+巡行信使手电二型"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "NplpNtWOx70B": {
+                  "id": "NplpNtWOx70B",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "装备部分："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "P3DFqcddX5Zy": {
+                  "id": "P3DFqcddX5Zy",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "主能力-敏捷  副能力-力量"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "PuUCgGLCtEdv": {
+                  "id": "PuUCgGLCtEdv",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "骏卫+大潘+陈千语+余烬（主控）"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Q6WMPwLSpUaQ": {
+                  "id": "Q6WMPwLSpUaQ",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "先说结论：陈千语控制能力强，输出效率较好，打法很团队，总的来说强度属于大杯上"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "（）"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "QGLbjgVylxZe": {
+                  "id": "QGLbjgVylxZe",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "不过目前仰止有个"
+                        }
+                      },
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "毒点"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "：对于BOSS这种有失衡结点的敌人，是无法触发词条三的击飞增伤效果的。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Qrzuyjmk79Uu": {
+                  "id": "Qrzuyjmk79Uu",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：适合使用五星替代武器的陈千语玩家，套装词条与破防也就是物理异常有关，陈千语能轻易触发效果。而小词条加了很多源石技艺强度使其来到了138，如上图的说明能明显增加物理异常的伤害和累计失衡值。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "TUNVb1vHETBU": {
+                  "id": "TUNVb1vHETBU",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "因为毒点的存在，所以便有"
+                        }
+                      },
+                      {
+                        "underline": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "也更推荐一般玩家选择"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "UNOBjWMyd7uL": {
+                  "id": "UNOBjWMyd7uL",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696513d7e338a8bc536389e4",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/419885a4b87a0aebc8c39ad951e8e62d.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "149778",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "USXnxIpWORtR": {
+                  "id": "USXnxIpWORtR",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "MI警用护甲+MI警用手套+MI警用瞄具+碾骨面具一型"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "WETbsInNMxo9": {
+                  "id": "WETbsInNMxo9",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "六星专武——扶摇"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "WOYjbF5wuTaW": {
+                  "id": "WOYjbF5wuTaW",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "五星替代1——仰止"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "XWharB9pSiqT": {
+                  "id": "XWharB9pSiqT",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "1.新手赠送开荒队："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "XdgSIGjGnH2k": {
+                  "id": "XdgSIGjGnH2k",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：小陈不太适合作为主控干员，即使主控在终末地这里一般也都不靠普攻打主伤害，不推荐小陈和绝大多数干员优先练普攻。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ZfK5Av0ARG8E": {
+                  "id": "ZfK5Av0ARG8E",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "技能部分："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "aPkMixaIQRuL": {
+                  "id": "aPkMixaIQRuL",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "实战连招：骏卫战场普攻至第二段时释放黎风战技,战技结束正好触发黎风和陈千语的连携技→陈千语释放战技→大潘释放战技(大潘最好带超域套)→大潘释放连携技→骏卫释放连携技。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "aW8IxjpunZv4": {
+                  "id": "aW8IxjpunZv4",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "轻超域护手+轻超域稳定盘*2+MI警用护甲"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "bRJlYO3R02fA": {
+                  "id": "bRJlYO3R02fA",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696513625cf0b8e228d5acc5",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/0630d7d2f09c9839867abac24d97bb29.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "97192",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "bg9xky7Aaxi6": {
+                  "id": "bg9xky7Aaxi6",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "战技"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "——造成伤害并击飞敌人。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "dhKg52aREwx2": {
+                  "id": "dhKg52aREwx2",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "先看点基础介绍信息："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "g7uLBolferzf": {
+                  "id": "g7uLBolferzf",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69651352e338a8bc536389e3",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/073bbbdd3795a604fd618916beeee284.webp",
+                    "width": "498",
+                    "height": "203",
+                    "size": "7764",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "gNVfDuuDcn2l": {
+                  "id": "gNVfDuuDcn2l",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "3.站桩挂机队"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "gZgfXOyP2b9T": {
+                  "id": "gZgfXOyP2b9T",
+                  "parentId": "document-id",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "陈千语"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "hBskrfQlGpI2": {
+                  "id": "hBskrfQlGpI2",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6965137251ac3ba99b149dcc",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/42752b7be9d79a8252d19d23c9b21f33.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "113606",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "hus15KmozSId": {
+                  "id": "hus15KmozSId",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696513bd3af0cbfacc52fd02",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/3652c71970f22732e6ba2cb6735e65d5.webp",
+                    "width": "1531",
+                    "height": "488",
+                    "size": "42138",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "iTYdtdyGdFR5": {
+                  "id": "iTYdtdyGdFR5",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：词条一和二与仰止一样，主要就是词条三，钢铁余音加攻击力并和物理异常联动，这对于陈千语来说就是常驻的一个+35%攻击力的词条。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ierfwPbUiGYT": {
+                  "id": "ierfwPbUiGYT",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "连携技：当有敌人进入破防状态时可以发动。进行穿梭斩击，对路径上的所有敌人造成物理伤害和击飞。（17秒冷却）"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "j7bXxCTfA7B0": {
+                  "id": "j7bXxCTfA7B0",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "普攻"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "——5段攻击，重击16失衡值。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "kcZ4pHpzzjga": {
+                  "id": "kcZ4pHpzzjga",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "毕业金装2（警用*3+1）："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "lJ0bs5ZUI9m5": {
+                  "id": "lJ0bs5ZUI9m5",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "实战连招：主控保持平a，管理员战技——陈千语连携——管理员连携——管理员战技——主控a一套—小羊+佩丽卡连携。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "oT5v5Vvbq0jR": {
+                  "id": "oT5v5Vvbq0jR",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "2.物理完全体"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "qSgA9XFx8jyu": {
+                  "id": "qSgA9XFx8jyu",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：这套适用于使用六星专武扶摇的陈千语玩家。警用套加暴击率，契合扶摇的词条二，暴击率直接30%+，且陈千语的攻击频率较高，战斗中触发暴击也就是套装效果较为容易。同时还能提供20点源石记忆强度和75.9%的战技加伤，一整套都非常适合战技打输出，终结技打爆发的陈千语。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "qes5g0UIHKW2": {
+                  "id": "qes5g0UIHKW2",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "过渡紫套3（巡行信使*3+1）："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "r3DVgbtA8qlV": {
+                  "id": "r3DVgbtA8qlV",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "骏卫（主控）+陈千语+大潘+黎风"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "r4pbglB5RXfq": {
+                  "id": "r4pbglB5RXfq",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "破势"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "——技能打断敌人蓄力时，额外对其造成10点失衡。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "rDnVeQvIvwVV": {
+                  "id": "rDnVeQvIvwVV",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：伤害倍率不俗，控制稳定简单，建议优先升级与专精。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "rmT2va8ZA1hR": {
+                  "id": "rmT2va8ZA1hR",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：是陈千语的主要输出技能，技力需求也不高。伤害倍率非常高且最终一击必定能吃满天赋一的加攻效果。推荐一般玩家优先升级和专精该技能。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "s0yhXIMtsyoL": {
+                  "id": "s0yhXIMtsyoL",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69651430e338a8bc536389e5",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/79958abbd19fd1479aa23addcc0926d7.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "199062",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "scGgbihc1DwT": {
+                  "id": "scGgbihc1DwT",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "然后再升连携技，普攻最后再升。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "szChEmLokVgD": {
+                  "id": "szChEmLokVgD",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "五星替代2——钢铁余音"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "uKW7idQRv1gW": {
+                  "id": "uKW7idQRv1gW",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6965137c51ac3ba99b149dcd",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/84d12b6de03f8e592466d6a73f76fe60.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "119236",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "uglwqJTUqLCG": {
+                  "id": "uglwqJTUqLCG",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：过渡套装，紫套找符合主副能力的就行。巡行信使套就是+50敏捷符合陈千语，因为甲没有很好的所以用了阿伯莉的。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "uhcOvzWKCDth": {
+                  "id": "uhcOvzWKCDth",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6965133ad5222515d2291e8f",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/b398a94c007ce36d522f80d618599f91.webp",
+                    "width": "1146",
+                    "height": "797",
+                    "size": "148126",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "uhkYPWCM3EpF": {
+                  "id": "uhkYPWCM3EpF",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：词条一和二加敏捷和物理伤害，词条三加终结技的伤害还和击飞联动，陈千语主能力为敏捷且战技和连携技均能造成击飞，因此仰止是最为合适的五星武器。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "v6USw0C6btuE": {
+                  "id": "v6USw0C6btuE",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6965143f62041418f3d301ac",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/12/3002335/be2edab62064a072ef9107a65044b1d3.webp",
+                    "width": "2560",
+                    "height": "1440",
+                    "size": "186032",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "xnNuPjMJqzD7": {
+                  "id": "xnNuPjMJqzD7",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：词条一敏捷契合陈千语主能力。词条二加暴击率，陈千语的输出都依赖较高的倍率，如能暴击提升也很大。词条三非常粗暴的加伤害啊，而且正好是战技和终结技，而且还能大幅增加对失衡敌人的伤害，给失衡特攻的陈千语再适合不过。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "yCd58VZ19NUc": {
+                  "id": "yCd58VZ19NUc",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "简评：加强打失衡效率的，挺有用的天赋，打失衡是物理队的一大特色"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ylXBGPFBsXxA": {
+                  "id": "ylXBGPFBsXxA",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "别问图，问就是黎风没抽到"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ywB2pUSwZUcz": {
+                  "id": "ywB2pUSwZUcz",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "并且加攻击力是优先与攻击力白值乘算，再吃到主能力的提升，也就是双倍乘区，非常适合大部分玩家。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "z85Pk5ALzGds": {
+                  "id": "z85Pk5ALzGds",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "总评：战技和终结技都是推荐优先练，如果打爆发流就终结技优先级高一级，平常玩法就战技先练。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "R6e8qzW0": {
+              "id": "document-id",
+              "blockIds": [
+                "OLR6V1Fn2lbr",
+                "xuwvZlWlpJC9"
+              ],
+              "blockMap": {
+                "OLR6V1Fn2lbr": {
+                  "id": "OLR6V1Fn2lbr",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f628774509b556106a0ca",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f628774509b556106a0ca_2f76db19.jpg",
+                    "width": "4195",
+                    "height": "19626",
+                    "size": "13709588",
+                    "format": "jpg",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "xuwvZlWlpJC9": {
+                  "id": "xuwvZlWlpJC9",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "r42aL4li": {
+              "id": "document-id",
+              "blockIds": [
+                "63UHHp",
+                "69569cf09a4ee9086cb003a9",
+                "69569cf06bc57177aa8bd6bd",
+                "69569cf09a4ee9086cb003a8",
+                "kTxumv"
+              ],
+              "blockMap": {
+                "63UHHp": {
+                  "id": "63UHHp",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "69569cf06bc57177aa8bd6bd": {
+                  "id": "69569cf06bc57177aa8bd6bd",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69569cf06bc57177aa8bd6bd",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/02/132207/d679ed0468bc425e51814fc40fae0dfd.png",
+                    "width": "4762",
+                    "height": "8469",
+                    "size": "5890563",
+                    "format": "png",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "69569cf09a4ee9086cb003a8": {
+                  "id": "69569cf09a4ee9086cb003a8",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69569cf09a4ee9086cb003a8",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/02/132207/062d549fe2b75ba9886e309b6653cf3f.png",
+                    "width": "4762",
+                    "height": "8469",
+                    "size": "4610454",
+                    "format": "png",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "69569cf09a4ee9086cb003a9": {
+                  "id": "69569cf09a4ee9086cb003a9",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69569cf09a4ee9086cb003a9",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/02/132207/02ab0d4fa10f2f420a62deb680f2d47d.png",
+                    "width": "4762",
+                    "height": "8469",
+                    "size": "13757147",
+                    "format": "png",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "kTxumv": {
+                  "id": "kTxumv",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "攻略",
+              "widgets": [
+                {
+                  "id": "4PGlcgII",
+                  "title": "",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "4PGlcgII": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [
+                {
+                  "tabId": "tab_1767283910044",
+                  "title": "长籽夜",
+                  "icon": ""
+                },
+                {
+                  "tabId": "tab_1767283935348",
+                  "title": "星海浩瀚VU",
+                  "icon": ""
+                },
+                {
+                  "tabId": "tab_1768231562640",
+                  "title": "CarpeDiem",
+                  "icon": ""
+                }
+              ],
+              "tabDataMap": {
+                "tab_1767283910044": {
+                  "intro": null,
+                  "content": "R6e8qzW0",
+                  "audioList": []
+                },
+                "tab_1767283935348": {
+                  "intro": null,
+                  "content": "r42aL4li",
+                  "audioList": []
+                },
+                "tab_1768231562640": {
+                  "intro": null,
+                  "content": "KbTnoH8N",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "【玩家攻略】陈千语",
+        "mainType": {
+          "id": "2",
+          "name": "游戏攻略辑",
+          "status": 2,
+          "position": 2,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "11",
+          "name": "干员攻略",
+          "fatherTypeId": "2",
+          "style": 5,
+          "status": 2,
+          "position": 12,
+          "icon": "",
+          "items": [],
+          "filterTagTree": [
+            {
+              "id": "10278",
+              "children": [
+                {
+                  "id": "10281",
+                  "children": [],
+                  "name": "近卫",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10282",
+                  "children": [],
+                  "name": "术师",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10283",
+                  "children": [],
+                  "name": "突击",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10280",
+                  "children": [],
+                  "name": "先锋",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10284",
+                  "children": [],
+                  "name": "重装",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10279",
+                  "children": [],
+                  "name": "辅助",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "干员职业",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10000",
+              "children": [
+                {
+                  "id": "10001",
+                  "children": [],
+                  "name": "1星",
+                  "type": 2,
+                  "value": "rarity_1"
+                },
+                {
+                  "id": "10002",
+                  "children": [],
+                  "name": "2星",
+                  "type": 2,
+                  "value": "rarity_2"
+                },
+                {
+                  "id": "10003",
+                  "children": [],
+                  "name": "3星",
+                  "type": 2,
+                  "value": "rarity_3"
+                },
+                {
+                  "id": "10004",
+                  "children": [],
+                  "name": "4星",
+                  "type": 2,
+                  "value": "rarity_4"
+                },
+                {
+                  "id": "10005",
+                  "children": [],
+                  "name": "5星",
+                  "type": 2,
+                  "value": "rarity_5"
+                },
+                {
+                  "id": "10006",
+                  "children": [],
+                  "name": "6星",
+                  "type": 2,
+                  "value": "rarity_6"
+                }
+              ],
+              "name": "星级",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "id": "10285",
+              "children": [
+                {
+                  "id": "10287",
+                  "children": [],
+                  "name": "物理",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10288",
+                  "children": [],
+                  "name": "灼热",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10290",
+                  "children": [],
+                  "name": "电磁",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10286",
+                  "children": [],
+                  "name": "寒冷",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10289",
+                  "children": [],
+                  "name": "自然",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "属性",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10291",
+              "children": [
+                {
+                  "id": "10304",
+                  "children": [],
+                  "name": "施术单元",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10300",
+                  "children": [],
+                  "name": "手铳",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10302",
+                  "children": [],
+                  "name": "单手剑",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10294",
+                  "children": [],
+                  "name": "双手剑",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10299",
+                  "children": [],
+                  "name": "长柄武器",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "武器类型",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10293",
+              "children": [
+                {
+                  "id": "10295",
+                  "children": [],
+                  "name": "力量",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10306",
+                  "children": [],
+                  "name": "敏捷",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10305",
+                  "children": [],
+                  "name": "智识",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10297",
+                  "children": [],
+                  "name": "意志",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "主能力",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10292",
+              "children": [
+                {
+                  "id": "10296",
+                  "children": [],
+                  "name": "力量",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10298",
+                  "children": [],
+                  "name": "敏捷",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10301",
+                  "children": [],
+                  "name": "智识",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10303",
+                  "children": [],
+                  "name": "意志",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "副能力",
+              "type": 1,
+              "value": ""
+            }
+          ]
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "createdUser": {
+          "id": "9450447906447",
+          "nickname": "三万光年",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/01/16/07569778ab14e1c02b7fb3d7e9186dd4.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2026/01/10/132207/29056206486b61da2a0a00b31d06a468.png",
+          "name": "【玩家攻略】陈千语",
+          "description": null,
+          "associate": null,
+          "subTypeList": [
+            {
+              "subTypeId": "10000",
+              "value": "10005"
+            },
+            {
+              "subTypeId": "10278",
+              "value": "10281"
+            },
+            {
+              "subTypeId": "10285",
+              "value": "10287"
+            },
+            {
+              "subTypeId": "10291",
+              "value": "10302"
+            },
+            {
+              "subTypeId": "10292",
+              "value": "10296"
+            },
+            {
+              "subTypeId": "10293",
+              "value": "10306"
+            }
+          ],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1768113235",
+        "lastAuditPassedAt": "1769956019",
+        "tagIds": [
+          "10005",
+          "10281",
+          "10302",
+          "10296",
+          "10287",
+          "10306"
+        ]
+      }
+    }
+  }
+}

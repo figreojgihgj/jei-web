@@ -1,0 +1,281 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_1083"
+  },
+  "name": "危境情报 - 白垩界卫",
+  "icon": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3b6e51acf5ca27ba431d_13673ac9.png",
+  "tags": [
+    "main:情报档案库",
+    "sub:情报资讯"
+  ],
+  "source": "情报档案库/情报资讯/id1083.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648737",
+    "data": {
+      "item": {
+        "itemId": "1083",
+        "document": {
+          "documentMap": {
+            "NONyRy1E": {
+              "id": "document-id",
+              "blockIds": [
+                "fjNwRPHFs2jU",
+                "6cugjs7WpBKn",
+                "Wm0M74zlsRTX",
+                "KFrNcFI9Rhl6",
+                "VuN2Ikp4F3ub",
+                "2yK6AjKKWOQb",
+                "wl0x2VDFENZX",
+                "o4dYujPLRIVn",
+                "UUOlTp7BO7I4"
+              ],
+              "blockMap": {
+                "2yK6AjKKWOQb": {
+                  "id": "2yK6AjKKWOQb",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f3baa51acf5ca27ba4325",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3baa51acf5ca27ba4325_96d20048.gif",
+                    "width": "360",
+                    "height": "640",
+                    "size": "5979314",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "6cugjs7WpBKn": {
+                  "id": "6cugjs7WpBKn",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f3b97d262875d5b984548",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3b97d262875d5b984548_96d20048.webp",
+                    "width": "900",
+                    "height": "3091",
+                    "size": "246510",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "KFrNcFI9Rhl6": {
+                  "id": "KFrNcFI9Rhl6",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f3ba23a151ae9156110f1",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3ba23a151ae9156110f1_0095c241.gif",
+                    "width": "360",
+                    "height": "640",
+                    "size": "7797152",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "UUOlTp7BO7I4": {
+                  "id": "UUOlTp7BO7I4",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "相关页面："
+                        }
+                      },
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "630",
+                          "showType": "card-big",
+                          "count": "0"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "VuN2Ikp4F3ub": {
+                  "id": "VuN2Ikp4F3ub",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f3ba62687d7923e48babc",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3ba62687d7923e48babc_0095c241.gif",
+                    "width": "360",
+                    "height": "640",
+                    "size": "7545719",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "Wm0M74zlsRTX": {
+                  "id": "Wm0M74zlsRTX",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f3b9de9b28fa88d018d83",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3b9de9b28fa88d018d83_0095c241.gif",
+                    "width": "360",
+                    "height": "640",
+                    "size": "4322230",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "fjNwRPHFs2jU": {
+                  "id": "fjNwRPHFs2jU",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f3b8b51acf5ca27ba431f",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3b8b51acf5ca27ba431f_e71aef33.webp",
+                    "width": "900",
+                    "height": "1600",
+                    "size": "127732",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "o4dYujPLRIVn": {
+                  "id": "o4dYujPLRIVn",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f3bb22687d7923e48babe",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3bb22687d7923e48babe_e71aef33.gif",
+                    "width": "360",
+                    "height": "640",
+                    "size": "4479584",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "wl0x2VDFENZX": {
+                  "id": "wl0x2VDFENZX",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f3baed262875d5b98454c",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3baed262875d5b98454c_ef3391c4.gif",
+                    "width": "360",
+                    "height": "640",
+                    "size": "5632787",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "危境情报",
+              "widgets": [
+                {
+                  "id": "wjCgd8So",
+                  "title": "危境情报",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "wjCgd8So": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "NONyRy1E",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "危境情报 - 白垩界卫",
+        "mainType": {
+          "id": "3",
+          "name": "情报档案库",
+          "status": 2,
+          "position": 3,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "12",
+          "name": "情报资讯",
+          "fatherTypeId": "3",
+          "style": 5,
+          "status": 2,
+          "position": 17,
+          "icon": "",
+          "items": [],
+          "filterTagTree": []
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "createdUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f3b6e51acf5ca27ba431d_13673ac9.png",
+          "name": "危境情报 - 白垩界卫",
+          "description": null,
+          "associate": null,
+          "subTypeList": [],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1769955274",
+        "lastAuditPassedAt": "1769947525",
+        "tagIds": []
+      }
+    }
+  }
+}

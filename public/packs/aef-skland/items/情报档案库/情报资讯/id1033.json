@@ -1,0 +1,263 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_1033"
+  },
+  "name": "危境情报 - 三位一体",
+  "icon": "https://bbs.hycdn.cn/image/2026/01/16/500031/3b640065c79a10f3eb6cdf8df5fd605c.png",
+  "tags": [
+    "main:情报档案库",
+    "sub:情报资讯"
+  ],
+  "source": "情报档案库/情报资讯/id1033.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648736",
+    "data": {
+      "item": {
+        "itemId": "1033",
+        "document": {
+          "documentMap": {
+            "lrYqY440": {
+              "id": "document-id",
+              "blockIds": [
+                "il10WumJeJ4f",
+                "GkNGG5oH1qYh",
+                "unY5n36zrpQA",
+                "h8WPZImXp4W9",
+                "a41PzHp4OWhm",
+                "YAMlrSIEcpjv",
+                "RouVwiHVvuxl",
+                "U5DdTVookD97"
+              ],
+              "blockMap": {
+                "GkNGG5oH1qYh": {
+                  "id": "GkNGG5oH1qYh",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6969dce3dc1f93d62e303e8f",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/16/500031/a2bcc593a30800ec8564607c17b6e304.webp",
+                    "width": "900",
+                    "height": "2200",
+                    "size": "162078",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "RouVwiHVvuxl": {
+                  "id": "RouVwiHVvuxl",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6969dce3e47d12fea2a7f59c",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/16/500031/b3d4773a64e7643825cd7b896716e19a.gif",
+                    "width": "405",
+                    "height": "720",
+                    "size": "3981314",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "U5DdTVookD97": {
+                  "id": "U5DdTVookD97",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "相关页面："
+                        }
+                      },
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "362",
+                          "showType": "card-big",
+                          "count": "0"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "YAMlrSIEcpjv": {
+                  "id": "YAMlrSIEcpjv",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6969dce3e338a8bc53638d45",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/16/500031/76aae16652e51e92b2418baced08a787.gif",
+                    "width": "405",
+                    "height": "720",
+                    "size": "5743339",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "a41PzHp4OWhm": {
+                  "id": "a41PzHp4OWhm",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6969dce34c10bb00130fff6a",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/16/500031/f525dfa30fa2ceabb06a9c95dddf7bed.gif",
+                    "width": "405",
+                    "height": "720",
+                    "size": "7405986",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "h8WPZImXp4W9": {
+                  "id": "h8WPZImXp4W9",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6969dce3872d14ea0c22b04b",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/16/500031/b4747f981afb091d251d5410ab7a61bc.gif",
+                    "width": "405",
+                    "height": "720",
+                    "size": "3835295",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "il10WumJeJ4f": {
+                  "id": "il10WumJeJ4f",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6969dce365951d615cb930a5",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/16/500031/7a80cd0203509a6fa2cfc11051279272.webp",
+                    "width": "900",
+                    "height": "1600",
+                    "size": "144772",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "unY5n36zrpQA": {
+                  "id": "unY5n36zrpQA",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6969dce39083aae324206ac2",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/16/500031/86fb69b1b7501946228ec619666d27a0.gif",
+                    "width": "405",
+                    "height": "720",
+                    "size": "6542900",
+                    "format": "gif",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "危境情报",
+              "widgets": [
+                {
+                  "id": "5AUd4UH2",
+                  "title": "危境情报",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "5AUd4UH2": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "lrYqY440",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "危境情报 - 三位一体",
+        "mainType": {
+          "id": "3",
+          "name": "情报档案库",
+          "status": 2,
+          "position": 3,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "12",
+          "name": "情报资讯",
+          "fatherTypeId": "3",
+          "style": 5,
+          "status": 2,
+          "position": 17,
+          "icon": "",
+          "items": [],
+          "filterTagTree": []
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "createdUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2026/01/16/500031/3b640065c79a10f3eb6cdf8df5fd605c.png",
+          "name": "危境情报 - 三位一体",
+          "description": null,
+          "associate": null,
+          "subTypeList": [],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1768545837",
+        "lastAuditPassedAt": "1768872840",
+        "tagIds": []
+      }
+    }
+  }
+}

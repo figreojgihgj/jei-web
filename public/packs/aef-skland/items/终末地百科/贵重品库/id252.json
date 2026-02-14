@@ -1,0 +1,478 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_252"
+  },
+  "name": "多用进阶自选箱",
+  "icon": "https://bbs.hycdn.cn/image/2026/01/07/3048259/804729e1880b902a43c31aa0da9d0589.png",
+  "description": "获取方式:\n协议通行证-协议定制奖励。",
+  "rarity": {
+    "stars": 5,
+    "label": "5星",
+    "color": "#fb8c00",
+    "token": "rarity_5",
+    "tagId": "10005"
+  },
+  "tags": [
+    "main:终末地百科",
+    "sub:贵重品库",
+    "rarity:5"
+  ],
+  "source": "终末地百科/贵重品库/id252.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648711",
+    "data": {
+      "item": {
+        "itemId": "252",
+        "document": {
+          "documentMap": {
+            "CkyDP3DJ": {
+              "id": "document-id",
+              "blockIds": [
+                "Xs9L5Z",
+                "0e9sOg",
+                "2VtAsG",
+                "pCnuhO"
+              ],
+              "blockMap": {
+                "0e9sOg": {
+                  "id": "0e9sOg",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "开启可以在以下范围内选取任意一项物资："
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "2VtAsG": {
+                  "id": "2VtAsG",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "215",
+                          "showType": "card-big",
+                          "count": "10"
+                        }
+                      },
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "214",
+                          "showType": "card-big",
+                          "count": "4"
+                        }
+                      },
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": " "
+                        }
+                      },
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "228",
+                          "showType": "card-big",
+                          "count": "10"
+                        }
+                      },
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "227",
+                          "showType": "card-big",
+                          "count": "4"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Xs9L5Z": {
+                  "id": "Xs9L5Z",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "5"
+                  }
+                },
+                "pCnuhO": {
+                  "id": "pCnuhO",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "2"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "hdqqLB2W": {
+              "id": "document-id",
+              "blockIds": [
+                "bQnTCN",
+                "PkguTE",
+                "cc9Nq6"
+              ],
+              "blockMap": {
+                "PkguTE": {
+                  "id": "PkguTE",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "color": "light_function_yellow",
+                        "kind": "text",
+                        "text": {
+                          "text": "协议通行证-协议定制"
+                        }
+                      },
+                      {
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "奖励。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "bQnTCN": {
+                  "id": "bQnTCN",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "5"
+                  }
+                },
+                "cc9Nq6": {
+                  "id": "cc9Nq6",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "2"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "物品来源",
+              "widgets": [
+                {
+                  "id": "lNzYFu78",
+                  "title": "相关来源",
+                  "size": "large"
+                }
+              ]
+            },
+            {
+              "title": "物品用途",
+              "widgets": [
+                {
+                  "id": "Gh72Rpj5",
+                  "title": "相关用途",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "Gh72Rpj5": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "CkyDP3DJ",
+                  "audioList": []
+                }
+              }
+            },
+            "lNzYFu78": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "hdqqLB2W",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "多用进阶自选箱",
+        "mainType": {
+          "id": "1",
+          "name": "终末地百科",
+          "status": 2,
+          "position": 1,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "16",
+          "name": "贵重品库",
+          "fatherTypeId": "1",
+          "style": 7,
+          "status": 2,
+          "position": 8,
+          "icon": "",
+          "items": [],
+          "filterTagTree": [
+            {
+              "id": "10000",
+              "children": [
+                {
+                  "id": "10001",
+                  "children": [],
+                  "name": "1星",
+                  "type": 2,
+                  "value": "rarity_1"
+                },
+                {
+                  "id": "10002",
+                  "children": [],
+                  "name": "2星",
+                  "type": 2,
+                  "value": "rarity_2"
+                },
+                {
+                  "id": "10003",
+                  "children": [],
+                  "name": "3星",
+                  "type": 2,
+                  "value": "rarity_3"
+                },
+                {
+                  "id": "10004",
+                  "children": [],
+                  "name": "4星",
+                  "type": 2,
+                  "value": "rarity_4"
+                },
+                {
+                  "id": "10005",
+                  "children": [],
+                  "name": "5星",
+                  "type": 2,
+                  "value": "rarity_5"
+                },
+                {
+                  "id": "10006",
+                  "children": [],
+                  "name": "6星",
+                  "type": 2,
+                  "value": "rarity_6"
+                }
+              ],
+              "name": "星级",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "id": "10321",
+              "children": [
+                {
+                  "id": "10323",
+                  "children": [],
+                  "name": "灰色品质",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10326",
+                  "children": [],
+                  "name": "绿色品质",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10325",
+                  "children": [],
+                  "name": "蓝色品质",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10327",
+                  "children": [],
+                  "name": "紫色品质",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10330",
+                  "children": [],
+                  "name": "金色品质",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10324",
+                  "children": [],
+                  "name": "橙色品质",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "品质",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10322",
+              "children": [
+                {
+                  "id": "10331",
+                  "children": [],
+                  "name": "培养素材",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10329",
+                  "children": [],
+                  "name": "任务物品",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10328",
+                  "children": [],
+                  "name": "珍贵物品",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "物品分类",
+              "type": 1,
+              "value": ""
+            }
+          ]
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "6208993443188",
+          "nickname": "肉丝饼",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/10/31/9c96dd862681caf8673e940a6f338d09.png"
+        },
+        "createdUser": {
+          "id": "1225401989759",
+          "nickname": "玉酱不吃鱼子酱",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/asset/avatar/74f94fc7b2f93bdd26ddf4bfa3f57ea2.webp"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2026/01/07/3048259/804729e1880b902a43c31aa0da9d0589.png",
+          "name": "多用进阶自选箱",
+          "description": {
+            "id": "document-id",
+            "blockIds": [
+              "mOGxEU",
+              "wwBpUO"
+            ],
+            "blockMap": {
+              "mOGxEU": {
+                "id": "mOGxEU",
+                "parentId": "document-id",
+                "align": "left",
+                "kind": "text",
+                "text": {
+                  "inlineElements": [
+                    {
+                      "bold": true,
+                      "kind": "text",
+                      "text": {
+                        "text": "开启后可选择获得干员精英化或武器突破素材。"
+                      }
+                    }
+                  ],
+                  "kind": "body"
+                }
+              },
+              "wwBpUO": {
+                "id": "wwBpUO",
+                "parentId": "document-id",
+                "align": "left",
+                "kind": "text",
+                "text": {
+                  "inlineElements": [
+                    {
+                      "color": "light_text_tertiary",
+                      "kind": "text",
+                      "text": {
+                        "text": "装着进阶类材料的补给箱。突破自身极限的第一步是触碰到自身极限，这需要漫长、痛苦的磨炼。"
+                      }
+                    }
+                  ],
+                  "kind": "body"
+                }
+              }
+            },
+            "authorMap": {},
+            "version": "1.0.0"
+          },
+          "associate": null,
+          "subTypeList": [
+            {
+              "subTypeId": "10000",
+              "value": "10005"
+            },
+            {
+              "subTypeId": "10321",
+              "value": "10330"
+            },
+            {
+              "subTypeId": "10322",
+              "value": "10328"
+            }
+          ],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1766896217",
+        "lastAuditPassedAt": "1768236973",
+        "tagIds": [
+          "10005",
+          "10330",
+          "10328"
+        ]
+      }
+    }
+  }
+}

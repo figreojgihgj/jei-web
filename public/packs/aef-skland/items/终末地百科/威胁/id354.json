@@ -1,0 +1,875 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_354"
+  },
+  "name": "刚角天使",
+  "icon": "https://bbs.hycdn.cn/image/2025/12/13/139426/5436f06fa9b6f53e1108e45dd40960d0.png",
+  "description": "获取方式:\n|敌人能力\n物理抗性 | 灼热抗性 | 电磁抗性 | 寒冷抗性 | 自然抗性\nC | C | D | D | C\n该敌人无特殊能力。\n|敌人分布区域\n枢纽区 阿伯莉采石场 矿脉源区\n|敌人掉落",
+  "tags": [
+    "main:终末地百科",
+    "sub:威胁"
+  ],
+  "source": "终末地百科/威胁/id354.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648714",
+    "data": {
+      "item": {
+        "itemId": "354",
+        "document": {
+          "documentMap": {
+            "CFhQGSs1": {
+              "id": "document-id",
+              "blockIds": [
+                "Qh78Jk",
+                "l2RXET",
+                "iz7J9H",
+                "6sEhJR",
+                "gLi8Lo",
+                "6tyDgx",
+                "ZoTWjI",
+                "r3E9Ve",
+                "nMuAMC",
+                "wLyRZy",
+                "ZfKXtf"
+              ],
+              "blockMap": {
+                "6sEhJR": {
+                  "id": "6sEhJR",
+                  "parentId": "document-id",
+                  "kind": "table",
+                  "table": {
+                    "id": "6sEhJR",
+                    "rowIds": [
+                      "zpE19x",
+                      "BkS5Us"
+                    ],
+                    "columnIds": [
+                      "keeYaI",
+                      "ygRLhH",
+                      "Vifs9Q",
+                      "GLepK4",
+                      "AsRIMG"
+                    ],
+                    "rowMap": {
+                      "BkS5Us": {
+                        "id": "BkS5Us"
+                      },
+                      "zpE19x": {
+                        "id": "zpE19x"
+                      }
+                    },
+                    "columnMap": {
+                      "AsRIMG": {
+                        "id": "AsRIMG",
+                        "width": 232
+                      },
+                      "GLepK4": {
+                        "id": "GLepK4",
+                        "width": 232
+                      },
+                      "Vifs9Q": {
+                        "id": "Vifs9Q",
+                        "width": 232
+                      },
+                      "keeYaI": {
+                        "id": "keeYaI",
+                        "width": 232
+                      },
+                      "ygRLhH": {
+                        "id": "ygRLhH",
+                        "width": 232
+                      }
+                    },
+                    "cellMap": {
+                      "BkS5Us_AsRIMG": {
+                        "id": "BkS5Us_AsRIMG",
+                        "childIds": [
+                          "wyM8CC"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "BkS5Us_GLepK4": {
+                        "id": "BkS5Us_GLepK4",
+                        "childIds": [
+                          "utP7R8"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "BkS5Us_Vifs9Q": {
+                        "id": "BkS5Us_Vifs9Q",
+                        "childIds": [
+                          "boFT3N"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "BkS5Us_keeYaI": {
+                        "id": "BkS5Us_keeYaI",
+                        "childIds": [
+                          "wnTK9E"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "BkS5Us_ygRLhH": {
+                        "id": "BkS5Us_ygRLhH",
+                        "childIds": [
+                          "oIlFBb"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zpE19x_AsRIMG": {
+                        "id": "zpE19x_AsRIMG",
+                        "childIds": [
+                          "lHHAM7"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zpE19x_GLepK4": {
+                        "id": "zpE19x_GLepK4",
+                        "childIds": [
+                          "naczjm"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zpE19x_Vifs9Q": {
+                        "id": "zpE19x_Vifs9Q",
+                        "childIds": [
+                          "VeLuiU"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zpE19x_keeYaI": {
+                        "id": "zpE19x_keeYaI",
+                        "childIds": [
+                          "bMGfGT"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zpE19x_ygRLhH": {
+                        "id": "zpE19x_ygRLhH",
+                        "childIds": [
+                          "xyqW3g"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      }
+                    },
+                    "description": "",
+                    "rowHeader": true,
+                    "colHeader": false
+                  }
+                },
+                "6tyDgx": {
+                  "id": "6tyDgx",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "3"
+                  }
+                },
+                "7saaXo": {
+                  "id": "7saaXo",
+                  "parentId": "HEcQPm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "36",
+                          "showType": "link-imgText",
+                          "count": "0"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "I4qfh4": {
+                  "id": "I4qfh4",
+                  "parentId": "kgjvAF",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "阿伯莉采石场"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Qh78Jk": {
+                  "id": "Qh78Jk",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "heading3"
+                  }
+                },
+                "T5LbIE": {
+                  "id": "T5LbIE",
+                  "parentId": "nx2AAl",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "该敌人无特殊能力。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "VeLuiU": {
+                  "id": "VeLuiU",
+                  "parentId": "zpE19x_Vifs9Q",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "电磁抗性"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ZfKXtf": {
+                  "id": "ZfKXtf",
+                  "parentId": "document-id",
+                  "kind": "list",
+                  "list": {
+                    "id": "ZfKXtf",
+                    "itemIds": [
+                      "HEcQPm"
+                    ],
+                    "itemMap": {
+                      "HEcQPm": {
+                        "id": "HEcQPm",
+                        "childIds": [
+                          "7saaXo"
+                        ]
+                      }
+                    },
+                    "kind": "unordered"
+                  }
+                },
+                "ZoTWjI": {
+                  "id": "ZoTWjI",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "|敌人分布区域"
+                        }
+                      }
+                    ],
+                    "kind": "heading3"
+                  }
+                },
+                "bMGfGT": {
+                  "id": "bMGfGT",
+                  "parentId": "zpE19x_keeYaI",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "物理抗性"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "boFT3N": {
+                  "id": "boFT3N",
+                  "parentId": "BkS5Us_Vifs9Q",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "D"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "exSotq": {
+                  "id": "exSotq",
+                  "parentId": "Yd1jgA",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "矿脉源区"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "gLi8Lo": {
+                  "id": "gLi8Lo",
+                  "parentId": "document-id",
+                  "kind": "list",
+                  "list": {
+                    "id": "gLi8Lo",
+                    "itemIds": [
+                      "nx2AAl"
+                    ],
+                    "itemMap": {
+                      "nx2AAl": {
+                        "id": "nx2AAl",
+                        "childIds": [
+                          "T5LbIE"
+                        ]
+                      }
+                    },
+                    "kind": "unordered"
+                  }
+                },
+                "ioPxHs": {
+                  "id": "ioPxHs",
+                  "parentId": "G4YrCm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "枢纽区"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "iz7J9H": {
+                  "id": "iz7J9H",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "|敌人能力"
+                        }
+                      }
+                    ],
+                    "kind": "heading3"
+                  }
+                },
+                "l2RXET": {
+                  "id": "l2RXET",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "2"
+                  }
+                },
+                "lHHAM7": {
+                  "id": "lHHAM7",
+                  "parentId": "zpE19x_AsRIMG",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "自然抗性"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "nMuAMC": {
+                  "id": "nMuAMC",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "3"
+                  }
+                },
+                "naczjm": {
+                  "id": "naczjm",
+                  "parentId": "zpE19x_GLepK4",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "寒冷抗性"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "oIlFBb": {
+                  "id": "oIlFBb",
+                  "parentId": "BkS5Us_ygRLhH",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "C"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "r3E9Ve": {
+                  "id": "r3E9Ve",
+                  "parentId": "document-id",
+                  "kind": "list",
+                  "list": {
+                    "id": "r3E9Ve",
+                    "itemIds": [
+                      "G4YrCm",
+                      "kgjvAF",
+                      "Yd1jgA"
+                    ],
+                    "itemMap": {
+                      "G4YrCm": {
+                        "id": "G4YrCm",
+                        "childIds": [
+                          "ioPxHs"
+                        ]
+                      },
+                      "Yd1jgA": {
+                        "id": "Yd1jgA",
+                        "childIds": [
+                          "exSotq"
+                        ]
+                      },
+                      "kgjvAF": {
+                        "id": "kgjvAF",
+                        "childIds": [
+                          "I4qfh4"
+                        ]
+                      }
+                    },
+                    "kind": "unordered"
+                  }
+                },
+                "utP7R8": {
+                  "id": "utP7R8",
+                  "parentId": "BkS5Us_GLepK4",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "D"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "wLyRZy": {
+                  "id": "wLyRZy",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "|敌人掉落"
+                        }
+                      }
+                    ],
+                    "kind": "heading3"
+                  }
+                },
+                "wnTK9E": {
+                  "id": "wnTK9E",
+                  "parentId": "BkS5Us_keeYaI",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "C"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "wyM8CC": {
+                  "id": "wyM8CC",
+                  "parentId": "BkS5Us_AsRIMG",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "C"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "xyqW3g": {
+                  "id": "xyqW3g",
+                  "parentId": "zpE19x_ygRLhH",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "灼热抗性"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "IIBKHZ94": {
+              "id": "document-id",
+              "blockIds": [
+                "ZLjAzk"
+              ],
+              "blockMap": {
+                "ZLjAzk": {
+                  "id": "ZLjAzk",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "“"
+                        }
+                      },
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "提利索隆"
+                        }
+                      },
+                      {
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "”（归档编号：ACL072），ACL071的非模式种。它们能够利用周围环境，表现出一定的决策能力。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "基本介绍",
+              "widgets": [
+                {
+                  "id": "MX3syh2E",
+                  "title": "敌人简介",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "MX3syh2E": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [
+                {
+                  "tabId": "tab_1764349954656",
+                  "title": "进阶敌人",
+                  "icon": ""
+                }
+              ],
+              "tabDataMap": {
+                "tab_1764349954656": {
+                  "intro": {
+                    "name": "刚角天使",
+                    "type": "天使",
+                    "imgUrl": "https://bbs.hycdn.cn/image/2025/11/29/139426/52e865440956c605bf295ee61c962e71.png",
+                    "description": "IIBKHZ94"
+                  },
+                  "content": "CFhQGSs1",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "刚角天使",
+        "mainType": {
+          "id": "1",
+          "name": "终末地百科",
+          "status": 2,
+          "position": 1,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "3",
+          "name": "威胁",
+          "fatherTypeId": "1",
+          "style": 2,
+          "status": 2,
+          "position": 5,
+          "icon": "",
+          "items": [],
+          "filterTagTree": [
+            {
+              "id": "10229",
+              "children": [
+                {
+                  "id": "10231",
+                  "children": [],
+                  "name": "天使",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10232",
+                  "children": [],
+                  "name": "裂地者",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10233",
+                  "children": [],
+                  "name": "沧贼",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10230",
+                  "children": [],
+                  "name": "野外生物",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "威胁",
+              "type": 1,
+              "value": ""
+            }
+          ]
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "9203146710665",
+          "nickname": "SilentTwilight",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/asset/avatar/f22b5040d9344087b127a56801b00b60.webp"
+        },
+        "createdUser": {
+          "id": "9203146710665",
+          "nickname": "SilentTwilight",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/asset/avatar/f22b5040d9344087b127a56801b00b60.webp"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2025/12/13/139426/5436f06fa9b6f53e1108e45dd40960d0.png",
+          "name": "刚角天使",
+          "description": {
+            "id": "document-id",
+            "blockIds": [
+              "8uzpoy"
+            ],
+            "blockMap": {
+              "8uzpoy": {
+                "id": "8uzpoy",
+                "parentId": "document-id",
+                "align": "left",
+                "kind": "text",
+                "text": {
+                  "inlineElements": [
+                    {
+                      "bold": true,
+                      "kind": "text",
+                      "text": {
+                        "text": "刚角天使"
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "text": {
+                        "text": "（"
+                      }
+                    },
+                    {
+                      "italic": true,
+                      "kind": "text",
+                      "text": {
+                        "text": "Heavy Ram"
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "text": {
+                        "text": "）是《明日方舟：终末地》中的一类"
+                      }
+                    },
+                    {
+                      "bold": true,
+                      "color": "light_rank_blue",
+                      "kind": "text",
+                      "text": {
+                        "text": "进阶敌人"
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "text": {
+                        "text": "。"
+                      }
+                    }
+                  ],
+                  "kind": "body"
+                }
+              }
+            },
+            "authorMap": {},
+            "version": "1.0.0"
+          },
+          "associate": null,
+          "subTypeList": [
+            {
+              "subTypeId": "10229",
+              "value": "10231"
+            }
+          ],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1767797666",
+        "lastAuditPassedAt": "1765622827",
+        "tagIds": [
+          "10231"
+        ]
+      }
+    }
+  }
+}

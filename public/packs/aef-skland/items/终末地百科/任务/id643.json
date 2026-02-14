@@ -1,0 +1,932 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_643"
+  },
+  "name": "童心速绘",
+  "icon": "https://bbs.hycdn.cn/image/2025/12/30/402818/f7cf31105903c18adae5b000320765bc.png",
+  "tags": [
+    "main:终末地百科",
+    "sub:任务"
+  ],
+  "source": "终末地百科/任务/id643.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648724",
+    "data": {
+      "item": {
+        "itemId": "643",
+        "document": {
+          "documentMap": {
+            "NfhMEwD9": {
+              "id": "document-id",
+              "blockIds": [
+                "NtVjUA",
+                "LDpeGYtfLI5z",
+                "kcmeWU"
+              ],
+              "blockMap": {
+                "9qjIwqAcUDvO": {
+                  "id": "9qjIwqAcUDvO",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "·查看"
+                        }
+                      },
+                      {
+                        "bold": true,
+                        "italic": true,
+                        "color": "light_function_brown",
+                        "kind": "text",
+                        "text": {
+                          "text": "菲奥娜"
+                        }
+                      },
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "发来的消息"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "HXRqTo": {
+                  "id": "HXRqTo",
+                  "parentId": "2mKSRl_3r8DY7",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "相关活动"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "JfYiuw": {
+                  "id": "JfYiuw",
+                  "parentId": "KzoRsf_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "卡莉想要画一本让大家开心的故事书。帮助她完成故事书。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "LDpeGYtfLI5z": {
+                  "id": "LDpeGYtfLI5z",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "3"
+                  }
+                },
+                "NKVUVnTGGUKC": {
+                  "id": "NKVUVnTGGUKC",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "联络员菲奥娜："
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "最近一次被找到后，她就一直要见你，暂不清楚原因。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "NtVjUA": {
+                  "id": "NtVjUA",
+                  "parentId": "document-id",
+                  "kind": "table",
+                  "table": {
+                    "id": "NtVjUA",
+                    "rowIds": [
+                      "2mKSRl",
+                      "zheV12"
+                    ],
+                    "columnIds": [
+                      "gHUCGa",
+                      "FTD4zT",
+                      "3r8DY7"
+                    ],
+                    "rowMap": {
+                      "2mKSRl": {
+                        "id": "2mKSRl"
+                      },
+                      "zheV12": {
+                        "id": "zheV12"
+                      }
+                    },
+                    "columnMap": {
+                      "3r8DY7": {
+                        "id": "3r8DY7",
+                        "width": 386.6666666666667
+                      },
+                      "FTD4zT": {
+                        "id": "FTD4zT",
+                        "width": 386.6666666666667
+                      },
+                      "gHUCGa": {
+                        "id": "gHUCGa",
+                        "width": 386.6666666666667
+                      }
+                    },
+                    "cellMap": {
+                      "2mKSRl_3r8DY7": {
+                        "id": "2mKSRl_3r8DY7",
+                        "childIds": [
+                          "HXRqTo"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "2mKSRl_FTD4zT": {
+                        "id": "2mKSRl_FTD4zT",
+                        "childIds": [
+                          "mMCsKf"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "2mKSRl_gHUCGa": {
+                        "id": "2mKSRl_gHUCGa",
+                        "childIds": [
+                          "UIRCTD"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zheV12_3r8DY7": {
+                        "id": "zheV12_3r8DY7",
+                        "childIds": [
+                          "uJhHKU"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zheV12_FTD4zT": {
+                        "id": "zheV12_FTD4zT",
+                        "childIds": [
+                          "mOJrs7"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zheV12_gHUCGa": {
+                        "id": "zheV12_gHUCGa",
+                        "childIds": [
+                          "P66VSA"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      }
+                    },
+                    "description": "",
+                    "rowHeader": true,
+                    "colHeader": false
+                  }
+                },
+                "P66VSA": {
+                  "id": "P66VSA",
+                  "parentId": "zheV12_gHUCGa",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "color": "light_rank_yellow",
+                        "kind": "text",
+                        "text": {
+                          "text": "枢纽区"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "PESO4SWqaIdw": {
+                  "id": "PESO4SWqaIdw",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "（"
+                        }
+                      },
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "BAKER/事务通讯"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "S0xp6aoPvRQU": {
+                  "id": "S0xp6aoPvRQU",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "管理员："
+                        }
+                      },
+                      {
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "这个小朋友想见我一面？"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "UIRCTD": {
+                  "id": "UIRCTD",
+                  "parentId": "2mKSRl_gHUCGa",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "地点"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "UXe40K": {
+                  "id": "UXe40K",
+                  "parentId": "wZtoRL_B2wshm",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "进程"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "clSDw1G4Bymo": {
+                  "id": "clSDw1G4Bymo",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "联络员菲奥娜："
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "据说她一个人跑去野外很多次。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "dpDpBtDTgXP3": {
+                  "id": "dpDpBtDTgXP3",
+                  "parentId": "KzoRsf_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "·"
+                        }
+                      },
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "帮助卡莉完成"
+                        }
+                      },
+                      {
+                        "bold": true,
+                        "italic": true,
+                        "color": "light_function_brown",
+                        "kind": "text",
+                        "text": {
+                          "text": "故事书"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ewv4KL6bXV0W": {
+                  "id": "ewv4KL6bXV0W",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "工人之家的小女孩卡莉想要见管理员一面。前往工人之家，了解具体发生了什么。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "kcmeWU": {
+                  "id": "kcmeWU",
+                  "parentId": "document-id",
+                  "kind": "table",
+                  "table": {
+                    "id": "kcmeWU",
+                    "rowIds": [
+                      "wZtoRL",
+                      "Kk4M2U",
+                      "KzoRsf"
+                    ],
+                    "columnIds": [
+                      "B2wshm"
+                    ],
+                    "rowMap": {
+                      "Kk4M2U": {
+                        "id": "Kk4M2U"
+                      },
+                      "KzoRsf": {
+                        "id": "KzoRsf"
+                      },
+                      "wZtoRL": {
+                        "id": "wZtoRL"
+                      }
+                    },
+                    "columnMap": {
+                      "B2wshm": {
+                        "id": "B2wshm",
+                        "width": 1160
+                      }
+                    },
+                    "cellMap": {
+                      "Kk4M2U_B2wshm": {
+                        "id": "Kk4M2U_B2wshm",
+                        "childIds": [
+                          "ewv4KL6bXV0W",
+                          "9qjIwqAcUDvO",
+                          "PESO4SWqaIdw",
+                          "rfy7eJHeIH4n",
+                          "S0xp6aoPvRQU",
+                          "clSDw1G4Bymo",
+                          "NKVUVnTGGUKC",
+                          "l6ps9LRk92TR",
+                          "zaNXdbXmbnTF"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "KzoRsf_B2wshm": {
+                        "id": "KzoRsf_B2wshm",
+                        "childIds": [
+                          "JfYiuw",
+                          "dpDpBtDTgXP3"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "wZtoRL_B2wshm": {
+                        "id": "wZtoRL_B2wshm",
+                        "childIds": [
+                          "UXe40K"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      }
+                    },
+                    "description": "",
+                    "rowHeader": true,
+                    "colHeader": false
+                  }
+                },
+                "l6ps9LRk92TR": {
+                  "id": "l6ps9LRk92TR",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "联络员菲奥娜："
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "如果你现在有时间，请前往工人之家一趟，了解下情况吧。）"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "mMCsKf": {
+                  "id": "mMCsKf",
+                  "parentId": "2mKSRl_FTD4zT",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "开启条件"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "mOJrs7": {
+                  "id": "mOJrs7",
+                  "parentId": "zheV12_FTD4zT",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "完成主线任务「第一章 - 进程Ⅱ - 开拓前路」后解锁活动"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "rfy7eJHeIH4n": {
+                  "id": "rfy7eJHeIH4n",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "联络员菲奥娜："
+                        }
+                      },
+                      {
+                        "color": "light_text_primary",
+                        "kind": "text",
+                        "text": {
+                          "text": "管理员，工人之家的工团成员们向我们提出申请，有个叫卡莉的小朋友想见管理员一面。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "uJhHKU": {
+                  "id": "uJhHKU",
+                  "parentId": "zheV12_3r8DY7",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "393",
+                          "showType": "link-imgText",
+                          "count": "0"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "zaNXdbXmbnTF": {
+                  "id": "zaNXdbXmbnTF",
+                  "parentId": "Kk4M2U_B2wshm",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "·前往"
+                        }
+                      },
+                      {
+                        "bold": true,
+                        "italic": true,
+                        "color": "light_function_brown",
+                        "kind": "text",
+                        "text": {
+                          "text": "工人之家"
+                        }
+                      },
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "，与卡莉交谈"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "np9FyJyC": {
+              "id": "document-id",
+              "blockIds": [
+                "rYN08A",
+                "UPs1kV"
+              ],
+              "blockMap": {
+                "UPs1kV": {
+                  "id": "UPs1kV",
+                  "parentId": "document-id",
+                  "kind": "table",
+                  "table": {
+                    "id": "UPs1kV",
+                    "rowIds": [
+                      "dgPubQ"
+                    ],
+                    "columnIds": [
+                      "OtoUYV",
+                      "tKbCg4",
+                      "DLlU8l",
+                      "YaBZSI",
+                      "P2rGx7"
+                    ],
+                    "rowMap": {
+                      "dgPubQ": {
+                        "id": "dgPubQ"
+                      }
+                    },
+                    "columnMap": {
+                      "DLlU8l": {
+                        "id": "DLlU8l",
+                        "width": 232
+                      },
+                      "OtoUYV": {
+                        "id": "OtoUYV",
+                        "width": 232
+                      },
+                      "P2rGx7": {
+                        "id": "P2rGx7",
+                        "width": 232
+                      },
+                      "YaBZSI": {
+                        "id": "YaBZSI",
+                        "width": 232
+                      },
+                      "tKbCg4": {
+                        "id": "tKbCg4",
+                        "width": 232
+                      }
+                    },
+                    "cellMap": {
+                      "dgPubQ_OtoUYV": {
+                        "id": "dgPubQ_OtoUYV",
+                        "childIds": [
+                          "i0y4dB"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "5",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      }
+                    },
+                    "description": "",
+                    "rowHeader": false,
+                    "colHeader": false
+                  }
+                },
+                "i0y4dB": {
+                  "id": "i0y4dB",
+                  "parentId": "dgPubQ_OtoUYV",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "19",
+                          "showType": "card-big",
+                          "count": "4250"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "rYN08A": {
+                  "id": "rYN08A",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "任务信息",
+              "widgets": [
+                {
+                  "id": "hHBXdRIi",
+                  "title": "",
+                  "size": "large"
+                }
+              ]
+            },
+            {
+              "title": "任务奖励",
+              "widgets": [
+                {
+                  "id": "kr8MRk9J",
+                  "title": "",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "hHBXdRIi": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "NfhMEwD9",
+                  "audioList": []
+                }
+              }
+            },
+            "kr8MRk9J": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "np9FyJyC",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "童心速绘",
+        "mainType": {
+          "id": "1",
+          "name": "终末地百科",
+          "status": 2,
+          "position": 1,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "8",
+          "name": "任务",
+          "fatherTypeId": "1",
+          "style": 8,
+          "status": 2,
+          "position": 10,
+          "icon": "",
+          "items": [],
+          "filterTagTree": [
+            {
+              "id": "10270",
+              "children": [
+                {
+                  "id": "10272",
+                  "children": [],
+                  "name": "主线任务",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10274",
+                  "children": [],
+                  "name": "探索任务",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10273",
+                  "children": [],
+                  "name": "支线任务",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10275",
+                  "children": [],
+                  "name": "活动任务",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10271",
+                  "children": [],
+                  "name": "委托任务",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "任务类型",
+              "type": 1,
+              "value": ""
+            }
+          ]
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "6507876905028",
+          "nickname": "喝奶茶的狸酥",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/10/31/bbb11da63be72ec2cbdb4de59393aaab.png"
+        },
+        "createdUser": {
+          "id": "6507876905028",
+          "nickname": "喝奶茶的狸酥",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/10/31/bbb11da63be72ec2cbdb4de59393aaab.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2025/12/30/402818/f7cf31105903c18adae5b000320765bc.png",
+          "name": "童心速绘",
+          "description": {
+            "id": "document-id",
+            "blockIds": [
+              "5vwEjP"
+            ],
+            "blockMap": {
+              "5vwEjP": {
+                "id": "5vwEjP",
+                "parentId": "document-id",
+                "align": "left",
+                "kind": "text",
+                "text": {
+                  "inlineElements": [],
+                  "kind": "body"
+                }
+              }
+            },
+            "authorMap": {},
+            "version": "1.0.0"
+          },
+          "associate": null,
+          "subTypeList": [
+            {
+              "subTypeId": "10270",
+              "value": "10275"
+            }
+          ],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1770449697",
+        "lastAuditPassedAt": "1770449959",
+        "tagIds": [
+          "10275"
+        ]
+      }
+    }
+  }
+}

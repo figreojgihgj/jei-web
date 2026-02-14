@@ -1,0 +1,199 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_1077"
+  },
+  "name": "456终末地！？",
+  "icon": "https://bbs.hycdn.cn/image/common/20260131/132207/697cef0251a1ffd966bffe46_2f76db19.jpg",
+  "tags": [
+    "main:情报档案库",
+    "sub:情报资讯"
+  ],
+  "source": "情报档案库/情报资讯/id1077.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648737",
+    "data": {
+      "item": {
+        "itemId": "1077",
+        "document": {
+          "documentMap": {
+            "q3tP4hjT": {
+              "id": "document-id",
+              "blockIds": [
+                "DNedNoYyeOAD",
+                "M7CBFC5zkNzh",
+                "aePqCQxMEvEP",
+                "cgNrZOmNkZXP",
+                "w5J6jWIMBgaQ"
+              ],
+              "blockMap": {
+                "DNedNoYyeOAD": {
+                  "id": "DNedNoYyeOAD",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697cf03051acf5ca27b9ec05",
+                    "url": "https://bbs.hycdn.cn/image/common/20260131/132207/697cf03051acf5ca27b9ec05_004865de.webp",
+                    "width": "1000",
+                    "height": "1479",
+                    "size": "134584",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "M7CBFC5zkNzh": {
+                  "id": "M7CBFC5zkNzh",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697cf038d262875d5b97ee36",
+                    "url": "https://bbs.hycdn.cn/image/common/20260131/132207/697cf038d262875d5b97ee36_004865de.webp",
+                    "width": "600",
+                    "height": "1636",
+                    "size": "107274",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "aePqCQxMEvEP": {
+                  "id": "aePqCQxMEvEP",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697cf03fb2a055d75726925d",
+                    "url": "https://bbs.hycdn.cn/image/common/20260131/132207/697cf03fb2a055d75726925d_65de0095.webp",
+                    "width": "600",
+                    "height": "1636",
+                    "size": "93872",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "cgNrZOmNkZXP": {
+                  "id": "cgNrZOmNkZXP",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697cf045b2a055d75726925f",
+                    "url": "https://bbs.hycdn.cn/image/common/20260131/132207/697cf045b2a055d75726925f_65de0095.webp",
+                    "width": "1080",
+                    "height": "1527",
+                    "size": "63780",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "w5J6jWIMBgaQ": {
+                  "id": "w5J6jWIMBgaQ",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "2026年",
+              "widgets": [
+                {
+                  "id": "ciAJYR7M",
+                  "title": "",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "ciAJYR7M": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [
+                {
+                  "tabId": "tab_1769795613342",
+                  "title": "「序言」",
+                  "icon": ""
+                }
+              ],
+              "tabDataMap": {
+                "tab_1769795613342": {
+                  "intro": null,
+                  "content": "q3tP4hjT",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "456终末地！？",
+        "mainType": {
+          "id": "3",
+          "name": "情报档案库",
+          "status": 2,
+          "position": 3,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "12",
+          "name": "情报资讯",
+          "fatherTypeId": "3",
+          "style": 5,
+          "status": 2,
+          "position": 17,
+          "icon": "",
+          "items": [],
+          "filterTagTree": []
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "9450447906447",
+          "nickname": "三万光年",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/01/16/07569778ab14e1c02b7fb3d7e9186dd4.png"
+        },
+        "createdUser": {
+          "id": "9450447906447",
+          "nickname": "三万光年",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/01/16/07569778ab14e1c02b7fb3d7e9186dd4.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/common/20260131/132207/697cef0251a1ffd966bffe46_2f76db19.jpg",
+          "name": "456终末地！？",
+          "description": null,
+          "associate": null,
+          "subTypeList": [],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1769795781",
+        "lastAuditPassedAt": "1769795675",
+        "tagIds": []
+      }
+    }
+  }
+}

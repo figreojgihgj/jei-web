@@ -1,0 +1,211 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_1045"
+  },
+  "name": "塔卫二畅游指南 - 景玉谷",
+  "icon": "https://bbs.hycdn.cn/image/2026/01/20/3002335/af3dfd5f11e738cf6cd7f349d7353065.png",
+  "tags": [
+    "main:情报档案库",
+    "sub:情报资讯"
+  ],
+  "source": "情报档案库/情报资讯/id1045.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648736",
+    "data": {
+      "item": {
+        "itemId": "1045",
+        "document": {
+          "documentMap": {
+            "C65Y0JNr": {
+              "id": "document-id",
+              "blockIds": [
+                "N8SdlIpUiz3q",
+                "xTCnjRKxF0IH",
+                "5TX3TiZ2aSoS",
+                "Gb0euCR7umaS",
+                "K84zX8vZin9S",
+                "GVnkl381jmvp"
+              ],
+              "blockMap": {
+                "5TX3TiZ2aSoS": {
+                  "id": "5TX3TiZ2aSoS",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696efeab07aa0f26d1589a80",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/cb2040e5cd169737bf6462022857de36.webp",
+                    "width": "1000",
+                    "height": "4610",
+                    "size": "531620",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "GVnkl381jmvp": {
+                  "id": "GVnkl381jmvp",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "Gb0euCR7umaS": {
+                  "id": "Gb0euCR7umaS",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696efeaf4d9a63de0f89d0da",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/5a6fddafebe41f42aa69b3bf800df763.webp",
+                    "width": "1000",
+                    "height": "1820",
+                    "size": "244154",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "K84zX8vZin9S": {
+                  "id": "K84zX8vZin9S",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696efeb7aa015319cfdbf9f5",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/b04c5637d48743aad49cdf8e3ad74bbb.webp",
+                    "width": "1000",
+                    "height": "2798",
+                    "size": "317824",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "N8SdlIpUiz3q": {
+                  "id": "N8SdlIpUiz3q",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696efe97f7b9adc8cd00c373",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/2fed58eedc3bed2a737a4ae7c03d918f.webp",
+                    "width": "1000",
+                    "height": "1570",
+                    "size": "132614",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "xTCnjRKxF0IH": {
+                  "id": "xTCnjRKxF0IH",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696efea459a22c6d71abd1ca",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/ad9161460ea055f7f6589d72111c378d.webp",
+                    "width": "1000",
+                    "height": "1680",
+                    "size": "166908",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "畅游指南",
+              "widgets": [
+                {
+                  "id": "p9TdKVEX",
+                  "title": "",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "p9TdKVEX": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "C65Y0JNr",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "塔卫二畅游指南 - 景玉谷",
+        "mainType": {
+          "id": "3",
+          "name": "情报档案库",
+          "status": 2,
+          "position": 3,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "12",
+          "name": "情报资讯",
+          "fatherTypeId": "3",
+          "style": 5,
+          "status": 2,
+          "position": 17,
+          "icon": "",
+          "items": [],
+          "filterTagTree": []
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "createdUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2026/01/20/3002335/af3dfd5f11e738cf6cd7f349d7353065.png",
+          "name": "塔卫二畅游指南 - 景玉谷",
+          "description": null,
+          "associate": null,
+          "subTypeList": [],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1768909245",
+        "lastAuditPassedAt": "1768910253",
+        "tagIds": []
+      }
+    }
+  }
+}

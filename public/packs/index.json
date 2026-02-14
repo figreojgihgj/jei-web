@@ -11,6 +11,10 @@
     {
       "packId": "single-item-demo",
       "label": "Single Item Demo (New Format)"
+    },
+    {
+      "packId": "aef-skland",
+      "label": "Arknights:Endfield Skland Wiki"
     }
   ]
 }

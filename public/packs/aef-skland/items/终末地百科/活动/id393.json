@@ -1,0 +1,2596 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_393"
+  },
+  "name": "卡莉的谷地童话",
+  "icon": "https://bbs.hycdn.cn/image/common/20260205/856392/698372ed94e337a3813bb997_db193eac.png",
+  "tags": [
+    "main:终末地百科",
+    "sub:活动"
+  ],
+  "source": "终末地百科/活动/id393.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648716",
+    "data": {
+      "item": {
+        "itemId": "393",
+        "document": {
+          "documentMap": {
+            "4GTDBIYW": {
+              "id": "document-id",
+              "blockIds": [
+                "RlWjKF"
+              ],
+              "blockMap": {
+                "8IthLP": {
+                  "id": "8IthLP",
+                  "parentId": "XqmWcn_hn1Qaj",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "文本介绍"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "E4jzdTdObB7B": {
+                  "id": "E4jzdTdObB7B",
+                  "parentId": "IFHv28_hn1Qaj",
+                  "kind": "image",
+                  "image": {
+                    "id": "69836f98fb917c18a2f944ec",
+                    "url": "https://bbs.hycdn.cn/image/common/20260205/856392/69836f98fb917c18a2f944ec_65de0095.webp",
+                    "width": "1650",
+                    "height": "300",
+                    "size": "85380",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "clientWidth": 1135,
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "HdaFYU": {
+                  "id": "HdaFYU",
+                  "parentId": "75PtSE_dxAzT8",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "限时活动"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "｜2026/02/07 12:00 - 2026/02/24 04:00（服务器时间）"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "MruzGD": {
+                  "id": "MruzGD",
+                  "parentId": "CfHnSk_dxAzT8",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "完成主线任务「第一章 - 进程Ⅱ - 开拓前路」"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "RlWjKF": {
+                  "id": "RlWjKF",
+                  "parentId": "document-id",
+                  "kind": "table",
+                  "table": {
+                    "id": "RlWjKF",
+                    "rowIds": [
+                      "IFHv28",
+                      "75PtSE",
+                      "CfHnSk",
+                      "XqmWcn"
+                    ],
+                    "columnIds": [
+                      "hn1Qaj",
+                      "dxAzT8"
+                    ],
+                    "rowMap": {
+                      "75PtSE": {
+                        "id": "75PtSE"
+                      },
+                      "CfHnSk": {
+                        "id": "CfHnSk"
+                      },
+                      "IFHv28": {
+                        "id": "IFHv28"
+                      },
+                      "XqmWcn": {
+                        "id": "XqmWcn"
+                      }
+                    },
+                    "columnMap": {
+                      "dxAzT8": {
+                        "id": "dxAzT8",
+                        "width": 1003
+                      },
+                      "hn1Qaj": {
+                        "id": "hn1Qaj",
+                        "width": 157
+                      }
+                    },
+                    "cellMap": {
+                      "75PtSE_dxAzT8": {
+                        "id": "75PtSE_dxAzT8",
+                        "childIds": [
+                          "HdaFYU"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "75PtSE_hn1Qaj": {
+                        "id": "75PtSE_hn1Qaj",
+                        "childIds": [
+                          "oOhutB"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "CfHnSk_dxAzT8": {
+                        "id": "CfHnSk_dxAzT8",
+                        "childIds": [
+                          "MruzGD"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "CfHnSk_hn1Qaj": {
+                        "id": "CfHnSk_hn1Qaj",
+                        "childIds": [
+                          "mikKCH"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "IFHv28_hn1Qaj": {
+                        "id": "IFHv28_hn1Qaj",
+                        "childIds": [
+                          "E4jzdTdObB7B"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "XqmWcn_dxAzT8": {
+                        "id": "XqmWcn_dxAzT8",
+                        "childIds": [
+                          "cyy6mz"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "XqmWcn_hn1Qaj": {
+                        "id": "XqmWcn_hn1Qaj",
+                        "childIds": [
+                          "8IthLP"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      }
+                    },
+                    "description": "",
+                    "rowHeader": true,
+                    "colHeader": false
+                  }
+                },
+                "cyy6mz": {
+                  "id": "cyy6mz",
+                  "parentId": "XqmWcn_dxAzT8",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "工人之家的卡莉想要画一本能让大家开心的故事书，希望管理员可以帮助她一起完成这本故事书。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "mikKCH": {
+                  "id": "mikKCH",
+                  "parentId": "CfHnSk_hn1Qaj",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "参与条件"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "oOhutB": {
+                  "id": "oOhutB",
+                  "parentId": "75PtSE_hn1Qaj",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "开放时间"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "KHl4cmRI": {
+              "id": "document-id",
+              "blockIds": [
+                "J7LO2a",
+                "DZXDyF",
+                "4BNevH"
+              ],
+              "blockMap": {
+                "14inA3T12Igv": {
+                  "id": "14inA3T12Igv",
+                  "parentId": "czuaEY_SrksfA",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "216",
+                          "showType": "card-big",
+                          "count": "2"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "4BNevH": {
+                  "id": "4BNevH",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "DZXDyF": {
+                  "id": "DZXDyF",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "2"
+                  }
+                },
+                "EVcAeV": {
+                  "id": "EVcAeV",
+                  "parentId": "SUkHIS_SrksfA",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "根据卡莉的故事，前往谷地通道的谷地要塞拍摄照片。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "FMRbTg": {
+                  "id": "FMRbTg",
+                  "parentId": "nv1xg9_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "地点"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "IUwYXQfZuQM8": {
+                  "id": "IUwYXQfZuQM8",
+                  "parentId": "fhRGr1_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·至少有1名干员的种族为鲁珀"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "J7LO2a": {
+                  "id": "J7LO2a",
+                  "parentId": "document-id",
+                  "kind": "table",
+                  "table": {
+                    "id": "J7LO2a",
+                    "rowIds": [
+                      "zUSEiA",
+                      "nv1xg9",
+                      "SUkHIS",
+                      "oM0k7s",
+                      "fhRGr1",
+                      "Jc2wVq",
+                      "LhTwTJ",
+                      "EyB2Mu",
+                      "czuaEY"
+                    ],
+                    "columnIds": [
+                      "WEPbHs",
+                      "xOldz0",
+                      "SrksfA",
+                      "EYMfcJ"
+                    ],
+                    "rowMap": {
+                      "EyB2Mu": {
+                        "id": "EyB2Mu"
+                      },
+                      "Jc2wVq": {
+                        "id": "Jc2wVq"
+                      },
+                      "LhTwTJ": {
+                        "id": "LhTwTJ"
+                      },
+                      "SUkHIS": {
+                        "id": "SUkHIS"
+                      },
+                      "czuaEY": {
+                        "id": "czuaEY"
+                      },
+                      "fhRGr1": {
+                        "id": "fhRGr1"
+                      },
+                      "nv1xg9": {
+                        "id": "nv1xg9"
+                      },
+                      "oM0k7s": {
+                        "id": "oM0k7s"
+                      },
+                      "zUSEiA": {
+                        "id": "zUSEiA"
+                      }
+                    },
+                    "columnMap": {
+                      "EYMfcJ": {
+                        "id": "EYMfcJ",
+                        "width": 290
+                      },
+                      "SrksfA": {
+                        "id": "SrksfA",
+                        "width": 290
+                      },
+                      "WEPbHs": {
+                        "id": "WEPbHs",
+                        "width": 290
+                      },
+                      "xOldz0": {
+                        "id": "xOldz0",
+                        "width": 290
+                      }
+                    },
+                    "cellMap": {
+                      "EyB2Mu_WEPbHs": {
+                        "id": "EyB2Mu_WEPbHs",
+                        "childIds": [
+                          "O900s2uyBoCa"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "Jc2wVq_WEPbHs": {
+                        "id": "Jc2wVq_WEPbHs",
+                        "childIds": [
+                          "fkHO6E6iRgOa",
+                          "xcMm0c"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "LhTwTJ_WEPbHs": {
+                        "id": "LhTwTJ_WEPbHs",
+                        "childIds": [
+                          "qUtZMPDdiGCs",
+                          "SeBnEfFf9RVm",
+                          "SSUuZmUjpLQU"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "SUkHIS_SrksfA": {
+                        "id": "SUkHIS_SrksfA",
+                        "childIds": [
+                          "EVcAeV"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "SUkHIS_WEPbHs": {
+                        "id": "SUkHIS_WEPbHs",
+                        "childIds": [
+                          "Yu5ouR"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "czuaEY_EYMfcJ": {
+                        "id": "czuaEY_EYMfcJ",
+                        "childIds": [
+                          "pJ0rAhxAA85n"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "czuaEY_SrksfA": {
+                        "id": "czuaEY_SrksfA",
+                        "childIds": [
+                          "14inA3T12Igv"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "czuaEY_WEPbHs": {
+                        "id": "czuaEY_WEPbHs",
+                        "childIds": [
+                          "Kpi87wEAy0Ar"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "czuaEY_xOldz0": {
+                        "id": "czuaEY_xOldz0",
+                        "childIds": [
+                          "WUdVybbRlvoY"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "fhRGr1_WEPbHs": {
+                        "id": "fhRGr1_WEPbHs",
+                        "childIds": [
+                          "gx9cpz",
+                          "IUwYXQfZuQM8",
+                          "j0tUOJ",
+                          "Z2DCCC"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "nv1xg9_SrksfA": {
+                        "id": "nv1xg9_SrksfA",
+                        "childIds": [
+                          "aTnbFO"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "nv1xg9_WEPbHs": {
+                        "id": "nv1xg9_WEPbHs",
+                        "childIds": [
+                          "FMRbTg"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "oM0k7s_WEPbHs": {
+                        "id": "oM0k7s_WEPbHs",
+                        "childIds": [
+                          "adKLJ3"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zUSEiA_WEPbHs": {
+                        "id": "zUSEiA_WEPbHs",
+                        "childIds": [
+                          "msUgxI"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      }
+                    },
+                    "description": "",
+                    "rowHeader": true,
+                    "colHeader": false
+                  }
+                },
+                "Kpi87wEAy0Ar": {
+                  "id": "Kpi87wEAy0Ar",
+                  "parentId": "czuaEY_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "926",
+                          "showType": "card-big",
+                          "count": "200"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "O900s2uyBoCa": {
+                  "id": "O900s2uyBoCa",
+                  "parentId": "EyB2Mu_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "奖励"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "SSUuZmUjpLQU": {
+                  "id": "SSUuZmUjpLQU",
+                  "parentId": "LhTwTJ_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "公主最喜欢的茶杯被打碎了，太坏了！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "SeBnEfFf9RVm": {
+                  "id": "SeBnEfFf9RVm",
+                  "parentId": "LhTwTJ_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "坏术师和她的手下曾经攻击了这里的城堡，但她最厉害的手下也曾在这里被天空骑士击败！暴怒的坏术师只能堵住大桥，灰溜溜地跑了！现在，鲁珀勇士正向那几个头上冒火的怪物冲去！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "WUdVybbRlvoY": {
+                  "id": "WUdVybbRlvoY",
+                  "parentId": "czuaEY_xOldz0",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "210",
+                          "showType": "card-big",
+                          "count": "12"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Yu5ouR": {
+                  "id": "Yu5ouR",
+                  "parentId": "SUkHIS_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "color": "light_rank_yellow",
+                        "kind": "text",
+                        "text": {
+                          "text": "谷地通道"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Z2DCCC": {
+                  "id": "Z2DCCC",
+                  "parentId": "fhRGr1_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·合影站位类型为多面向"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "aTnbFO": {
+                  "id": "aTnbFO",
+                  "parentId": "nv1xg9_SrksfA",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "描述"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "adKLJ3": {
+                  "id": "adKLJ3",
+                  "parentId": "oM0k7s_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "任务要求"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "fkHO6E6iRgOa": {
+                  "id": "fkHO6E6iRgOa",
+                  "parentId": "Jc2wVq_WEPbHs",
+                  "kind": "image",
+                  "image": {
+                    "id": "69892c2ae6807215b8fb9b0a",
+                    "url": "https://bbs.hycdn.cn/image/common/20260209/856392/69892c2ae6807215b8fb9b0a_65de0095.webp",
+                    "width": "1430",
+                    "height": "785",
+                    "size": "123142",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "clientWidth": 1135,
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "gx9cpz": {
+                  "id": "gx9cpz",
+                  "parentId": "fhRGr1_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·画面中出现谷地要塞的4座巢雕"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "j0tUOJ": {
+                  "id": "j0tUOJ",
+                  "parentId": "fhRGr1_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·至少有3名干员在画面中"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "msUgxI": {
+                  "id": "msUgxI",
+                  "parentId": "zUSEiA_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "被坏术师袭击过的城堡！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "pJ0rAhxAA85n": {
+                  "id": "pJ0rAhxAA85n",
+                  "parentId": "czuaEY_EYMfcJ",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "19",
+                          "showType": "card-big",
+                          "count": "30000"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "qUtZMPDdiGCs": {
+                  "id": "qUtZMPDdiGCs",
+                  "parentId": "LhTwTJ_WEPbHs",
+                  "kind": "image",
+                  "image": {
+                    "id": "69892c32c12a131fc1b7357b",
+                    "url": "https://bbs.hycdn.cn/image/common/20260209/856392/69892c32c12a131fc1b7357b_004865de.webp",
+                    "width": "1430",
+                    "height": "785",
+                    "size": "139280",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "clientWidth": 1135,
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "xcMm0c": {
+                  "id": "xcMm0c",
+                  "parentId": "Jc2wVq_WEPbHs",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "坏术师和她的手下曾经攻击了这里的城堡，但她最厉害的手下也曾在这里被天空骑士击败！暴怒的坏术师只能堵住大桥，灰溜溜地跑了！现在，鲁珀勇士正向那几个头上冒火的怪物冲去！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "ahn8tojw": {
+              "id": "document-id",
+              "blockIds": [
+                "gAd6KM",
+                "a8sVRzmnQ4Z6",
+                "ZAF0Ne"
+              ],
+              "blockMap": {
+                "6atQOwDAMn9d": {
+                  "id": "6atQOwDAMn9d",
+                  "parentId": "vsndWGYXE1sW",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "如果拍照任务所在的地区尚未解锁，请管理员继续推进主线任务以解锁相应地区。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "7JYRQG": {
+                  "id": "7JYRQG",
+                  "parentId": "OScmt7",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "活动开放期间，完成拍照任务，累计可获得【头像框·卡莉的童话集】【"
+                        }
+                      },
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "926",
+                          "showType": "link-imgText",
+                          "count": "0"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "】【"
+                        }
+                      },
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "216",
+                          "showType": "link-imgText",
+                          "count": "0"
+                        }
+                      },
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "】等活动奖励。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "VOJiQVFr0vMR": {
+                  "id": "VOJiQVFr0vMR",
+                  "parentId": "8jxLVdDr4D9V",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "根据拍摄目标，调整小队中上场的干员与队形，将拍摄目标收入画面中，完成拍照任务。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ZAF0Ne": {
+                  "id": "ZAF0Ne",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "2"
+                  }
+                },
+                "a8sVRzmnQ4Z6": {
+                  "id": "a8sVRzmnQ4Z6",
+                  "parentId": "document-id",
+                  "kind": "list",
+                  "list": {
+                    "id": "a8sVRzmnQ4Z6",
+                    "itemIds": [
+                      "x3G7JC",
+                      "8jxLVdDr4D9V",
+                      "Hsy414",
+                      "vsndWGYXE1sW",
+                      "OScmt7"
+                    ],
+                    "itemMap": {
+                      "8jxLVdDr4D9V": {
+                        "id": "8jxLVdDr4D9V",
+                        "childIds": [
+                          "VOJiQVFr0vMR"
+                        ]
+                      },
+                      "Hsy414": {
+                        "id": "Hsy414",
+                        "childIds": [
+                          "ya2z1k"
+                        ]
+                      },
+                      "OScmt7": {
+                        "id": "OScmt7",
+                        "childIds": [
+                          "7JYRQG"
+                        ]
+                      },
+                      "vsndWGYXE1sW": {
+                        "id": "vsndWGYXE1sW",
+                        "childIds": [
+                          "6atQOwDAMn9d"
+                        ]
+                      },
+                      "x3G7JC": {
+                        "id": "x3G7JC",
+                        "childIds": [
+                          "zZ9i5Z"
+                        ]
+                      }
+                    },
+                    "kind": "unordered"
+                  }
+                },
+                "gAd6KM": {
+                  "id": "gAd6KM",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "5"
+                  }
+                },
+                "ya2z1k": {
+                  "id": "ya2z1k",
+                  "parentId": "Hsy414",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "活动共有7个拍照任务，活动开启时，将会开放前2个拍照任务。从第三日起，每日04:00（服务器时间）将会开放1个新的拍照任务。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "zZ9i5Z": {
+                  "id": "zZ9i5Z",
+                  "parentId": "x3G7JC",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "活动期间，管理员可以前往四号谷地的各个指定地点开启拍照任务。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "qAvoZhO9": {
+              "id": "document-id",
+              "blockIds": [
+                "XAgA2T",
+                "CKFmhQ",
+                "iySwKw"
+              ],
+              "blockMap": {
+                "4AYc4QuaskcF": {
+                  "id": "4AYc4QuaskcF",
+                  "parentId": "MVBVRI_AFh7qg",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "222",
+                          "showType": "card-big",
+                          "count": "25"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "6n2q77GhLXcL": {
+                  "id": "6n2q77GhLXcL",
+                  "parentId": "Sbd8K3_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "“公主不见啦，难道是坏术师又回来报仇了？”好术师带着几个勇士来到最高的塔下，“这是山谷里最高的塔，一定能看到坏术师在哪里！”勇士们就此开始寻找卡莉公主！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "7gMg3i": {
+                  "id": "7gMg3i",
+                  "parentId": "f0r73D_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·画面中出现协议共振塔与宿营地"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "CKFmhQ": {
+                  "id": "CKFmhQ",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "2"
+                  }
+                },
+                "EjGevOhjLkmZ": {
+                  "id": "EjGevOhjLkmZ",
+                  "parentId": "MVBVRI_oZpXbg",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "19",
+                          "showType": "card-big",
+                          "count": "30000"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Gy6jh0TPuVBj": {
+                  "id": "Gy6jh0TPuVBj",
+                  "parentId": "7cLL6j_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "“公主不见啦，难道是坏术师又回来报仇了？”好术师带着几个勇士来到最高的塔下，“这是山谷里最高的塔，一定能看到坏术师在哪里！”勇士们就此开始寻找卡莉公主！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "RpFUS3qIjQxs": {
+                  "id": "RpFUS3qIjQxs",
+                  "parentId": "Sbd8K3_AedBXk",
+                  "kind": "image",
+                  "image": {
+                    "id": "6986c7681acbba54e4b0dc1d",
+                    "url": "https://bbs.hycdn.cn/image/common/20260207/856392/6986c7681acbba54e4b0dc1d_ef3391c4.webp",
+                    "width": "1430",
+                    "height": "785",
+                    "size": "174822",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "clientWidth": 1135,
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "SH7aKI": {
+                  "id": "SH7aKI",
+                  "parentId": "zGuQgE_AFh7qg",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "描述"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "WnXlriyLv1ws": {
+                  "id": "WnXlriyLv1ws",
+                  "parentId": "7cLL6j_AedBXk",
+                  "kind": "image",
+                  "image": {
+                    "id": "6986c75abb0b60ca653d075a",
+                    "url": "https://bbs.hycdn.cn/image/common/20260207/856392/6986c75abb0b60ca653d075a_004865de.webp",
+                    "width": "1430",
+                    "height": "785",
+                    "size": "168638",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "clientWidth": 1135,
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "XAgA2T": {
+                  "id": "XAgA2T",
+                  "parentId": "document-id",
+                  "kind": "table",
+                  "table": {
+                    "id": "XAgA2T",
+                    "rowIds": [
+                      "cv4uFz",
+                      "zGuQgE",
+                      "pB5OCH",
+                      "TDyCDT",
+                      "f0r73D",
+                      "7cLL6j",
+                      "Sbd8K3",
+                      "K7nJkI",
+                      "MVBVRI"
+                    ],
+                    "columnIds": [
+                      "AedBXk",
+                      "oZpXbg",
+                      "AFh7qg",
+                      "V44wrv"
+                    ],
+                    "rowMap": {
+                      "7cLL6j": {
+                        "id": "7cLL6j"
+                      },
+                      "K7nJkI": {
+                        "id": "K7nJkI"
+                      },
+                      "MVBVRI": {
+                        "id": "MVBVRI"
+                      },
+                      "Sbd8K3": {
+                        "id": "Sbd8K3"
+                      },
+                      "TDyCDT": {
+                        "id": "TDyCDT"
+                      },
+                      "cv4uFz": {
+                        "id": "cv4uFz"
+                      },
+                      "f0r73D": {
+                        "id": "f0r73D"
+                      },
+                      "pB5OCH": {
+                        "id": "pB5OCH"
+                      },
+                      "zGuQgE": {
+                        "id": "zGuQgE"
+                      }
+                    },
+                    "columnMap": {
+                      "AFh7qg": {
+                        "id": "AFh7qg",
+                        "width": 290
+                      },
+                      "AedBXk": {
+                        "id": "AedBXk",
+                        "width": 290
+                      },
+                      "V44wrv": {
+                        "id": "V44wrv",
+                        "width": 290
+                      },
+                      "oZpXbg": {
+                        "id": "oZpXbg",
+                        "width": 290
+                      }
+                    },
+                    "cellMap": {
+                      "7cLL6j_AedBXk": {
+                        "id": "7cLL6j_AedBXk",
+                        "childIds": [
+                          "WnXlriyLv1ws",
+                          "Gy6jh0TPuVBj"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "K7nJkI_AedBXk": {
+                        "id": "K7nJkI_AedBXk",
+                        "childIds": [
+                          "iN1I0cuKLXHv"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "MVBVRI_AFh7qg": {
+                        "id": "MVBVRI_AFh7qg",
+                        "childIds": [
+                          "4AYc4QuaskcF"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "MVBVRI_AedBXk": {
+                        "id": "MVBVRI_AedBXk",
+                        "childIds": [
+                          "u8obNrd4qgPz"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "MVBVRI_V44wrv": {
+                        "id": "MVBVRI_V44wrv",
+                        "childIds": [
+                          "XTTDVbA6RmSi"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "MVBVRI_oZpXbg": {
+                        "id": "MVBVRI_oZpXbg",
+                        "childIds": [
+                          "EjGevOhjLkmZ"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "Sbd8K3_AedBXk": {
+                        "id": "Sbd8K3_AedBXk",
+                        "childIds": [
+                          "RpFUS3qIjQxs",
+                          "6n2q77GhLXcL",
+                          "lEr9DbgtsUQ5"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "TDyCDT_AedBXk": {
+                        "id": "TDyCDT_AedBXk",
+                        "childIds": [
+                          "gVgnBt"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "cv4uFz_AedBXk": {
+                        "id": "cv4uFz_AedBXk",
+                        "childIds": [
+                          "x9vO4O"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "f0r73D_AedBXk": {
+                        "id": "f0r73D_AedBXk",
+                        "childIds": [
+                          "7gMg3i",
+                          "zOpqKi",
+                          "ezpVHh",
+                          "ukrPFi"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "pB5OCH_AFh7qg": {
+                        "id": "pB5OCH_AFh7qg",
+                        "childIds": [
+                          "cR1cNu"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "pB5OCH_AedBXk": {
+                        "id": "pB5OCH_AedBXk",
+                        "childIds": [
+                          "u2iRvf"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zGuQgE_AFh7qg": {
+                        "id": "zGuQgE_AFh7qg",
+                        "childIds": [
+                          "SH7aKI"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "zGuQgE_AedBXk": {
+                        "id": "zGuQgE_AedBXk",
+                        "childIds": [
+                          "kuTObt"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      }
+                    },
+                    "description": "",
+                    "rowHeader": true,
+                    "colHeader": false
+                  }
+                },
+                "XTTDVbA6RmSi": {
+                  "id": "XTTDVbA6RmSi",
+                  "parentId": "MVBVRI_V44wrv",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "223",
+                          "showType": "card-big",
+                          "count": "40"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "cR1cNu": {
+                  "id": "cR1cNu",
+                  "parentId": "pB5OCH_AFh7qg",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "根据卡莉的故事，前往枢纽区的枢纽基地电站拍摄照片。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ezpVHh": {
+                  "id": "ezpVHh",
+                  "parentId": "f0r73D_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·至少有3名干员在画面中"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "gVgnBt": {
+                  "id": "gVgnBt",
+                  "parentId": "TDyCDT_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "任务要求"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "iN1I0cuKLXHv": {
+                  "id": "iN1I0cuKLXHv",
+                  "parentId": "K7nJkI_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "奖励"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "iySwKw": {
+                  "id": "iySwKw",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "kuTObt": {
+                  "id": "kuTObt",
+                  "parentId": "zGuQgE_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "地点"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "lEr9DbgtsUQ5": {
+                  "id": "lEr9DbgtsUQ5",
+                  "parentId": "Sbd8K3_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "塔真高啊，星星都被接到了塔上！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "u2iRvf": {
+                  "id": "u2iRvf",
+                  "parentId": "pB5OCH_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "color": "light_rank_yellow",
+                        "kind": "text",
+                        "text": {
+                          "text": "枢纽区"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "u8obNrd4qgPz": {
+                  "id": "u8obNrd4qgPz",
+                  "parentId": "MVBVRI_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "926",
+                          "showType": "card-big",
+                          "count": "200"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ukrPFi": {
+                  "id": "ukrPFi",
+                  "parentId": "f0r73D_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·合影站位类型为方阵"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "x9vO4O": {
+                  "id": "x9vO4O",
+                  "parentId": "cv4uFz_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "最高的塔！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "zOpqKi": {
+                  "id": "zOpqKi",
+                  "parentId": "f0r73D_AedBXk",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·至少有1名干员的职业为术师"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "rRMFsN9r": {
+              "id": "document-id",
+              "blockIds": [
+                "Y72U7U",
+                "rXu2KxiLTrtd",
+                "JbI8W2WnwfdO"
+              ],
+              "blockMap": {
+                "3aNvySlfd1Is": {
+                  "id": "3aNvySlfd1Is",
+                  "parentId": "B7ArYi_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "水泥丛林中，出逃到这里的公主和天空城堡的骑士相遇。“外面来了一个坏术师，她和她的手下正在破坏我们的山谷！天空骑士这么说道，“山谷的勇士们需要帮助！”"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "9YtTY6": {
+                  "id": "9YtTY6",
+                  "parentId": "vRQXOT_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·画面中出现卡莉"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Eevxd448sUTl": {
+                  "id": "Eevxd448sUTl",
+                  "parentId": "3Ri6or_NbVZTW",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "216",
+                          "showType": "card-big",
+                          "count": "2"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "FerTrD": {
+                  "id": "FerTrD",
+                  "parentId": "8n6AUm_I0cxAl",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "根据卡莉的故事，前往枢纽区的工人之家拍摄照片。"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "JbI8W2WnwfdO": {
+                  "id": "JbI8W2WnwfdO",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "N8ib16": {
+                  "id": "N8ib16",
+                  "parentId": "vRQXOT_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·至少有1名干员的所属阵营为终末地工业"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Qu37b8fJoPs0": {
+                  "id": "Qu37b8fJoPs0",
+                  "parentId": "SwmTXO_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "水泥丛林中，出逃到这里的公主和天空城堡的骑士相遇。“外面来了一个坏术师，她和她的手下正在破坏我们的山谷！天空骑士这么说道，“山谷的勇士们需要帮助！”"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "Tu4WtUWDIwmu": {
+                  "id": "Tu4WtUWDIwmu",
+                  "parentId": "SwmTXO_EwDJMr",
+                  "kind": "image",
+                  "image": {
+                    "id": "6986c749e088e2131732a8d5",
+                    "url": "https://bbs.hycdn.cn/image/common/20260207/856392/6986c749e088e2131732a8d5_ef3391c4.webp",
+                    "width": "1430",
+                    "height": "785",
+                    "size": "122662",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "clientWidth": 1135,
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "Y72U7U": {
+                  "id": "Y72U7U",
+                  "parentId": "document-id",
+                  "kind": "table",
+                  "table": {
+                    "id": "Y72U7U",
+                    "rowIds": [
+                      "ykLxbI",
+                      "xUigXY",
+                      "8n6AUm",
+                      "UPVfsg",
+                      "vRQXOT",
+                      "B7ArYi",
+                      "SwmTXO",
+                      "PX0kph",
+                      "3Ri6or"
+                    ],
+                    "columnIds": [
+                      "EwDJMr",
+                      "NbVZTW",
+                      "I0cxAl",
+                      "gmB5co"
+                    ],
+                    "rowMap": {
+                      "3Ri6or": {
+                        "id": "3Ri6or"
+                      },
+                      "8n6AUm": {
+                        "id": "8n6AUm"
+                      },
+                      "B7ArYi": {
+                        "id": "B7ArYi"
+                      },
+                      "PX0kph": {
+                        "id": "PX0kph"
+                      },
+                      "SwmTXO": {
+                        "id": "SwmTXO"
+                      },
+                      "UPVfsg": {
+                        "id": "UPVfsg"
+                      },
+                      "vRQXOT": {
+                        "id": "vRQXOT"
+                      },
+                      "xUigXY": {
+                        "id": "xUigXY"
+                      },
+                      "ykLxbI": {
+                        "id": "ykLxbI"
+                      }
+                    },
+                    "columnMap": {
+                      "EwDJMr": {
+                        "id": "EwDJMr",
+                        "width": 290
+                      },
+                      "I0cxAl": {
+                        "id": "I0cxAl",
+                        "width": 290
+                      },
+                      "NbVZTW": {
+                        "id": "NbVZTW",
+                        "width": 290
+                      },
+                      "gmB5co": {
+                        "id": "gmB5co",
+                        "width": 290
+                      }
+                    },
+                    "cellMap": {
+                      "3Ri6or_EwDJMr": {
+                        "id": "3Ri6or_EwDJMr",
+                        "childIds": [
+                          "tHoENcaYaKu4"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "3Ri6or_I0cxAl": {
+                        "id": "3Ri6or_I0cxAl",
+                        "childIds": [
+                          "fI4H2p7pkXht"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "3Ri6or_NbVZTW": {
+                        "id": "3Ri6or_NbVZTW",
+                        "childIds": [
+                          "Eevxd448sUTl"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "3Ri6or_gmB5co": {
+                        "id": "3Ri6or_gmB5co",
+                        "childIds": [
+                          "pfLqHObC2QA4"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "1",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "8n6AUm_EwDJMr": {
+                        "id": "8n6AUm_EwDJMr",
+                        "childIds": [
+                          "tdF13G"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "8n6AUm_I0cxAl": {
+                        "id": "8n6AUm_I0cxAl",
+                        "childIds": [
+                          "FerTrD"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "B7ArYi_EwDJMr": {
+                        "id": "B7ArYi_EwDJMr",
+                        "childIds": [
+                          "gxDMOASGYiAq",
+                          "3aNvySlfd1Is"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "PX0kph_EwDJMr": {
+                        "id": "PX0kph_EwDJMr",
+                        "childIds": [
+                          "ZE5Os7qLIOZv"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "SwmTXO_EwDJMr": {
+                        "id": "SwmTXO_EwDJMr",
+                        "childIds": [
+                          "Tu4WtUWDIwmu",
+                          "Qu37b8fJoPs0",
+                          "ypS3qPKcn8Ka"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "UPVfsg_EwDJMr": {
+                        "id": "UPVfsg_EwDJMr",
+                        "childIds": [
+                          "cN7kci"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "vRQXOT_EwDJMr": {
+                        "id": "vRQXOT_EwDJMr",
+                        "childIds": [
+                          "9YtTY6",
+                          "N8ib16",
+                          "pTaKOs",
+                          "fjftqM"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "xUigXY_EwDJMr": {
+                        "id": "xUigXY_EwDJMr",
+                        "childIds": [
+                          "wGtzPL"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "xUigXY_I0cxAl": {
+                        "id": "xUigXY_I0cxAl",
+                        "childIds": [
+                          "eqjWH0"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "2",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      },
+                      "ykLxbI_EwDJMr": {
+                        "id": "ykLxbI_EwDJMr",
+                        "childIds": [
+                          "hVcDdH"
+                        ],
+                        "rowSpan": "1",
+                        "colSpan": "4",
+                        "borderKind": "",
+                        "borderColor": "",
+                        "backgroundColor": "",
+                        "verticalAlign": "unknown"
+                      }
+                    },
+                    "description": "",
+                    "rowHeader": true,
+                    "colHeader": false
+                  }
+                },
+                "ZE5Os7qLIOZv": {
+                  "id": "ZE5Os7qLIOZv",
+                  "parentId": "PX0kph_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "奖励"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "cN7kci": {
+                  "id": "cN7kci",
+                  "parentId": "UPVfsg_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "任务要求"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "eqjWH0": {
+                  "id": "eqjWH0",
+                  "parentId": "xUigXY_I0cxAl",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "描述"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "fI4H2p7pkXht": {
+                  "id": "fI4H2p7pkXht",
+                  "parentId": "3Ri6or_I0cxAl",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "19",
+                          "showType": "card-big",
+                          "count": "30000"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "fjftqM": {
+                  "id": "fjftqM",
+                  "parentId": "vRQXOT_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·合影站位类型为横列"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "gxDMOASGYiAq": {
+                  "id": "gxDMOASGYiAq",
+                  "parentId": "B7ArYi_EwDJMr",
+                  "kind": "image",
+                  "image": {
+                    "id": "6986c73aae75257dd2319690",
+                    "url": "https://bbs.hycdn.cn/image/common/20260207/856392/6986c73aae75257dd2319690_004865de.webp",
+                    "width": "1430",
+                    "height": "785",
+                    "size": "98900",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "clientWidth": 1135,
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "hVcDdH": {
+                  "id": "hVcDdH",
+                  "parentId": "ykLxbI_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "出逃到水泥丛林的公主！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "pTaKOs": {
+                  "id": "pTaKOs",
+                  "parentId": "vRQXOT_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "text",
+                        "text": {
+                          "text": "·至少有3名干员在画面中"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "pfLqHObC2QA4": {
+                  "id": "pfLqHObC2QA4",
+                  "parentId": "3Ri6or_gmB5co",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "212",
+                          "showType": "card-big",
+                          "count": "30"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "rXu2KxiLTrtd": {
+                  "id": "rXu2KxiLTrtd",
+                  "parentId": "document-id",
+                  "kind": "horizontalLine",
+                  "horizontalLine": {
+                    "kind": "2"
+                  }
+                },
+                "tHoENcaYaKu4": {
+                  "id": "tHoENcaYaKu4",
+                  "parentId": "3Ri6or_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "kind": "entry",
+                        "entry": {
+                          "id": "926",
+                          "showType": "card-big",
+                          "count": "200"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "tdF13G": {
+                  "id": "tdF13G",
+                  "parentId": "8n6AUm_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "color": "light_rank_yellow",
+                        "kind": "text",
+                        "text": {
+                          "text": "枢纽区"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "wGtzPL": {
+                  "id": "wGtzPL",
+                  "parentId": "xUigXY_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "bold": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "地点"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                },
+                "ypS3qPKcn8Ka": {
+                  "id": "ypS3qPKcn8Ka",
+                  "parentId": "SwmTXO_EwDJMr",
+                  "align": "center",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [
+                      {
+                        "italic": true,
+                        "kind": "text",
+                        "text": {
+                          "text": "兴奋的公主加入天空骑士打败坏术师的队伍，冒险就此开始！"
+                        }
+                      }
+                    ],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "活动说明",
+              "widgets": [
+                {
+                  "id": "0OLkjM9m",
+                  "title": "活动展示",
+                  "size": "large"
+                },
+                {
+                  "id": "HCX2sgXW",
+                  "title": "任务规则",
+                  "size": "large"
+                }
+              ]
+            },
+            {
+              "title": "活动内容",
+              "widgets": [
+                {
+                  "id": "TowuJTjA",
+                  "title": "任务阶段",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "0OLkjM9m": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "4GTDBIYW",
+                  "audioList": []
+                }
+              }
+            },
+            "HCX2sgXW": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "ahn8tojw",
+                  "audioList": []
+                }
+              }
+            },
+            "TowuJTjA": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [
+                {
+                  "tabId": "tab_1765538170840",
+                  "title": "出逃到水泥丛林的公主！",
+                  "icon": ""
+                },
+                {
+                  "tabId": "tab_1765603898604",
+                  "title": "最高的塔！",
+                  "icon": ""
+                },
+                {
+                  "tabId": "tab_1766064286521",
+                  "title": "被坏术师袭击过的城堡！",
+                  "icon": ""
+                }
+              ],
+              "tabDataMap": {
+                "tab_1765538170840": {
+                  "intro": null,
+                  "content": "rRMFsN9r",
+                  "audioList": []
+                },
+                "tab_1765603898604": {
+                  "intro": null,
+                  "content": "qAvoZhO9",
+                  "audioList": []
+                },
+                "tab_1766064286521": {
+                  "intro": null,
+                  "content": "KHl4cmRI",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "卡莉的谷地童话",
+        "mainType": {
+          "id": "1",
+          "name": "终末地百科",
+          "status": 2,
+          "position": 1,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "9",
+          "name": "活动",
+          "fatherTypeId": "1",
+          "style": 8,
+          "status": 2,
+          "position": 11,
+          "icon": "",
+          "items": [],
+          "filterTagTree": [
+            {
+              "id": "10276",
+              "children": [
+                {
+                  "id": "10277",
+                  "children": [],
+                  "name": "零号委托",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "版本",
+              "type": 1,
+              "value": ""
+            }
+          ]
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "6507876905028",
+          "nickname": "喝奶茶的狸酥",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/10/31/bbb11da63be72ec2cbdb4de59393aaab.png"
+        },
+        "createdUser": {
+          "id": "2260070249320",
+          "nickname": "小丁淘气",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2024/07/23/9c42d7e3930900532c7a7338de289d1f.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/common/20260205/856392/698372ed94e337a3813bb997_db193eac.png",
+          "name": "卡莉的谷地童话",
+          "description": {
+            "id": "document-id",
+            "blockIds": [
+              "e1I0lH"
+            ],
+            "blockMap": {
+              "e1I0lH": {
+                "id": "e1I0lH",
+                "parentId": "document-id",
+                "align": "left",
+                "kind": "text",
+                "text": {
+                  "inlineElements": [
+                    {
+                      "bold": true,
+                      "kind": "text",
+                      "text": {
+                        "text": "拍照活动"
+                      }
+                    }
+                  ],
+                  "kind": "body"
+                }
+              }
+            },
+            "authorMap": {},
+            "version": "1.0.0"
+          },
+          "associate": null,
+          "subTypeList": [
+            {
+              "subTypeId": "10276",
+              "value": "10277"
+            }
+          ],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1770441136",
+        "lastAuditPassedAt": "1770598812",
+        "tagIds": [
+          "10277"
+        ]
+      }
+    }
+  }
+}

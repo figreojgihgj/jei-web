@@ -1,0 +1,726 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_1007"
+  },
+  "name": "【玩家攻略】洁尔佩塔",
+  "icon": "https://bbs.hycdn.cn/image/2026/01/10/132207/8823c3871dd0d44dc8392d1722cc4408.png",
+  "rarity": {
+    "stars": 6,
+    "label": "6星",
+    "color": "#8e24aa",
+    "token": "rarity_6",
+    "tagId": "10006"
+  },
+  "tags": [
+    "main:游戏攻略辑",
+    "sub:干员攻略",
+    "rarity:6"
+  ],
+  "source": "游戏攻略辑/干员攻略/id1007.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648735",
+    "data": {
+      "item": {
+        "itemId": "1007",
+        "document": {
+          "documentMap": {
+            "PFFtJeA5": {
+              "id": "document-id",
+              "blockIds": [
+                "FqCEblwXvgta",
+                "A2pvFMCkHIAZ",
+                "5beb43uAtlHk"
+              ],
+              "blockMap": {
+                "5beb43uAtlHk": {
+                  "id": "5beb43uAtlHk",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "A2pvFMCkHIAZ": {
+                  "id": "A2pvFMCkHIAZ",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6974bbf444aadba6836e5780",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/24/500031/d37150566b8b4db0fad74fae098e8fbc.webp",
+                    "width": "2000",
+                    "height": "3200",
+                    "size": "832870",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "FqCEblwXvgta": {
+                  "id": "FqCEblwXvgta",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "6974bbe762041418f3d30e0d",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/24/500031/0fe8ea2f7bee5ba8e94d53a2e695e479.webp",
+                    "width": "1440",
+                    "height": "3200",
+                    "size": "486924",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "cESkXXoe": {
+              "id": "document-id",
+              "blockIds": [
+                "JpcbD29WUVus",
+                "YB3V63vrutBM",
+                "CmmmPUiVujZ4",
+                "F88yzzXK5sTy"
+              ],
+              "blockMap": {
+                "CmmmPUiVujZ4": {
+                  "id": "CmmmPUiVujZ4",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69871ea85efcfb8bdd83bb21",
+                    "url": "https://bbs.hycdn.cn/image/common/20260207/3002335/69871ea85efcfb8bdd83bb21_ef3391c4.webp",
+                    "width": "2381",
+                    "height": "4234",
+                    "size": "488418",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "F88yzzXK5sTy": {
+                  "id": "F88yzzXK5sTy",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "JpcbD29WUVus": {
+                  "id": "JpcbD29WUVus",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69871ea1d955cec2a16b28c6",
+                    "url": "https://bbs.hycdn.cn/image/common/20260207/3002335/69871ea1d955cec2a16b28c6_ef3391c4.webp",
+                    "width": "2381",
+                    "height": "4234",
+                    "size": "482930",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "YB3V63vrutBM": {
+                  "id": "YB3V63vrutBM",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69871ea57b6eb679c8a8b2ee",
+                    "url": "https://bbs.hycdn.cn/image/common/20260207/3002335/69871ea57b6eb679c8a8b2ee_e71aef33.webp",
+                    "width": "2381",
+                    "height": "4234",
+                    "size": "209090",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "k3OjeEb3": {
+              "id": "document-id",
+              "blockIds": [
+                "jyolXbiZwOzM",
+                "lhWhTp9JILpf",
+                "hy4v75kcRafH",
+                "zh9NaWHpGxAa"
+              ],
+              "blockMap": {
+                "hy4v75kcRafH": {
+                  "id": "hy4v75kcRafH",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69885f28445db29c73f53bde",
+                    "url": "https://bbs.hycdn.cn/image/common/20260208/3002335/69885f28445db29c73f53bde_004865de.webp",
+                    "width": "1280",
+                    "height": "5424",
+                    "size": "496324",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "jyolXbiZwOzM": {
+                  "id": "jyolXbiZwOzM",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69885f14e61c72c6bca7d92b",
+                    "url": "https://bbs.hycdn.cn/image/common/20260208/3002335/69885f14e61c72c6bca7d92b_e71aef33.webp",
+                    "width": "1280",
+                    "height": "5388",
+                    "size": "479614",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "lhWhTp9JILpf": {
+                  "id": "lhWhTp9JILpf",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69885f22bb5763418fa6c617",
+                    "url": "https://bbs.hycdn.cn/image/common/20260208/3002335/69885f22bb5763418fa6c617_91c496d2.webp",
+                    "width": "1280",
+                    "height": "3168",
+                    "size": "290704",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "zh9NaWHpGxAa": {
+                  "id": "zh9NaWHpGxAa",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "mH2syvKv": {
+              "id": "document-id",
+              "blockIds": [
+                "btxhN4OkgHHt",
+                "eJgwwNrrTQpd"
+              ],
+              "blockMap": {
+                "btxhN4OkgHHt": {
+                  "id": "btxhN4OkgHHt",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "697f5e3674509b556106a019",
+                    "url": "https://bbs.hycdn.cn/image/common/20260201/3002335/697f5e3674509b556106a019_2f76db19.jpg",
+                    "width": "4205",
+                    "height": "17556",
+                    "size": "19246954",
+                    "format": "jpg",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "eJgwwNrrTQpd": {
+                  "id": "eJgwwNrrTQpd",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            },
+            "okU3iOp9": {
+              "id": "document-id",
+              "blockIds": [
+                "mwXVJPqxbFcw",
+                "kP6VN2qdIRLR"
+              ],
+              "blockMap": {
+                "kP6VN2qdIRLR": {
+                  "id": "kP6VN2qdIRLR",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "mwXVJPqxbFcw": {
+                  "id": "mwXVJPqxbFcw",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "69871d876caf00d56a5eba22",
+                    "url": "https://bbs.hycdn.cn/image/common/20260207/3002335/69871d876caf00d56a5eba22_004865de.webp",
+                    "width": "2480",
+                    "height": "5322",
+                    "size": "1035086",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "攻略",
+              "widgets": [
+                {
+                  "id": "5L7aJUBN",
+                  "title": "",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "5L7aJUBN": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [
+                {
+                  "tabId": "tab_1767284457214",
+                  "title": "长籽夜",
+                  "icon": ""
+                },
+                {
+                  "tabId": "tab_1767284497742",
+                  "title": "星海浩瀚VU",
+                  "icon": ""
+                },
+                {
+                  "tabId": "tab_1768230804895",
+                  "title": "星语Poistars",
+                  "icon": ""
+                },
+                {
+                  "tabId": "tab_1770462582716",
+                  "title": "苏祁风",
+                  "icon": ""
+                },
+                {
+                  "tabId": "tab_1770544903026",
+                  "title": "tomo",
+                  "icon": ""
+                }
+              ],
+              "tabDataMap": {
+                "tab_1767284457214": {
+                  "intro": null,
+                  "content": "mH2syvKv",
+                  "audioList": []
+                },
+                "tab_1767284497742": {
+                  "intro": null,
+                  "content": "cESkXXoe",
+                  "audioList": []
+                },
+                "tab_1768230804895": {
+                  "intro": null,
+                  "content": "PFFtJeA5",
+                  "audioList": []
+                },
+                "tab_1770462582716": {
+                  "intro": null,
+                  "content": "okU3iOp9",
+                  "audioList": []
+                },
+                "tab_1770544903026": {
+                  "intro": null,
+                  "content": "k3OjeEb3",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "【玩家攻略】洁尔佩塔",
+        "mainType": {
+          "id": "2",
+          "name": "游戏攻略辑",
+          "status": 2,
+          "position": 2,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "11",
+          "name": "干员攻略",
+          "fatherTypeId": "2",
+          "style": 5,
+          "status": 2,
+          "position": 12,
+          "icon": "",
+          "items": [],
+          "filterTagTree": [
+            {
+              "id": "10278",
+              "children": [
+                {
+                  "id": "10281",
+                  "children": [],
+                  "name": "近卫",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10282",
+                  "children": [],
+                  "name": "术师",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10283",
+                  "children": [],
+                  "name": "突击",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10280",
+                  "children": [],
+                  "name": "先锋",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10284",
+                  "children": [],
+                  "name": "重装",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10279",
+                  "children": [],
+                  "name": "辅助",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "干员职业",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10000",
+              "children": [
+                {
+                  "id": "10001",
+                  "children": [],
+                  "name": "1星",
+                  "type": 2,
+                  "value": "rarity_1"
+                },
+                {
+                  "id": "10002",
+                  "children": [],
+                  "name": "2星",
+                  "type": 2,
+                  "value": "rarity_2"
+                },
+                {
+                  "id": "10003",
+                  "children": [],
+                  "name": "3星",
+                  "type": 2,
+                  "value": "rarity_3"
+                },
+                {
+                  "id": "10004",
+                  "children": [],
+                  "name": "4星",
+                  "type": 2,
+                  "value": "rarity_4"
+                },
+                {
+                  "id": "10005",
+                  "children": [],
+                  "name": "5星",
+                  "type": 2,
+                  "value": "rarity_5"
+                },
+                {
+                  "id": "10006",
+                  "children": [],
+                  "name": "6星",
+                  "type": 2,
+                  "value": "rarity_6"
+                }
+              ],
+              "name": "星级",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "id": "10285",
+              "children": [
+                {
+                  "id": "10287",
+                  "children": [],
+                  "name": "物理",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10288",
+                  "children": [],
+                  "name": "灼热",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10290",
+                  "children": [],
+                  "name": "电磁",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10286",
+                  "children": [],
+                  "name": "寒冷",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10289",
+                  "children": [],
+                  "name": "自然",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "属性",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10291",
+              "children": [
+                {
+                  "id": "10304",
+                  "children": [],
+                  "name": "施术单元",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10300",
+                  "children": [],
+                  "name": "手铳",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10302",
+                  "children": [],
+                  "name": "单手剑",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10294",
+                  "children": [],
+                  "name": "双手剑",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10299",
+                  "children": [],
+                  "name": "长柄武器",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "武器类型",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10293",
+              "children": [
+                {
+                  "id": "10295",
+                  "children": [],
+                  "name": "力量",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10306",
+                  "children": [],
+                  "name": "敏捷",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10305",
+                  "children": [],
+                  "name": "智识",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10297",
+                  "children": [],
+                  "name": "意志",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "主能力",
+              "type": 1,
+              "value": ""
+            },
+            {
+              "id": "10292",
+              "children": [
+                {
+                  "id": "10296",
+                  "children": [],
+                  "name": "力量",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10298",
+                  "children": [],
+                  "name": "敏捷",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10301",
+                  "children": [],
+                  "name": "智识",
+                  "type": 1,
+                  "value": ""
+                },
+                {
+                  "id": "10303",
+                  "children": [],
+                  "name": "意志",
+                  "type": 1,
+                  "value": ""
+                }
+              ],
+              "name": "副能力",
+              "type": 1,
+              "value": ""
+            }
+          ]
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "createdUser": {
+          "id": "9450447906447",
+          "nickname": "三万光年",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/01/16/07569778ab14e1c02b7fb3d7e9186dd4.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2026/01/10/132207/8823c3871dd0d44dc8392d1722cc4408.png",
+          "name": "【玩家攻略】洁尔佩塔",
+          "description": null,
+          "associate": null,
+          "subTypeList": [
+            {
+              "subTypeId": "10000",
+              "value": "10006"
+            },
+            {
+              "subTypeId": "10278",
+              "value": "10279"
+            },
+            {
+              "subTypeId": "10285",
+              "value": "10289"
+            },
+            {
+              "subTypeId": "10291",
+              "value": "10304"
+            },
+            {
+              "subTypeId": "10292",
+              "value": "10301"
+            },
+            {
+              "subTypeId": "10293",
+              "value": "10297"
+            }
+          ],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1768113228",
+        "lastAuditPassedAt": "1770549476",
+        "tagIds": [
+          "10006",
+          "10279",
+          "10304",
+          "10301",
+          "10289",
+          "10297"
+        ]
+      }
+    }
+  }
+}

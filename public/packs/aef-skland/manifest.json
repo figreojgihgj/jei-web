@@ -1,0 +1,26 @@
+{
+  "packId": "aef-skland",
+  "gameId": "aef-skland",
+  "displayName": "Skland Wiki",
+  "version": "2026-02-14",
+  "files": {
+    "items": "items/",
+    "itemsIndex": "itemsIndex.json",
+    "itemsLite": "itemsLite.json",
+    "recipeTypes": "recipeTypes.json",
+    "recipes": "recipes.json"
+  },
+  "imageProxy": {
+    "enabled": true,
+    "urlTemplate": "https://end-api.shallow.ink/api/proxy/image?url={url}",
+    "devUrlTemplate": "http://127.0.0.1:12345/api/proxy/image?url={url}",
+    "domains": [
+      "bbs.hycdn.cn",
+      "ak.hycdn.cn",
+      "web.hycdn.cn"
+    ],
+    "tokenQuery": {
+      "enabled": false
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "key": {
+    "id": "aef-skland.wiki.item_1046"
+  },
+  "name": "塔卫二畅游指南 - 武陵城",
+  "icon": "https://bbs.hycdn.cn/image/2026/01/20/3002335/de88f870d4fa71f4a46d5bbd9910120a.png",
+  "tags": [
+    "main:情报档案库",
+    "sub:情报资讯"
+  ],
+  "source": "情报档案库/情报资讯/id1046.json",
+  "wiki": {
+    "code": 0,
+    "message": "OK",
+    "timestamp": "1770648736",
+    "data": {
+      "item": {
+        "itemId": "1046",
+        "document": {
+          "documentMap": {
+            "kQUamqAV": {
+              "id": "document-id",
+              "blockIds": [
+                "tyqBRBxqyRiJ",
+                "abdbnYSSf5Zs",
+                "h16WXec7cR70",
+                "WTngdX1PtrLG",
+                "V2L8uPgBFMHJ"
+              ],
+              "blockMap": {
+                "V2L8uPgBFMHJ": {
+                  "id": "V2L8uPgBFMHJ",
+                  "parentId": "document-id",
+                  "align": "left",
+                  "kind": "text",
+                  "text": {
+                    "inlineElements": [],
+                    "kind": "body"
+                  }
+                },
+                "WTngdX1PtrLG": {
+                  "id": "WTngdX1PtrLG",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696f0111523105a5640994cf",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/681fc3a83cd011ee7e7dfa4c3cc4d840.webp",
+                    "width": "790",
+                    "height": "2554",
+                    "size": "258058",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "abdbnYSSf5Zs": {
+                  "id": "abdbnYSSf5Zs",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696f0103b538b24c7d15335e",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/11395c4faef8e0759bc8333339fd48c5.webp",
+                    "width": "790",
+                    "height": "1890",
+                    "size": "216274",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "h16WXec7cR70": {
+                  "id": "h16WXec7cR70",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696f010a07aa0f26d1589a84",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/3620df50932f1397d74c416a2289b631.webp",
+                    "width": "790",
+                    "height": "2512",
+                    "size": "274366",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                },
+                "tyqBRBxqyRiJ": {
+                  "id": "tyqBRBxqyRiJ",
+                  "parentId": "document-id",
+                  "kind": "image",
+                  "image": {
+                    "id": "696f00e5a68df484d1202161",
+                    "url": "https://bbs.hycdn.cn/image/2026/01/20/3002335/aa0ff66f78f66025b40ff20b2e3649d5.webp",
+                    "width": "790",
+                    "height": "1239",
+                    "size": "82950",
+                    "format": "webp",
+                    "kind": "",
+                    "description": "",
+                    "status": "",
+                    "infos": []
+                  }
+                }
+              },
+              "authorMap": {},
+              "version": "1.0.0"
+            }
+          },
+          "chapterGroup": [
+            {
+              "title": "畅游指南",
+              "widgets": [
+                {
+                  "id": "BQNXyQEI",
+                  "title": "",
+                  "size": "large"
+                }
+              ]
+            }
+          ],
+          "extraInfo": {
+            "showType": "",
+            "illustration": "",
+            "composite": ""
+          },
+          "widgetCommonMap": {
+            "BQNXyQEI": {
+              "type": "common",
+              "tableList": [],
+              "tabList": [],
+              "tabDataMap": {
+                "default": {
+                  "intro": null,
+                  "content": "kQUamqAV",
+                  "audioList": []
+                }
+              }
+            }
+          }
+        },
+        "name": "塔卫二畅游指南 - 武陵城",
+        "mainType": {
+          "id": "3",
+          "name": "情报档案库",
+          "status": 2,
+          "position": 3,
+          "typeSub": []
+        },
+        "subType": {
+          "id": "12",
+          "name": "情报资讯",
+          "fatherTypeId": "3",
+          "style": 5,
+          "status": 2,
+          "position": 17,
+          "icon": "",
+          "items": [],
+          "filterTagTree": []
+        },
+        "lang": "zh_Hans",
+        "lastUpdatedUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "createdUser": {
+          "id": "3260573475636",
+          "nickname": "陇凉水",
+          "avatarCode": 0,
+          "avatar": "https://bbs.hycdn.cn/image/2025/05/01/c7115b5e09aa451f2824c83f574b9677.png"
+        },
+        "brief": {
+          "cover": "https://bbs.hycdn.cn/image/2026/01/20/3002335/de88f870d4fa71f4a46d5bbd9910120a.png",
+          "name": "塔卫二畅游指南 - 武陵城",
+          "description": null,
+          "associate": null,
+          "subTypeList": [],
+          "composite": null
+        },
+        "status": 2,
+        "publishedAtTs": "1768909242",
+        "lastAuditPassedAt": "1768910229",
+        "tagIds": []
+      }
+    }
+  }
+}
