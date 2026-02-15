@@ -645,6 +645,14 @@
               <q-toggle v-model="lineCollapseIntermediate" dense :label="t('hideIntermediate')" />
               <q-toggle v-model="lineIncludeCycleSeeds" dense :label="t('showCycleSeeds')" />
               <q-toggle v-model="lineWidthByRate" dense :label="t('lineWidthByRate')" />
+              <q-toggle
+                v-if="selectedLineItemData && !selectedLineItemData.isRoot"
+                :model-value="selectedLineItemForcedRaw"
+                dense
+                color="warning"
+                label="视为原料"
+                @update:model-value="(v) => setSelectedLineItemForcedRaw(!!v)"
+              />
               <q-btn
                 v-if="lineWidthByRate"
                 dense
@@ -753,6 +761,9 @@
                         {{ p.data.subtitle }}
                         <q-badge v-if="p.data.isRoot" color="primary" class="q-ml-xs">
                           目标
+                        </q-badge>
+                        <q-badge v-if="p.data.forcedRaw" color="warning" class="q-ml-xs">
+                          原料
                         </q-badge>
                       </div>
                     </div>
@@ -957,6 +968,118 @@
             </q-card>
 
             <q-card flat bordered class="q-pa-md">
+              <div class="text-subtitle2 q-mb-md">中间产物生产计数</div>
+              <q-table
+                dense
+                flat
+                :rows="calcIntermediateRows"
+                :columns="calcIntermediateColumns"
+                row-key="id"
+                :rows-per-page-options="[0]"
+              >
+                <template #body-cell-name="props">
+                  <q-td :props="props">
+                    <div class="row items-center q-gutter-sm">
+                      <stack-view
+                        :content="{ kind: 'item', id: props.row.id, amount: 1 }"
+                        :item-defs-by-key-hash="itemDefsByKeyHash"
+                        variant="slot"
+                        :show-name="false"
+                        :show-subtitle="false"
+                      />
+                      <span>{{ props.row.name }}</span>
+                    </div>
+                  </q-td>
+                </template>
+                <template #body-cell-amount="props">
+                  <q-td :props="props" class="text-right">
+                    {{ formatAmount(props.row.amount) }}
+                  </q-td>
+                </template>
+                <template #body-cell-rate="props">
+                  <q-td :props="props" class="text-right">
+                    {{ formatAmount(props.row.rate) }}
+                  </q-td>
+                </template>
+                <template #body-cell-action="props">
+                  <q-td :props="props" class="text-right">
+                    <q-btn
+                      dense
+                      outline
+                      no-caps
+                      size="sm"
+                      :color="props.row.forcedRaw ? 'warning' : 'primary'"
+                      :icon="props.row.forcedRaw ? 'undo' : 'inventory_2'"
+                      :label="props.row.forcedRaw ? '取消原料' : '设为原料'"
+                      @click="setForcedRawForItemId(props.row.id, !props.row.forcedRaw)"
+                    />
+                  </q-td>
+                </template>
+              </q-table>
+            </q-card>
+
+            <q-card v-if="calcForcedRawRows.length" flat bordered class="q-pa-md">
+              <div class="text-subtitle2 q-mb-md">视为原料清单（可取消）</div>
+              <q-table
+                dense
+                flat
+                :rows="calcForcedRawRows"
+                :columns="calcForcedRawColumns"
+                row-key="keyHash"
+                :rows-per-page-options="[0]"
+              >
+                <template #body-cell-name="props">
+                  <q-td :props="props">
+                    <div class="row items-center q-gutter-sm">
+                      <stack-view
+                        :content="{
+                          kind: 'item',
+                          id: props.row.itemKey.id,
+                          amount: 1,
+                          ...(props.row.itemKey.meta !== undefined
+                            ? { meta: props.row.itemKey.meta }
+                            : {}),
+                          ...(props.row.itemKey.nbt !== undefined
+                            ? { nbt: props.row.itemKey.nbt }
+                            : {}),
+                        }"
+                        :item-defs-by-key-hash="itemDefsByKeyHash"
+                        variant="slot"
+                        :show-name="false"
+                        :show-subtitle="false"
+                      />
+                      <span>{{ props.row.name }}</span>
+                    </div>
+                  </q-td>
+                </template>
+                <template #body-cell-amount="props">
+                  <q-td :props="props" class="text-right">
+                    {{ formatAmount(props.row.amount) }}
+                  </q-td>
+                </template>
+                <template #body-cell-rate="props">
+                  <q-td :props="props" class="text-right">
+                    {{ formatAmount(props.row.rate) }}
+                  </q-td>
+                </template>
+                <template #body-cell-action="props">
+                  <q-td :props="props" class="text-right">
+                    <q-btn
+                      dense
+                      outline
+                      no-caps
+                      size="sm"
+                      color="warning"
+                      icon="undo"
+                      label="取消原料"
+                      @click="setForcedRawByKeyHash(props.row.keyHash, false)"
+                    />
+                  </q-td>
+                </template>
+              </q-table>
+            </q-card>
+
+            <q-card flat bordered class="q-pa-md">
               <div class="text-subtitle2 q-mb-md">产出速率</div>
               <q-table
                 dense
@@ -1140,6 +1263,7 @@ const lineIncludeCycleSeeds = ref(true);
 const lineWidthByRate = ref(false);
 const lineWidthCurveDialogOpen = ref(false);
 const lineWidthCurveConfig = ref<LineWidthCurveConfig>(createDefaultLineWidthCurveConfig());
+const forcedRawItemKeyHashes = ref<Set<string>>(new Set());
 const selectedLineNodeId = ref<string | null>(null);
 const lineNodePositions = ref(new Map<string, { x: number; y: number }>());
 const calcDisplayUnit = ref<'per_second' | 'per_minute' | 'per_hour'>('per_minute');
@@ -1263,6 +1387,15 @@ watch(planningComplete, (complete) => {
   }
 });
 
+const forcedRawSignature = computed(() =>
+  Array.from(forcedRawItemKeyHashes.value.values()).sort().join('|'),
+);
+
+watch(forcedRawSignature, () => {
+  if (!planningComplete.value) return;
+  buildMergedTree();
+});
+
 const buildMergedTree = () => {
   if (!props.pack || !props.index || targets.value.length === 0) return;
 
@@ -1283,6 +1416,7 @@ const buildMergedTree = () => {
           targetUnit: target.unit,
           selectedRecipeIdByItemKeyHash: selectedRecipeIdByItemKeyHash.value,
           selectedItemIdByTagId: selectedItemIdByTagId.value,
+          forcedRawItemKeyHashes: forcedRawItemKeyHashes.value,
           maxDepth: 20,
         }),
       )
@@ -1402,6 +1536,7 @@ const loadSavedPlan = (payload: PlannerSavePayload) => {
           rootItemKey: target.itemKey,
           selectedRecipeIdByItemKeyHash: selectedRecipeIdByItemKeyHash.value,
           selectedItemIdByTagId: selectedItemIdByTagId.value,
+          forcedRawItemKeyHashes: forcedRawItemKeyHashes.value,
           maxDepth: 20,
         });
         allDecisionsList.push(...decisions);
@@ -1451,6 +1586,7 @@ const updateTargetUnit = (index: number, unit: 'per_second' | 'per_minute' | 'pe
 
 const clearTargets = () => {
   targets.value = [];
+  forcedRawItemKeyHashes.value = new Set();
   resetPlanning();
 };
 
@@ -1490,6 +1626,7 @@ const startPlanning = () => {
         rootItemKey: target.itemKey,
         selectedRecipeIdByItemKeyHash: new Map(),
         selectedItemIdByTagId: new Map(),
+        forcedRawItemKeyHashes: forcedRawItemKeyHashes.value,
         maxDepth: 20,
       });
       allDecisionsList.push(...decisions);
@@ -1554,6 +1691,46 @@ const itemName = (itemKey: ItemKey): string => {
   const keyHash = itemKeyHash(itemKey);
   return props.itemDefsByKeyHash?.[keyHash]?.name ?? itemKey.id;
 };
+
+function isForcedRawKey(itemKey: ItemKey): boolean {
+  return forcedRawItemKeyHashes.value.has(itemKeyHash(itemKey));
+}
+
+function setForcedRawForKey(itemKey: ItemKey, forced: boolean): void {
+  const keyHash = itemKeyHash(itemKey);
+  if (targetRootHashes.value.has(keyHash)) return;
+  const next = new Set(forcedRawItemKeyHashes.value);
+  if (forced) next.add(keyHash);
+  else next.delete(keyHash);
+  forcedRawItemKeyHashes.value = next;
+}
+
+function setForcedRawByKeyHash(keyHash: string, forced: boolean): void {
+  if (targetRootHashes.value.has(keyHash)) return;
+  const next = new Set(forcedRawItemKeyHashes.value);
+  if (forced) next.add(keyHash);
+  else next.delete(keyHash);
+  forcedRawItemKeyHashes.value = next;
+}
+
+function setForcedRawForItemId(itemId: string, forced: boolean): void {
+  const keyHash = itemKeyHash({ id: itemId });
+  if (targetRootHashes.value.has(keyHash)) return;
+  if (forced) {
+    setForcedRawForKey({ id: itemId }, true);
+    return;
+  }
+  const next = new Set(forcedRawItemKeyHashes.value);
+  Array.from(next).forEach((hash) => {
+    const def = props.itemDefsByKeyHash?.[hash];
+    const defId = def?.key?.id;
+    if (defId === itemId || (!def && hash === keyHash)) {
+      next.delete(hash);
+    }
+  });
+  next.delete(keyHash);
+  forcedRawItemKeyHashes.value = next;
+}
 
 const decisionKey = (d: PlannerDecision): string => {
   return d.kind === 'item_recipe' ? `recipe:${d.itemKeyHash}` : `tag:${d.tagId}`;
@@ -1847,6 +2024,7 @@ type LineFlowItemData = {
   title: string;
   subtitle: string;
   isRoot: boolean;
+  forcedRaw: boolean;
   inPorts: number;
   outPorts: number;
 };
@@ -2245,6 +2423,7 @@ const lineFlow = computed(() => {
           title,
           subtitle,
           isRoot: !!n.isRoot,
+          forcedRaw: isForcedRawKey(n.itemKey),
           inPorts: 0,
           outPorts: 0,
         } satisfies LineFlowItemData,
@@ -2723,6 +2902,23 @@ const lineFlowNodes = computed(() => {
     draggable: true,
   }));
 });
+const selectedLineItemData = computed<LineFlowItemData | null>(() => {
+  const selectedId = selectedLineNodeId.value;
+  if (!selectedId) return null;
+  const node = lineFlowNodes.value.find((n) => n.id === selectedId && n.type === 'lineItemNode');
+  if (!node) return null;
+  return node.data as LineFlowItemData;
+});
+const selectedLineItemForcedRaw = computed(() => {
+  const node = selectedLineItemData.value;
+  if (!node) return false;
+  return isForcedRawKey(node.itemKey);
+});
+function setSelectedLineItemForcedRaw(forced: boolean) {
+  const node = selectedLineItemData.value;
+  if (!node || node.isRoot) return;
+  setForcedRawForKey(node.itemKey, forced);
+}
 const lineFlowEdges = computed(() => lineFlow.value.edges);
 const lineFlowEdgesStyled = computed(() => {
   const selectedId = selectedLineNodeId.value;
@@ -2874,6 +3070,96 @@ const calcItemRows = computed(() => {
     .sort((a, b) => b.rate - a.rate);
 });
 
+const calcIntermediateRows = computed(() => {
+  if (!mergedTree.value) {
+    return [] as Array<{
+      id: ItemId;
+      name: string;
+      amount: number;
+      rate: number;
+      forcedRaw: boolean;
+    }>;
+  }
+
+  const amountById = new Map<ItemId, number>();
+  const rateById = new Map<ItemId, number>();
+  const rootTargetHashes = targetRootHashes.value;
+
+  const walk = (node: RequirementNode, isRoot: boolean) => {
+    if (node.kind !== 'item') return;
+    const hash = itemKeyHash(node.itemKey);
+    const forcedRaw = forcedRawItemKeyHashes.value.has(hash);
+    const isTarget = rootTargetHashes.has(hash);
+    const isIntermediate = !isRoot && !isTarget && node.children.length > 0 && !forcedRaw;
+    if (isIntermediate) {
+      const itemId = node.itemKey.id;
+      amountById.set(itemId, (amountById.get(itemId) ?? 0) + nodeDisplayAmount(node));
+      rateById.set(
+        itemId,
+        (rateById.get(itemId) ?? 0) +
+          displayRateFromAmount(nodeDisplayAmount(node), calcDisplayUnit.value),
+      );
+    }
+    node.children.forEach((child) => walk(child, false));
+  };
+
+  walk(mergedTree.value.root, true);
+
+  return Array.from(amountById.entries())
+    .map(([id, amount]) => ({
+      id,
+      name: getItemName(id),
+      amount,
+      rate: rateById.get(id) ?? 0,
+      forcedRaw: isForcedRawKey({ id }),
+    }))
+    .sort((a, b) => b.rate - a.rate || a.name.localeCompare(b.name));
+});
+
+const calcForcedRawRows = computed(() => {
+  if (!mergedTree.value) {
+    return [] as Array<{
+      keyHash: string;
+      itemKey: ItemKey;
+      name: string;
+      amount: number;
+      rate: number;
+    }>;
+  }
+
+  const rowsByHash = new Map<
+    string,
+    { keyHash: string; itemKey: ItemKey; name: string; amount: number; rate: number }
+  >();
+
+  const walk = (node: RequirementNode) => {
+    if (node.kind !== 'item') return;
+    const hash = itemKeyHash(node.itemKey);
+    if (forcedRawItemKeyHashes.value.has(hash) && !targetRootHashes.value.has(hash)) {
+      const prev = rowsByHash.get(hash);
+      const amount = nodeDisplayAmount(node);
+      const rate = displayRateFromAmount(amount, calcDisplayUnit.value);
+      if (prev) {
+        prev.amount += amount;
+        prev.rate += rate;
+      } else {
+        rowsByHash.set(hash, {
+          keyHash: hash,
+          itemKey: node.itemKey,
+          name: getItemName(node.itemKey.id),
+          amount,
+          rate,
+        });
+      }
+    }
+    node.children.forEach((child) => walk(child));
+  };
+
+  walk(mergedTree.value.root);
+
+  return Array.from(rowsByHash.values()).sort((a, b) => b.rate - a.rate || a.name.localeCompare(b.name));
+});
+
 const calcMachineTotal = computed(() => {
   return calcMachineRows.value.reduce((sum, r) => sum + r.count, 0);
 });
@@ -2891,6 +3177,30 @@ const calcItemColumns = computed(() => [
     field: 'rate',
     align: 'right' as const,
   },
+]);
+
+const calcIntermediateColumns = computed(() => [
+  { name: 'name', label: '物品', field: 'name', align: 'left' as const },
+  { name: 'amount', label: '数量(/min)', field: 'amount', align: 'right' as const },
+  {
+    name: 'rate',
+    label: `速率 (${unitSuffix(calcDisplayUnit.value)})`,
+    field: 'rate',
+    align: 'right' as const,
+  },
+  { name: 'action', label: '操作', field: 'action', align: 'right' as const },
+]);
+
+const calcForcedRawColumns = computed(() => [
+  { name: 'name', label: '物品', field: 'name', align: 'left' as const },
+  { name: 'amount', label: '数量(/min)', field: 'amount', align: 'right' as const },
+  {
+    name: 'rate',
+    label: `速率 (${unitSuffix(calcDisplayUnit.value)})`,
+    field: 'rate',
+    align: 'right' as const,
+  },
+  { name: 'action', label: '操作', field: 'action', align: 'right' as const },
 ]);
 
 const getRateUnitLabel = (unit: 'per_second' | 'per_minute' | 'per_hour') => {

@@ -74,6 +74,14 @@ function finiteNumberOr(v: unknown, fallback: number): number {
   return Number.isFinite(n) ? n : fallback;
 }
 
+function isForcedRawItem(
+  key: ItemKey,
+  forcedRawItemKeyHashes?: ReadonlySet<string>,
+): boolean {
+  if (!forcedRawItemKeyHashes || forcedRawItemKeyHashes.size === 0) return false;
+  return forcedRawItemKeyHashes.has(itemKeyHash(key));
+}
+
 function recipeTypeHasMachine(recipeType: RecipeTypeDef | undefined): boolean {
   if (!recipeType?.machine) return false;
   return Array.isArray(recipeType.machine) ? recipeType.machine.length > 0 : true;
@@ -187,6 +195,7 @@ export function computePlannerDecisions(args: {
   rootItemKey: ItemKey;
   selectedRecipeIdByItemKeyHash: Map<string, string>;
   selectedItemIdByTagId: Map<string, ItemId>;
+  forcedRawItemKeyHashes?: ReadonlySet<string>;
   maxDepth?: number;
 }): PlannerDecision[] {
   const { pack, index, rootItemKey, selectedRecipeIdByItemKeyHash, selectedItemIdByTagId } = args;
@@ -201,6 +210,11 @@ export function computePlannerDecisions(args: {
     const h = itemKeyHash(key);
     if (visiting.has(h)) return;
     visiting.add(h);
+
+    if (isForcedRawItem(key, args.forcedRawItemKeyHashes)) {
+      visiting.delete(h);
+      return;
+    }
 
     const options = sortRecipeOptionsForItem(index, key, recipesProducingItem(index, key));
     if (options.length > 1 && !selectedRecipeIdByItemKeyHash.has(h)) {
@@ -424,6 +438,7 @@ export function buildRequirementTree(args: {
   targetUnit?: 'items' | 'per_second' | 'per_minute' | 'per_hour';
   selectedRecipeIdByItemKeyHash: Map<string, string>;
   selectedItemIdByTagId: Map<string, ItemId>;
+  forcedRawItemKeyHashes?: ReadonlySet<string>;
   maxDepth?: number;
 }): BuildTreeResult {
   const { pack, index, rootItemKey, selectedRecipeIdByItemKeyHash, selectedItemIdByTagId } = args;
@@ -477,6 +492,19 @@ export function buildRequirementTree(args: {
     if (depth > maxDepth) {
       addLeafItem(key.id, amountNeeded);
       return { kind: 'item', nodeId, itemKey: key, amount: amountNeeded, children: [], catalysts: [], cycle: false };
+    }
+
+    if (isForcedRawItem(key, args.forcedRawItemKeyHashes)) {
+      addLeafItem(key.id, amountNeeded);
+      return {
+        kind: 'item',
+        nodeId,
+        itemKey: key,
+        amount: amountNeeded,
+        children: [],
+        catalysts: [],
+        cycle: false,
+      };
     }
 
     const h = itemKeyHash(key);
@@ -773,6 +801,7 @@ export function buildEnhancedRequirementTree(args: {
   targetAmount: number;
   selectedRecipeIdByItemKeyHash: Map<string, string>;
   selectedItemIdByTagId: Map<string, ItemId>;
+  forcedRawItemKeyHashes?: ReadonlySet<string>;
   maxDepth?: number;
   targetUnit?: 'items' | 'per_second' | 'per_minute' | 'per_hour';
 }): EnhancedBuildTreeResult {

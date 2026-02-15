@@ -172,7 +172,9 @@
       :pack-proxy-template="packProxyTemplate"
       :pack-dev-proxy-template="packDevProxyTemplate"
       :pack-image-proxy-use-pack-provided="settingsStore.packImageProxyUsePackProvided"
-      @update:pack-image-proxy-use-pack-provided="settingsStore.setPackImageProxyUsePackProvided($event)"
+      @update:pack-image-proxy-use-pack-provided="
+        settingsStore.setPackImageProxyUsePackProvided($event)
+      "
       :pack-image-proxy-use-manual="settingsStore.packImageProxyUseManual"
       @update:pack-image-proxy-use-manual="settingsStore.setPackImageProxyUseManual($event)"
       :pack-image-proxy-use-dev="settingsStore.packImageProxyUseDev"
@@ -184,9 +186,13 @@
       :pack-image-proxy-access-token="settingsStore.packImageProxyAccessToken"
       @update:pack-image-proxy-access-token="settingsStore.setPackImageProxyAccessToken($event)"
       :pack-image-proxy-anonymous-token="settingsStore.packImageProxyAnonymousToken"
-      @update:pack-image-proxy-anonymous-token="settingsStore.setPackImageProxyAnonymousToken($event)"
+      @update:pack-image-proxy-anonymous-token="
+        settingsStore.setPackImageProxyAnonymousToken($event)
+      "
       :pack-image-proxy-framework-token="settingsStore.packImageProxyFrameworkToken"
-      @update:pack-image-proxy-framework-token="settingsStore.setPackImageProxyFrameworkToken($event)"
+      @update:pack-image-proxy-framework-token="
+        settingsStore.setPackImageProxyFrameworkToken($event)
+      "
     />
 
     <pre v-if="settingsStore.debugLayout" class="jei-debug-overlay">{{ debugText }}</pre>
@@ -810,7 +816,10 @@ async function syncUrl(mode: 'replace' | 'push') {
     const packId = activePackId.value;
     const currentKey = currentItemKey.value;
     if (!currentKey) {
-      if (routeKeyHash()) return;
+      if (loading.value) return;
+      const routePack = typeof route.query.pack === 'string' ? route.query.pack : null;
+      const routeHasItemState = Boolean(routeKeyHash() || routeTab());
+      if (route.path === '/' && !routeHasItemState && routePack === (packId || null)) return;
       const next = { path: '/', query: packId ? { pack: packId } : {} };
       if (mode === 'push') await router.push(next);
       else await router.replace(next);
@@ -1171,16 +1180,17 @@ watch(activePackId, async (next) => {
   void recomputePageSize(); // 切 pack 后重新计算一次
 });
 watch(
-  () => [
-    settingsStore.packImageProxyUsePackProvided,
-    settingsStore.packImageProxyUseManual,
-    settingsStore.packImageProxyUseDev,
-    settingsStore.packImageProxyManualUrl,
-    settingsStore.packImageProxyDevUrl,
-    settingsStore.packImageProxyAccessToken,
-    settingsStore.packImageProxyAnonymousToken,
-    settingsStore.packImageProxyFrameworkToken,
-  ] as const,
+  () =>
+    [
+      settingsStore.packImageProxyUsePackProvided,
+      settingsStore.packImageProxyUseManual,
+      settingsStore.packImageProxyUseDev,
+      settingsStore.packImageProxyManualUrl,
+      settingsStore.packImageProxyDevUrl,
+      settingsStore.packImageProxyAccessToken,
+      settingsStore.packImageProxyAnonymousToken,
+      settingsStore.packImageProxyFrameworkToken,
+    ] as const,
   async () => {
     if (!pack.value) return;
     await ensurePackImageProxyTokens(pack.value.manifest);
