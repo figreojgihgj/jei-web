@@ -1,16 +1,34 @@
 # About
 
 ## Build
-- Version: 1894c41-dirty
-- Commit: 1894c41 (1894c41d7c6910c9b0b4be7e39f3e42226a92f99)
-- Commit count: 70
-- Subject: Merge branch 'master' of https://github.com/AndreaFrederica/jei-web
+- Version: 49c4900-dirty
+- Commit: 49c4900 (49c4900be284001bde8bd5851bebd7d55f96b17b)
+- Commit count: 72
+- Subject: 支持了aef skland wiki 数据包
 - Author: AndreaFrederica
-- Date: 2026-02-14T00:19:25+08:00
-- Generated at: 2026-02-14T23:50:07.879Z
+- Date: 2026-02-15T07:57:06+08:00
+- Generated at: 2026-02-15T00:21:55.927Z
 - Remote: https://github.com/AndreaFrederica/jei-web.git
 
 ## Version History
+
+### r72 (2026-02-15T07:57:06+08:00)
+- 49c4900
+  支持了aef skland wiki 数据包
+
+### r71 (2026-02-15T07:50:33+08:00)
+- 6069f98
+  feat: implement image proxy support for packs and items
+  
+  - Added image proxy configuration to PackManifest and ItemDef.
+  - Implemented functions to apply image proxy tokens and normalize URLs.
+  - Enhanced the loader to cache and manage pack manifests with image proxy support.
+  - Introduced new settings in the UI for managing image proxy configurations.
+  - Updated validation to include image proxy fields.
+  - Refactored planner logic to consider recipe type priorities.
+  - Added new utility functions for handling image URLs in runtime.
+  - Updated settings store to persist image proxy tokens and configurations.
+  - Improved item and recipe sorting based on planner priorities.
 
 ### r70 (2026-02-14T00:19:25+08:00)
 - 1894c41

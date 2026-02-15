@@ -50,6 +50,14 @@ Local copy available at: `D:\Projcets\factoriolab-zmd`
 
 **Note:** The Arknights:Endfield data pack contains game data extracted from the game Arknights:Endfield. This data is used for informational purposes only and remains the property of Hypergryph.
 
+## aef-skland Data Source
+
+**Source Website:** https://wiki.skland.com/endfield (Skland Wiki / 森空岛Wiki)
+
+**Data Pack Location:** `public/packs/aef-skland/`
+
+**Note:** The `aef-skland` pack is generated from publicly accessible wiki data from Skland Wiki. The original wiki content and related assets remain the property of their respective owners.
+
 ---
 
 ## Attribution

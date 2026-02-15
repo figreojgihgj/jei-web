@@ -260,6 +260,15 @@
             <q-item-label>明日方舟:终末地非官方Wiki</q-item-label>
           </q-item-section>
         </q-item>
+        <q-item clickable tag="a" target="_blank" href="https://end.shallow.ink/">
+          <q-item-section avatar>
+            <q-icon name="link" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>终末地-协议终端</q-item-label>
+            <q-item-label caption>熵增项目组</q-item-label>
+          </q-item-section>
+        </q-item>
 
         <q-separator class="q-my-sm" />
 
